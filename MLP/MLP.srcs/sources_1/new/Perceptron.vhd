@@ -50,26 +50,36 @@ architecture Behavioral of Perceptron is
     signal res_mul: std_logic_vector(31 downto 0);
     signal res_sum: std_logic_vector(31 downto 0);
     signal index: std_logic_vector(7 downto 0);
+    signal intern_valid: std_logic;
 begin
-index <= x"00";
     process(Clock)
     begin
         if rising_edge(Clock) then
-            -- MULTIPLICATEUR
-            res_mul <= Weight(TO_INTEGER(unsigned(index))) * Input_Value;
-            -- SUMMATEUR
-            res_sum <= res_sum + res_mul;
-            -- FONCTION D'ACTIVATION ReLu
-            if res_sum < 0 then
-                Output_Value <= x"0000";
-            else
-                Output_Value <= res_sum;
-            end if;
-            -- UPDATE INDEX
-            index <= index + 1;
-            if index >= 3 then
+            if Reset = '0' then
                 index <= x"00";
+                valid <= '0';
+                intern_valid <= '0';
+                res_mul <= x"0000";
+                res_sum <= x"0000";
+            end if;
+            if intern_valid = '0' then
+                -- MULTIPLICATEUR
+                res_mul <= Weight(TO_INTEGER(unsigned(index))) * Input_Value;
+                -- SUMMATEUR
+                res_sum <= res_sum + res_mul;
+                -- FONCTION D'ACTIVATION ReLu
+                if res_sum < 0 then
+                    Output_Value <= x"0000";
+                else
+                    Output_Value <= res_sum;
+                end if;
+                -- UPDATE INDEX
+                index <= index + 1;
+                if index >= 3 then
+                    valid <= '1';
+                    intern_valid <= '1';
+                end if;
             end if;
         end if;
-    end process;  
+    end process;
 end Behavioral;
