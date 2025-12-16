@@ -62,7 +62,7 @@ begin
                 res_mul <= x"0000";
                 res_sum <= x"0000";
             end if;
-            if intern_valid = '0' then
+            if intern_valid = '0' and Enable = '1' then
                 -- MULTIPLICATEUR
                 res_mul <= Weight(TO_INTEGER(unsigned(index))) * Input_Value;
                 -- SUMMATEUR
@@ -82,4 +82,9 @@ begin
             end if;
         end if;
     end process;
+    
+    -- Fonctions d'activations à mettre en concurents
+    -- Gérer le signe pour les fonctions d'activations
+    -- Interger N pour la taille du tableau
+    -- Gérer en 64 bits le résultat de l'opération de multiplication
 end Behavioral;

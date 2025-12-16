@@ -67,8 +67,8 @@ begin
         RESET <= '0';
         wait for 20 ns;
         RESET <= '1';
-        ENABLE <= '1';
-        wait for 20 ns;
         INPUT <= x"0001";
+        wait for 20 ns;
+        ENABLE <= '1';
     end process;
 end Bench;
