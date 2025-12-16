@@ -60,7 +60,16 @@ index <= x"00";
             -- SUMMATEUR
             res_sum <= res_sum + res_mul;
             -- FONCTION D'ACTIVATION ReLu
-            
+            if res_sum < 0 then
+                Output_Value <= x"0000";
+            else
+                Output_Value <= res_sum;
+            end if;
+            -- UPDATE INDEX
+            index <= index + 1;
+            if index >= 3 then
+                index <= x"00";
+            end if;
         end if;
     end process;  
 end Behavioral;
