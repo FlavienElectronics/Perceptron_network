@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="simulation_Perceptron_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="simulation_Perceptron" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="166.138 ns"></ZoomEndTime>
+      <Cursor1Time time="85.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="125"></NameColumnWidth>
+      <ValueColumnWidth column_width="60"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject type="logic" fp_name="/simulation_Perceptron/ENABLE">
+      <obj_property name="ElementShortName">ENABLE</obj_property>
+      <obj_property name="ObjectShortName">ENABLE</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/simulation_Perceptron/INPUT">
+      <obj_property name="ElementShortName">INPUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">INPUT[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/simulation_Perceptron/CLOCK">
+      <obj_property name="ElementShortName">CLOCK</obj_property>
+      <obj_property name="ObjectShortName">CLOCK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/simulation_Perceptron/RESET">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/simulation_Perceptron/VALID">
+      <obj_property name="ElementShortName">VALID</obj_property>
+      <obj_property name="ObjectShortName">VALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/simulation_Perceptron/OUTPUT">
+      <obj_property name="ElementShortName">OUTPUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OUTPUT[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">16</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/simulation_Perceptron/percep/Weight">
+      <obj_property name="ElementShortName">Weight[0:3][31:0]</obj_property>
+      <obj_property name="ObjectShortName">Weight[0:3][31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">16</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/simulation_Perceptron/percep/res_mul">
+      <obj_property name="ElementShortName">res_mul[63:0]</obj_property>
+      <obj_property name="ObjectShortName">res_mul[63:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">32</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/simulation_Perceptron/percep/res_sum">
+      <obj_property name="ElementShortName">res_sum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">res_sum[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">16</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/simulation_Perceptron/percep/index">
+      <obj_property name="ElementShortName">index[7:0]</obj_property>
+      <obj_property name="ObjectShortName">index[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/simulation_Perceptron/percep/intern_valid">
+      <obj_property name="ElementShortName">intern_valid</obj_property>
+      <obj_property name="ObjectShortName">intern_valid</obj_property>
+   </wvobject>
+</wave_config>

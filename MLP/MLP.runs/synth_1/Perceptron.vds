@@ -1,0 +1,343 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Jan  5 09:34:28 2026
+# Process ID         : 25895
+# Current directory  : /home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.runs/synth_1
+# Command line       : vivado -log Perceptron.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Perceptron.tcl
+# Log file           : /home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.runs/synth_1/Perceptron.vds
+# Journal file       : /home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.runs/synth_1/vivado.jou
+# Running On         : insa-21101
+# Platform           : Linuxmint
+# Operating System   : Linux Mint 22
+# Processor Detail   : Intel(R) Xeon(R) w3-2423
+# CPU Frequency      : 2654.576 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 66628 MB
+# Swap memory        : 0 MB
+# Total Virtual      : 66628 MB
+# Available Virtual  : 59263 MB
+#-----------------------------------------------------------
+source Perceptron.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.srcs/utils_1/imports/synth_1/Perceptron.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.srcs/utils_1/imports/synth_1/Perceptron.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Perceptron -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 25945
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1765.359 ; gain = 277.859 ; free physical = 50935 ; free virtual = 55629
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Perceptron' [/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.srcs/sources_1/new/Perceptron.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'Perceptron' (0#1) [/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.srcs/sources_1/new/Perceptron.vhd:46]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1836.297 ; gain = 348.797 ; free physical = 50881 ; free virtual = 55576
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1854.109 ; gain = 366.609 ; free physical = 51076 ; free virtual = 55770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1862.113 ; gain = 374.613 ; free physical = 51071 ; free virtual = 55765
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1879.027 ; gain = 391.527 ; free physical = 50993 ; free virtual = 55688
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 6     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---Muxes : 
+	   4 Input   32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP multOp, operation Mode is: A*B.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP res_mul_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register res_mul_reg is absorbed into DSP res_mul_reg.
+DSP Report: operator multOp is absorbed into DSP res_mul_reg.
+DSP Report: operator multOp is absorbed into DSP res_mul_reg.
+DSP Report: Generating DSP multOp, operation Mode is: A*B.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: operator multOp is absorbed into DSP multOp.
+DSP Report: Generating DSP res_mul_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register res_mul_reg is absorbed into DSP res_mul_reg.
+DSP Report: operator multOp is absorbed into DSP res_mul_reg.
+DSP Report: operator multOp is absorbed into DSP res_mul_reg.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[47]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[46]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[45]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[44]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[43]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[42]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[41]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[40]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[39]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[38]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[37]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[36]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[35]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[34]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[33]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[32]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[31]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[30]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[29]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[28]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[27]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[26]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[25]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[24]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[23]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[22]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[21]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[20]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[19]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[18]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[17]) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[47]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[46]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[45]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[44]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[43]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[42]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[41]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[40]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[39]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[38]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[37]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[36]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[35]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[34]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[33]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[32]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[31]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[30]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[29]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[28]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[27]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[26]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[25]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[24]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[23]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[22]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[21]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[20]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[19]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[18]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[17]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[15]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[14]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[13]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[12]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[11]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[10]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[9]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[8]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[7]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[6]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[5]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[4]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[3]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[2]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[1]__0) is unused and will be removed from module Perceptron.
+WARNING: [Synth 8-3332] Sequential element (res_mul_reg[0]__0) is unused and will be removed from module Perceptron.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1982.996 ; gain = 495.496 ; free physical = 50775 ; free virtual = 55474
+---------------------------------------------------------------------------------
+ Sort Area is  multOp_0 : 0 0 : 2701 5095 : Used 1 time 0
+ Sort Area is  multOp_0 : 0 1 : 2394 5095 : Used 1 time 0
+ Sort Area is  multOp_3 : 0 0 : 2339 4542 : Used 1 time 0
+ Sort Area is  multOp_3 : 0 1 : 2203 4542 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Perceptron  | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Perceptron  | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|Perceptron  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Perceptron  | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1982.996 ; gain = 495.496 ; free physical = 50775 ; free virtual = 55474
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1982.996 ; gain = 495.496 ; free physical = 50775 ; free virtual = 55474
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2128.809 ; gain = 641.309 ; free physical = 50650 ; free virtual = 55348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2128.809 ; gain = 641.309 ; free physical = 50650 ; free virtual = 55348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2128.809 ; gain = 641.309 ; free physical = 50650 ; free virtual = 55348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2128.809 ; gain = 641.309 ; free physical = 50650 ; free virtual = 55348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2128.809 ; gain = 641.309 ; free physical = 50650 ; free virtual = 55348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2128.809 ; gain = 641.309 ; free physical = 50650 ; free virtual = 55348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Perceptron  | A*B             | 17     | 3      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Perceptron  | (PCIN>>17+A*B)' | 3      | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|Perceptron  | A*B             | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Perceptron  | (PCIN>>17+A*B)' | 0      | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    20|
+|3     |DSP48E1 |     4|
+|4     |LUT1    |     2|
+|5     |LUT2    |    83|
+|6     |LUT3    |     8|
+|7     |LUT4    |     1|
+|8     |LUT5    |     1|
+|9     |LUT6    |     3|
+|10    |FDRE    |    91|
+|11    |FDSE    |     1|
+|12    |IBUF    |    35|
+|13    |OBUF    |    33|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   283|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2128.809 ; gain = 641.309 ; free physical = 50650 ; free virtual = 55348
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 79 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2128.809 ; gain = 641.309 ; free physical = 50650 ; free virtual = 55348
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2128.816 ; gain = 641.309 ; free physical = 50650 ; free virtual = 55348
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2144.652 ; gain = 0.000 ; free physical = 50749 ; free virtual = 55448
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2291.305 ; gain = 0.000 ; free physical = 50666 ; free virtual = 55365
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: a58fd0de
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 79 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2291.305 ; gain = 803.809 ; free physical = 50666 ; free virtual = 55365
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1495.649; main = 1495.649; forked = 276.195
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2804.770; main = 2291.309; forked = 916.832
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2315.316 ; gain = 0.000 ; free physical = 50670 ; free virtual = 55369
+INFO: [Common 17-1381] The checkpoint '/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.runs/synth_1/Perceptron.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file Perceptron_utilization_synth.rpt -pb Perceptron_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  5 09:34:56 2026...

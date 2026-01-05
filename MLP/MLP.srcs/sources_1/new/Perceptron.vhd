@@ -45,9 +45,9 @@ end Perceptron;
 
 architecture Behavioral of Perceptron is
     type Weights_type is array(0 to 3) of std_logic_vector (31 downto  0);
-    signal Weight : Weights_type := (others => X"00");
+    signal Weight : Weights_type := (others => X"00000000");
     --signal w1 : integer := W;
-    signal res_mul: std_logic_vector(31 downto 0);
+    signal res_mul: std_logic_vector(63 downto 0);
     signal res_sum: std_logic_vector(31 downto 0);
     signal index: std_logic_vector(7 downto 0);
     signal intern_valid: std_logic;
@@ -59,26 +59,31 @@ begin
                 index <= x"00";
                 valid <= '0';
                 intern_valid <= '0';
-                res_mul <= x"0000";
-                res_sum <= x"0000";
+                res_mul <= x"0000000000000000";
+                res_sum <= x"00000000";
+                Weight(0) <= X"00050000";
+                Weight(1) <= X"00020000";
+                Weight(2) <= X"00080000";
+                Weight(3) <= X"00030000";
             end if;
             if intern_valid = '0' and Enable = '1' then
                 -- MULTIPLICATEUR
                 res_mul <= Weight(TO_INTEGER(unsigned(index))) * Input_Value;
                 -- SUMMATEUR
-                res_sum <= res_sum + res_mul;
-                -- FONCTION D'ACTIVATION ReLu
-                if res_sum < 0 then
-                    Output_Value <= x"0000";
-                else
-                    Output_Value <= res_sum;
-                end if;
+                res_sum <= res_sum + res_mul(47 downto 16);
+                res_sum(31) <= res_mul(63);
                 -- UPDATE INDEX
                 index <= index + 1;
                 if index >= 3 then
                     valid <= '1';
                     intern_valid <= '1';
                 end if;
+            end if;
+            -- FONCTION D'ACTIVATION ReLu
+            if (signed(res_sum) < 0) then
+                Output_Value <= x"00000000";
+            else
+                Output_Value <= res_sum;
             end if;
         end if;
     end process;

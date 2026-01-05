@@ -39,8 +39,8 @@ end simulation_Perceptron;
 architecture Bench of simulation_Perceptron is
     signal ENABLE       : STD_LOGIC;
     signal INPUT        : STD_LOGIC_VECTOR (31 downto 0);
-    signal CLOCK        : STD_LOGIC;
-    signal RESET        : STD_LOGIC;
+    signal CLOCK        : STD_LOGIC := '0';
+    signal RESET        : STD_LOGIC := '1';
     signal VALID        : STD_LOGIC;
     signal OUTPUT       : STD_LOGIC_VECTOR (31 downto 0);
     
@@ -67,8 +67,10 @@ begin
         RESET <= '0';
         wait for 20 ns;
         RESET <= '1';
-        INPUT <= x"0001";
+        INPUT <= x"00010000";
         wait for 20 ns;
         ENABLE <= '1';
+        
+        wait;
     end process;
 end Bench;
