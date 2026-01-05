@@ -10,12 +10,12 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="34.040 ns"></ZoomStartTime>
-      <ZoomEndTime time="120.041 ns"></ZoomEndTime>
-      <Cursor1Time time="85.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="111.905 ns"></ZoomEndTime>
+      <Cursor1Time time="75.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="105"></NameColumnWidth>
+      <NameColumnWidth column_width="101"></NameColumnWidth>
       <ValueColumnWidth column_width="60"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="12" />
@@ -66,7 +66,7 @@
    <wvobject type="array" fp_name="/simulation_Perceptron/percep/res_sum">
       <obj_property name="ElementShortName">res_sum[31:0]</obj_property>
       <obj_property name="ObjectShortName">res_sum[31:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">16</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>

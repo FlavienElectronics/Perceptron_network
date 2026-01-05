@@ -52,7 +52,7 @@ architecture Behavioral of Perceptron is
     signal index: std_logic_vector(7 downto 0);
     signal intern_valid: std_logic;
     signal res_xor: std_logic;
-    signal coup_dans_le_vide : std_logic;
+    signal dif_pos : std_logic;
 begin
     process(Clock)
     begin
@@ -61,8 +61,7 @@ begin
                 index <= x"00";
                 valid <= '0';
                 intern_valid <= '0';
-                coup_dans_le_vide <= '0';
-                res_mul <= x"0000000000000000";
+--                res_mul <= x"0000000000000000";
                 res_sum <= x"00000000";
                 Weight(0) <= X"00050000";
                 Weight(1) <= X"00020000";
@@ -71,21 +70,19 @@ begin
             end if;
             if intern_valid = '0' and Enable = '1' then
                 -- MULTIPLICATEUR
-                res_mul <= (Weight(TO_INTEGER(unsigned(index))) AND not X"80000000") * (Input_Value AND not X"80000000");
+                --res_mul <= (Weight(TO_INTEGER(unsigned(index))) AND not X"80000000") * (Input_Value AND not X"80000000");
                 -- SUMMATEUR
                 res_xor <= (Weight(TO_INTEGER(unsigned(index)))(31) XOR Input_Value(31));
-                if res_xor = '1' then
+                if (res_xor = '1' and dif_pos = '1') then
                     res_sum <= (res_sum - (res_mul(47 downto 16)) OR X"80000000");
+                elsif (res_xor = '1' and dif_pos = '0') then
+                   res_sum <= ((res_mul(47 downto 16) - res_sum) OR X"80000000");
                 else
                     res_sum <= (res_sum + (res_mul(47 downto 16)) AND not X"80000000");
                 end if;
+                
                 -- UPDATE INDEX
-                --if index = 0 then
-                --    coup_dans_le_vide <= '1';
-                --end if;
-                --if coup_dans_le_vide = '1' then
                 index <= index + 1;
-                --end if;
                 if index >= 3 then
                     valid <= '1';
                     intern_valid <= '1';
@@ -93,6 +90,11 @@ begin
             end if;
         end if;
     end process;
+    
+    -- MULTIPLICATEUR
+    res_mul <= (Weight(TO_INTEGER(unsigned(index))) AND not X"80000000") * (Input_Value AND not X"80000000") when index < 4;
+    
+    dif_pos <= '1' when res_sum > res_mul(47 downto 16) else '0';
     
     -- FONCTION D'ACTIVATION ReLu
     Output_Value <= x"00000000" when res_sum(31) = '1' else res_sum;

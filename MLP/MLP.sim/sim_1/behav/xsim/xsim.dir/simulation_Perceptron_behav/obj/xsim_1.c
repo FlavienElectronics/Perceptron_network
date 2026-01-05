@@ -54,18 +54,20 @@
 #endif
 typedef void (*funcp)(char *, char *);
 extern int main(int, char**);
-IKI_DLLESPEC extern void execute_50(char*, char *);
-IKI_DLLESPEC extern void execute_51(char*, char *);
-IKI_DLLESPEC extern void execute_48(char*, char *);
-IKI_DLLESPEC extern void execute_49(char*, char *);
+IKI_DLLESPEC extern void execute_58(char*, char *);
+IKI_DLLESPEC extern void execute_59(char*, char *);
+IKI_DLLESPEC extern void execute_54(char*, char *);
+IKI_DLLESPEC extern void execute_55(char*, char *);
+IKI_DLLESPEC extern void execute_56(char*, char *);
+IKI_DLLESPEC extern void execute_57(char*, char *);
 IKI_DLLESPEC extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
 IKI_DLLESPEC extern void transaction_2(char*, char*, unsigned, unsigned, unsigned);
-funcp funcTab[6] = {(funcp)execute_50, (funcp)execute_51, (funcp)execute_48, (funcp)execute_49, (funcp)vhdl_transfunc_eventcallback, (funcp)transaction_2};
-const int NumRelocateId= 6;
+funcp funcTab[8] = {(funcp)execute_58, (funcp)execute_59, (funcp)execute_54, (funcp)execute_55, (funcp)execute_56, (funcp)execute_57, (funcp)vhdl_transfunc_eventcallback, (funcp)transaction_2};
+const int NumRelocateId= 8;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/simulation_Perceptron_behav/xsim.reloc",  (void **)funcTab, 6);
+	iki_relocate(dp, "xsim.dir/simulation_Perceptron_behav/xsim.reloc",  (void **)funcTab, 8);
 	iki_vhdl_file_variable_register(dp + 5200);
 	iki_vhdl_file_variable_register(dp + 5256);
 
