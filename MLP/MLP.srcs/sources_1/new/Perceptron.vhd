@@ -170,7 +170,7 @@ begin
 --    sum_is_greater_than_mul <= '1' when res_sum > res_mul(47 downto 16) else '0';
     
     A <= res_sum;
-    B <= res_mul(63 downto 32);
+    B <= res_mul(63) & res_mul(61 downto 31); -- problème ici
     
     A_is_positive <= '1' when A(31) = '0' else '0';
     B_is_positive <= '1' when B(31) = '0' else '0';
