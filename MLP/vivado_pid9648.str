@@ -2070,3 +2070,80 @@ selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 203, 429); // b (RDIRe
 // TclEventType: WAVEFORM_UPDATE_WAVEFORM
 // TclEventType: WAVEFORM_UPDATE_COMMANDS
 // TclEventType: WAVEFORM_MOVE_CURSOR
+// Elapsed time: 22 seconds
+selectCodeEditor("simulation_Perceptron.vhd", 473, 390); // ae (simulation_Perceptron.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 8:52:28 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 8:53:08 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 8:53:48 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 8:54:28 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 8:55:08 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 8:55:48 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 8:56:28 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 8:57:08 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 8:57:48 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 8:58:28 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 8:59:08 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 8:59:48 PM CET
+// Elapsed time: 470 seconds
+selectCodeEditor("simulation_Perceptron.vhd", 839, 261); // ae (simulation_Perceptron.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:00:28 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:01:08 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:01:48 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:02:28 PM CET
+// Elapsed time: 156 seconds
+selectCodeEditor("simulation_Perceptron.vhd", 656, 433); // ae (simulation_Perceptron.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:03:08 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:03:48 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:04:28 PM CET
+// Elapsed time: 104 seconds
+selectCodeEditor("simulation_Perceptron.vhd", 630, 349); // ae (simulation_Perceptron.vhd)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Perceptron.vhd", 0); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("Perceptron.vhd", 742, 225); // ae (Perceptron.vhd)
+typeControlKey((HResource) null, "Perceptron.vhd", 'c'); // ae (Perceptron.vhd)
+// [GUI Memory]: 193 MB (+246kb) [00:38:38]
+selectCodeEditor("Perceptron.vhd", 299, 251); // ae (Perceptron.vhd)
+selectCodeEditor("Perceptron.vhd", 738, 246); // ae (Perceptron.vhd)
+typeControlKey((HResource) null, "Perceptron.vhd", 'c'); // ae (Perceptron.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:05:08 PM CET
+// Elapsed time: 11 seconds
+selectCodeEditor("Perceptron.vhd", 435, 89); // ae (Perceptron.vhd)
+typeControlKey((HResource) null, "Perceptron.vhd", 'c'); // ae (Perceptron.vhd)
+// Elapsed time: 26 seconds
+selectCodeEditor("Perceptron.vhd", 196, 242); // ae (Perceptron.vhd)
+selectCodeEditor("Perceptron.vhd", 238, 258); // ae (Perceptron.vhd)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 39m:11s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 39m:13s
+selectCodeEditor("Perceptron.vhd", 474, 141); // ae (Perceptron.vhd)
+selectCodeEditor("Perceptron.vhd", 183, 141); // ae (Perceptron.vhd)
+selectCodeEditor("Perceptron.vhd", 477, 141); // ae (Perceptron.vhd)
+typeControlKey((HResource) null, "Perceptron.vhd", 'c'); // ae (Perceptron.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:05:48 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:06:28 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:07:09 PM CET
+// Elapsed time: 121 seconds
+selectCodeEditor("Perceptron.vhd", 181, 247); // ae (Perceptron.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:07:49 PM CET
+selectCodeEditor("Perceptron.vhd", 185, 280); // ae (Perceptron.vhd)
+selectCodeEditor("Perceptron.vhd", 183, 274); // ae (Perceptron.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:08:29 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:09:09 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:09:49 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:10:29 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:11:09 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:11:49 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:12:29 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:13:09 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:13:49 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:14:29 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:15:09 PM CET
+// Elapsed time: 464 seconds
+selectCodeEditor("Perceptron.vhd", 679, 457); // ae (Perceptron.vhd)
+selectCodeEditor("Perceptron.vhd", 342, 438); // ae (Perceptron.vhd)
+// Run Command: RDIResourceCommand.RDICommands_WAVEFORM_SAVE_CONFIGURATION
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// Tcl Message: save_wave_config {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} 
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:15:49 PM CET

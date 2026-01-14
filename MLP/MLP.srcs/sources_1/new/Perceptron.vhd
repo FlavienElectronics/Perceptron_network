@@ -44,7 +44,10 @@ entity Perceptron is
 end Perceptron;
 
 architecture Behavioral of Perceptron is
-    type Weights_type is array(0 to 3) of std_logic_vector (31 downto  0);
+    constant weight_array_size : integer := 4; -- Désigne la taille du vecteur de poids
+    constant size_integral_32bit : integer := 2; -- Désigne le nombre de bit codant la partie entière du mot de 32 bits
+    
+    type Weights_type is array(0 to weight_array_size-1) of std_logic_vector (31 downto  0);
     signal Weight : Weights_type := (others => X"00000000");
     signal actualWeight : std_logic_vector (31 downto  0);
     --signal w1 : integer := W;
@@ -155,7 +158,7 @@ begin
                 
                 -- UPDATE INDEX
                 index <= index + 1;
-                if index >= 3 then
+                if index >= (weight_array_size-1) then
                     valid <= '1';
                     intern_valid <= '1';
                     index <= x"00";
@@ -188,7 +191,7 @@ begin
     
     mul_mask <= x"0000000000000000" when mul_sign = '0' else x"8000000000000000" ;
     
-    res_mul <= ((Weight(TO_INTEGER(unsigned(index))) AND not X"80000000") * (Input_Value AND not X"80000000")) or mul_mask when index < 4;
+    res_mul <= ((Weight(TO_INTEGER(unsigned(index))) AND not X"80000000") * (Input_Value AND not X"80000000")) or mul_mask when index < weight_array_size;
     
     --dif_pos <= '1' when res_sum > res_mul(47 downto 16) else '0';
     

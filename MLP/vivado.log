@@ -488,3 +488,4 @@ source simulation_Perceptron.tcl
 # run 1000ns
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Perceptron_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+save_wave_config {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg}

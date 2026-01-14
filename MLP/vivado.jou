@@ -58,3 +58,4 @@ close_sim
 launch_simulation
 open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
 source simulation_Perceptron.tcl
+save_wave_config {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg}
