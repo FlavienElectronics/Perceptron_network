@@ -46,6 +46,7 @@ end Perceptron;
 architecture Behavioral of Perceptron is
     type Weights_type is array(0 to 3) of std_logic_vector (31 downto  0);
     signal Weight : Weights_type := (others => X"00000000");
+    signal actualWeight : std_logic_vector (31 downto  0);
     --signal w1 : integer := W;
     signal res_mul: std_logic_vector(63 downto 0);
     signal mul_mask: std_logic_vector(63 downto 0);
@@ -121,30 +122,30 @@ begin
                 --                                          ON SOMME
                 --              CASE A > 0 and B > 0
                 if (A_is_positive = '1' and B_is_positive = '1') then 
-                    res_sum <=  ((A + B) AND not X"80000000");
+                    res_sum <=  ((A + B) AND not X"80000000"); -- effacement du bit de signe
                     
                 --              CASE A < 0 and B < 0 
                 elsif (A_is_positive = '0' and B_is_positive = '0') then 
-                    res_sum <=  ((A + B) OR X"80000000");
+                    res_sum <=  ((A + B) OR X"80000000"); -- mise à 1 du bit de signe
                     
                 --              CASE A > 0 and B < 0   
                 elsif (A_is_positive = '1' and B_is_positive = '0') then     
                     if (A_is_equal_to_B = '1') then
                         res_sum <= X"00000000";
                     elsif (A_is_greater_than_B = '1') then
-                        res_sum <=  ((A + B) AND not X"80000000");
+                        res_sum <=  ((A - B) AND not X"80000000"); -- effacement du bit de signe
                     else 
-                        res_sum <=  ((B - A) OR X"80000000");
+                        res_sum <=  ((B - A) OR X"80000000"); -- mise à 1 du bit de signe
                     end if;
                     
                 --              CASE A < 0 and B > 0   
-                elsif (A_is_positive = '1' and B_is_positive = '0') then     
+                elsif (A_is_positive = '0' and B_is_positive = '1') then     
                     if (A_is_equal_to_B = '1') then
                         res_sum <= X"00000000";
                     elsif (A_is_greater_than_B = '1') then
-                        res_sum <=  ((A - B) OR X"80000000");
+                        res_sum <=  ((A - B) OR X"80000000"); -- mise à 1 du bit de signe
                     else 
-                        res_sum <=  ((B - A) AND not X"80000000");
+                        res_sum <=  ((B - A) AND not X"80000000"); -- effacement du bit de signe
                     end if;
                 
                 else
@@ -162,6 +163,8 @@ begin
             end if;
         end if;
     end process;
+    
+    actualWeight <= (Weight(TO_INTEGER(unsigned(index))));
     
 --    weight_is_positive <= '1' when Weight(TO_INTEGER(unsigned(index)))(31) = '0' else '0';
 --    input_is_positive <= '1' when Input_Value(31) = '0' else '0';

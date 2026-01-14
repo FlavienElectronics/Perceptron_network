@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.runs/synth_1/Perceptron.tcl"
+  variable script "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.runs/synth_1/Perceptron.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,22 +56,23 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param general.usePosixSpawnForFork 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.cache/wt} [current_project]
-set_property parent.project_path {/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.cache/wt [current_project]
+set_property parent.project_path C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
-set_property ip_output_repo {/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib {{/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.srcs/sources_1/new/Perceptron.vhd}}
+read_vhdl -library xil_defaultlib C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Perceptron.vhd
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -83,7 +84,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental {/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.srcs/utils_1/imports/synth_1/Perceptron.dcp}
+read_checkpoint -auto_incremental -incremental C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/utils_1/imports/synth_1/Perceptron.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

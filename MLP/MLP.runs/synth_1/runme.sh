@@ -1,16 +1,20 @@
-#!/bin/sh
+#!/bin/bash
 
 # 
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-# Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+# Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
 
+echo "This script was generated under a different operating system."
+echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executing this script"
+exit
+
 if [ -z "$PATH" ]; then
-  PATH=/usr/local/Xilinx/Vitis/2024.2/bin:/usr/local/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/lin64:/usr/local/Xilinx/Vivado/2024.2/bin
+  PATH=C:/Program/2025.2/Vitis/bin;C:/Program/2025.2/Vivado/ids_lite/ISE/bin/nt64;C:/Program/2025.2/Vivado/ids_lite/ISE/lib/nt64:C:/Program/2025.2/Vivado/bin
 else
-  PATH=/usr/local/Xilinx/Vitis/2024.2/bin:/usr/local/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/lin64:/usr/local/Xilinx/Vivado/2024.2/bin:$PATH
+  PATH=C:/Program/2025.2/Vitis/bin;C:/Program/2025.2/Vivado/ids_lite/ISE/bin/nt64;C:/Program/2025.2/Vivado/ids_lite/ISE/lib/nt64:C:/Program/2025.2/Vivado/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.runs/synth_1'
+HD_PWD='C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
