@@ -60,7 +60,7 @@ architecture Behavioral of Perceptron is
     -- Decimal : [28,0]
     
     -- res_mul (binary) : 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-    --                    SSII IIDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD
+    --                    SXII IIDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD
     -- Signe : 63
     -- Integral : [61,58]
     -- Decimal : [57,0]

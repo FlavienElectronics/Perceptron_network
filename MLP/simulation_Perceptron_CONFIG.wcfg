@@ -10,13 +10,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="5.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="162.901 ns"></ZoomEndTime>
-      <Cursor1Time time="58.300 ns"></Cursor1Time>
+      <ZoomStartTime time="20.975 ns"></ZoomStartTime>
+      <ZoomEndTime time="179.076 ns"></ZoomEndTime>
+      <Cursor1Time time="40.975 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="170"></NameColumnWidth>
-      <ValueColumnWidth column_width="127"></ValueColumnWidth>
+      <ValueColumnWidth column_width="123"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="18" />
    <wvobject fp_name="/simulation_Perceptron/ENABLE" type="logic">
