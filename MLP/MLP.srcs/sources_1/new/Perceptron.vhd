@@ -48,10 +48,37 @@ architecture Behavioral of Perceptron is
     signal Weight : Weights_type := (others => X"00000000");
     --signal w1 : integer := W;
     signal res_mul: std_logic_vector(63 downto 0);
+    signal mul_mask: std_logic_vector(63 downto 0);
+    
+    -- S = signe / I = partie intégrale / D = partie décimale
+    
+    -- res_sum (binary) : 0000 0000 0000 0000 0000 0000 0000 0000
+    --                    SIID DDDD DDDD DDDD DDDD DDDD DDDD DDDD 
+    -- Signe : 31
+    -- Integral : [30,29]
+    -- Decimal : [28,0]
+    
+    -- res_mul (binary) : 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+    --                    SSII IIDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD
+    -- Signe : 63
+    -- Integral : [61,58]
+    -- Decimal : [57,0]
     signal res_sum: std_logic_vector(31 downto 0);
     signal index: std_logic_vector(7 downto 0);
     signal intern_valid: std_logic;
-    signal res_xor: std_logic;
+    
+    signal A_is_positive: std_logic;
+    signal B_is_positive: std_logic;
+    --signal sum_is_positive: std_logic;
+    --signal mul_is_positive: std_logic;
+    signal A_is_greater_than_B: std_logic;
+    signal A_is_equal_to_B: std_logic;
+    
+    signal A: std_logic_vector(31 downto 0);
+    signal B: std_logic_vector(31 downto 0);
+    
+    
+    signal mul_sign: std_logic;
     signal dif_pos : std_logic;
 begin
     process(Clock)
@@ -72,14 +99,55 @@ begin
                 -- MULTIPLICATEUR
                 --res_mul <= (Weight(TO_INTEGER(unsigned(index))) AND not X"80000000") * (Input_Value AND not X"80000000");
                 -- SUMMATEUR
-                res_xor <= (Weight(TO_INTEGER(unsigned(index)))(31) XOR Input_Value(31));
-                if (res_xor = '1' and dif_pos = '1') then
-                    res_sum <= (res_sum - (res_mul(47 downto 16)) OR X"80000000");
-                elsif (res_xor = '1' and dif_pos = '0') then
-                   res_sum <= ((res_mul(47 downto 16) - res_sum) OR X"80000000");
+                
+--                -- 1 valeur est négative et somme totale > multiplication
+--                if (res_xor = '1' and dif_pos = '1') then
+--                    res_sum <= (res_sum - (res_mul(47 downto 16)) OR X"80000000");
+                
+--                -- 1 valeur est négative et somme totale < multiplication
+--                elsif (res_xor = '1' and dif_pos = '0') then
+--                   res_sum <= ((res_mul(47 downto 16) - res_sum) OR X"80000000");
+                   
+--                -- Les deux valeurs sont soit négatives soit positives 
+--                else
+--                    res_sum <= (res_sum + (res_mul(47 downto 16)) AND not X"80000000");
+--                end if;
+
+
+                -- A = res_sum and B = res_mul
+                --                                          ON SOMME
+                --              CASE A > 0 and B > 0
+                if (A_is_positive = '1' and B_is_positive = '1') then 
+                    res_sum <=  ((A + B) AND not X"80000000");
+                    
+                --              CASE A < 0 and B < 0 
+                elsif (A_is_positive = '0' and B_is_positive = '0') then 
+                    res_sum <=  ((A + B) OR X"80000000");
+                    
+                --              CASE A > 0 and B < 0   
+                elsif (A_is_positive = '1' and B_is_positive = '0') then     
+                    if (A_is_equal_to_B = '1') then
+                        res_sum <= X"00000000";
+                    elsif (A_is_greater_than_B = '1') then
+                        res_sum <=  ((A + B) AND not X"80000000");
+                    else 
+                        res_sum <=  ((B - A) OR X"80000000");
+                    end if;
+                    
+                --              CASE A < 0 and B > 0   
+                elsif (A_is_positive = '1' and B_is_positive = '0') then     
+                    if (A_is_equal_to_B = '1') then
+                        res_sum <= X"00000000";
+                    elsif (A_is_greater_than_B = '1') then
+                        res_sum <=  ((A - B) OR X"80000000");
+                    else 
+                        res_sum <=  ((B - A) AND not X"80000000");
+                    end if;
+                
                 else
-                    res_sum <= (res_sum + (res_mul(47 downto 16)) AND not X"80000000");
+                    res_sum <= X"00000000";
                 end if;
+                
                 
                 -- UPDATE INDEX
                 index <= index + 1;
@@ -91,10 +159,31 @@ begin
         end if;
     end process;
     
-    -- MULTIPLICATEUR
-    res_mul <= (Weight(TO_INTEGER(unsigned(index))) AND not X"80000000") * (Input_Value AND not X"80000000") when index < 4;
+--    weight_is_positive <= '1' when Weight(TO_INTEGER(unsigned(index)))(31) = '0' else '0';
+--    input_is_positive <= '1' when Input_Value(31) = '0' else '0';
+--    sum_is_positive <= '1' when res_sum(31) = '0' else '0';
+--    mul_is_positive <= '1' when res_mul(31) = '0' else '0';
+--    sum_is_greater_than_mul <= '1' when res_sum > res_mul(47 downto 16) else '0';
     
-    dif_pos <= '1' when res_sum > res_mul(47 downto 16) else '0';
+    A <= res_sum;
+    B <= res_mul(63 downto 32);
+    
+    A_is_positive <= '1' when A(31) = '0' else '0';
+    B_is_positive <= '1' when B(31) = '0' else '0';
+    A_is_greater_than_B <= '1' when A(30 downto 0) > B(30 downto 0) else '0';
+    A_is_equal_to_B <= '1' when A(30 downto 0) = B(30 downto 0) else '0';
+ 
+    -- MULTIPLICATEUR
+    
+    -- mul_sign représente le ou exclusif entre le bit de signe de la valeur d'entrée et le poid correspondant
+    mul_sign <= (Weight(TO_INTEGER(unsigned(index)))(31) XOR Input_Value(31));
+    -- si mul_sign = 1 alors au moins une valeur est négative sinon, les deux valeurs sont positives ou négative
+    
+    mul_mask <= x"0000000000000000" when mul_sign = '0' else x"8000000000000000" ;
+    
+    res_mul <= ((Weight(TO_INTEGER(unsigned(index))) AND not X"80000000") * (Input_Value AND not X"80000000")) or mul_mask when index < 4;
+    
+    --dif_pos <= '1' when res_sum > res_mul(47 downto 16) else '0';
     
     -- FONCTION D'ACTIVATION ReLu
     Output_Value <= x"00000000" when res_sum(31) = '1' else res_sum;
