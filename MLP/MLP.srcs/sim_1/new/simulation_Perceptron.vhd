@@ -67,7 +67,7 @@ begin
         RESET <= '0';
         wait for 20 ns;
         RESET <= '1';
-        INPUT <= x"00010000";
+        INPUT <= x"20000000"; -- = 1.0
         wait for 20 ns;
         ENABLE <= '1';
         

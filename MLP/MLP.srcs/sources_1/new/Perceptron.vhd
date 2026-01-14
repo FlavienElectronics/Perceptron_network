@@ -90,10 +90,13 @@ begin
                 intern_valid <= '0';
 --                res_mul <= x"0000000000000000";
                 res_sum <= x"00000000";
-                Weight(0) <= X"00050000";
-                Weight(1) <= X"00020000";
-                Weight(2) <= X"80080000";
-                Weight(3) <= X"00030000";
+                
+                -- res_sum (binary) : 0000 0000 0000 0000 0000 0000 0000 0000
+                --                    SIID DDDD DDDD DDDD DDDD DDDD DDDD DDDD 
+                Weight(0) <= X"30000000"; -- = 1.5
+                Weight(1) <= X"10000000"; -- = 0.5
+                Weight(2) <= X"A0000000"; -- = -1.0
+                Weight(3) <= X"40000000"; -- =  2.0
             end if;
             if intern_valid = '0' and Enable = '1' then
                 -- MULTIPLICATEUR
@@ -154,6 +157,7 @@ begin
                 if index >= 3 then
                     valid <= '1';
                     intern_valid <= '1';
+                    index <= x"00";
                 end if;
             end if;
         end if;
