@@ -171,6 +171,10 @@ def modifier_resultat(widget, texte):
 
 def maj_ligne_float_to_hex32(*args):
     valeur = var_entree_1.get()
+    n_int = var_int_1.get() or "0"
+    n_dead = var_dead_1.get() or "0"
+    v_dec = 31 - int(n_int) - int(n_dead)
+    modifier_resultat(lbl_v_dec_1, v_dec)
     if valeur:
         res = convertion_float_hex32(valeur)
         modifier_resultat(res_1, ajouter_separateur(res))
@@ -179,16 +183,28 @@ def maj_ligne_float_to_hex32(*args):
 
 def maj_ligne_float_to_hex64(*args):
     valeur = var_entree_2.get()
+    n_int = var_int_2.get() or "0"
+    n_dead = var_dead_2.get() or "0"
+    v_dec = 63 - int(n_int) - int(n_dead)
+    modifier_resultat(lbl_v_dec_2, v_dec)
     res = convertion_float_hex64(valeur)
     modifier_resultat(res_2, ajouter_separateur(res))
 
 def maj_ligne_hex32_to_float(*args):
     valeur = var_entree_3.get()
+    n_int = var_int_3.get() or "0"
+    n_dead = var_dead_3.get() or "0"
+    v_dec = 31 - int(n_int) - int(n_dead)
+    modifier_resultat(lbl_v_dec_3, v_dec)
     res = convertion_hex32_float(valeur)
     modifier_resultat(res_3, str(res))
 
 def maj_ligne_hex64_to_float(*args):
     valeur = var_entree_4.get()
+    n_int = var_int_4.get() or "0"
+    n_dead = var_dead_4.get() or "0"
+    v_dec = 63 - int(n_int) - int(n_dead)
+    modifier_resultat(lbl_v_dec_4, v_dec)
     res = convertion_hex64_float(valeur)
     modifier_resultat(res_4, res)
 
@@ -209,7 +225,7 @@ tk.Entry(f_g1, textvariable=var_entree_1).pack(fill="x", pady=5)
 fb1 = tk.Frame(f_g1); fb1.pack(anchor="w")
 tk.Label(fb1, text="Int:").grid(row=0, column=0); var_int_1 = tk.StringVar(value="2"); var_int_1.trace_add("write", maj_ligne_float_to_hex32)
 tk.Spinbox(fb1, from_=0, to=31, width=5, textvariable=var_int_1, command=maj_ligne_float_to_hex32).grid(row=1, column=0, padx=2)
-tk.Label(fb1, text="Dec:").grid(row=0, column=1); lbl_v_dec_1 = tk.Label(fb1, text="29", width=5, relief="sunken"); lbl_v_dec_1.grid(row=1, column=1, padx=2)
+tk.Label(fb1, text="Dec:").grid(row=0, column=1); lbl_v_dec_1 = tk.Entry(fb1, width=5, state="readonly", relief="sunken", justify="center"); lbl_v_dec_1.grid(row=1, column=1, padx=2)
 tk.Label(fb1, text="Dead:").grid(row=0, column=2); var_dead_1 = tk.StringVar(value="0"); var_dead_1.trace_add("write", maj_ligne_float_to_hex32)
 tk.Spinbox(fb1, from_=0, to=31, width=5, textvariable=var_dead_1, command=maj_ligne_float_to_hex32).grid(row=1, column=2, padx=2)
 f_d1 = tk.Frame(root, padx=20, pady=10); f_d1.grid(row=0, column=1, sticky="ew")
@@ -225,7 +241,7 @@ tk.Entry(f_g2, textvariable=var_entree_2).pack(fill="x", pady=5)
 fb2 = tk.Frame(f_g2); fb2.pack(anchor="w")
 tk.Label(fb2, text="Int:").grid(row=0, column=0); var_int_2 = tk.StringVar(value="2"); var_int_2.trace_add("write", maj_ligne_float_to_hex64)
 tk.Spinbox(fb2, from_=0, to=31, width=5, textvariable=var_int_2, command=maj_ligne_float_to_hex64).grid(row=1, column=0, padx=2)
-tk.Label(fb2, text="Dec:").grid(row=0, column=1); lbl_v_dec_2 = tk.Label(fb2, text="29", width=5, relief="sunken"); lbl_v_dec_2.grid(row=1, column=1, padx=2)
+tk.Label(fb2, text="Dec:").grid(row=0, column=1); lbl_v_dec_2 = tk.Entry(fb2, width=5, state="readonly", relief="sunken", justify="center"); lbl_v_dec_2.grid(row=1, column=1, padx=2)
 tk.Label(fb2, text="Dead:").grid(row=0, column=2); var_dead_2 = tk.StringVar(value="0"); var_dead_2.trace_add("write", maj_ligne_float_to_hex64)
 tk.Spinbox(fb2, from_=0, to=31, width=5, textvariable=var_dead_2, command=maj_ligne_float_to_hex64).grid(row=1, column=2, padx=2)
 f_d2 = tk.Frame(root, padx=20, pady=10); f_d2.grid(row=1, column=1, sticky="ew")
@@ -240,7 +256,7 @@ tk.Entry(f_g3, textvariable=var_entree_3).pack(fill="x", pady=5)
 fb3 = tk.Frame(f_g3); fb3.pack(anchor="w")
 tk.Label(fb3, text="Int:").grid(row=0, column=0); var_int_3 = tk.StringVar(value="2"); var_int_3.trace_add("write", maj_ligne_hex32_to_float)
 tk.Spinbox(fb3, from_=0, to=31, width=5, textvariable=var_int_3, command=maj_ligne_hex32_to_float).grid(row=1, column=0, padx=2)
-tk.Label(fb3, text="Dec:").grid(row=0, column=1); lbl_v_dec_3 = tk.Label(fb3, text="29", width=5, relief="sunken"); lbl_v_dec_3.grid(row=1, column=1, padx=2)
+tk.Label(fb3, text="Dec:").grid(row=0, column=1); lbl_v_dec_3 = tk.Entry(fb3, width=5, state="readonly", relief="sunken", justify="center"); lbl_v_dec_3.grid(row=1, column=1, padx=2)
 tk.Label(fb3, text="Dead:").grid(row=0, column=2); var_dead_3 = tk.StringVar(value="0"); var_dead_3.trace_add("write", maj_ligne_hex32_to_float)
 tk.Spinbox(fb3, from_=0, to=31, width=5, textvariable=var_dead_3, command=maj_ligne_hex32_to_float).grid(row=1, column=2, padx=2)
 f_d3 = tk.Frame(root, padx=20, pady=10); f_d3.grid(row=2, column=1, sticky="ew")
@@ -255,7 +271,7 @@ tk.Entry(f_g4, textvariable=var_entree_4).pack(fill="x", pady=5)
 fb4 = tk.Frame(f_g4); fb4.pack(anchor="w")
 tk.Label(fb4, text="Int:").grid(row=0, column=0); var_int_4 = tk.StringVar(value="2"); var_int_4.trace_add("write", maj_ligne_hex64_to_float)
 tk.Spinbox(fb4, from_=0, to=31, width=5, textvariable=var_int_4, command=maj_ligne_hex64_to_float).grid(row=1, column=0, padx=2)
-tk.Label(fb4, text="Dec:").grid(row=0, column=1); lbl_v_dec_4 = tk.Label(fb4, text="29", width=5, relief="sunken"); lbl_v_dec_4.grid(row=1, column=1, padx=2)
+tk.Label(fb4, text="Dec:").grid(row=0, column=1); lbl_v_dec_4 = tk.Entry(fb4, width=5, state="readonly", relief="sunken", justify="center"); lbl_v_dec_4.grid(row=1, column=1, padx=2)
 tk.Label(fb4, text="Dead:").grid(row=0, column=2); var_dead_4 = tk.StringVar(value="0"); var_dead_4.trace_add("write", maj_ligne_hex64_to_float)
 tk.Spinbox(fb4, from_=0, to=31, width=5, textvariable=var_dead_4, command=maj_ligne_hex64_to_float).grid(row=1, column=2, padx=2)
 f_d4 = tk.Frame(root, padx=20, pady=10); f_d4.grid(row=3, column=1, sticky="ew")
