@@ -2,15 +2,15 @@ import tkinter as tk
 
 # --- 1. FONCTIONS DE CALCUL ---
 
-def convertion_float_hex32(valeur_float):
+def convertion_float_hex32(valeur_float,size_integral,dead_bit):
     try:
         valeur_float = float(valeur_float)
     except ValueError:
         return "Erreur : format invalide"
 
     size_word = 32
-    size_integral = 2
-    dead_bit = 0
+    size_integral = int(size_integral)
+    dead_bit = int(dead_bit)
     size_decimal = size_word - size_integral - dead_bit - 1
     max_value_integral = 0
     
@@ -42,15 +42,15 @@ def convertion_float_hex32(valeur_float):
     return hex(final_value)
 
 
-def convertion_float_hex64(valeur_float):
+def convertion_float_hex64(valeur_float,size_integral,dead_bit):
     try:
         valeur_float = float(valeur_float)
     except ValueError:
         return "Erreur : format invalide"
 
     size_word = 64
-    size_integral = 4
-    dead_bit = 1
+    size_integral = int(size_integral)
+    dead_bit = int(dead_bit)
     size_decimal = size_word - size_integral - dead_bit - 1
     max_value_integral = 0
     
@@ -81,13 +81,13 @@ def convertion_float_hex64(valeur_float):
     final_value |= absolute_integral << (size_word - size_integral - dead_bit - 1)
     return hex(final_value)
 
-def convertion_hex64_float(valeur_hexa):
+def convertion_hex64_float(valeur_hexa,size_integral,dead_bit):
     valeur_hexa = supprimer_espaces(valeur_hexa)
     valeur_hexa = int(valeur_hexa,16)
 
     size_word = 64
-    size_integral = 4
-    dead_bit = 1
+    size_integral = int(size_integral)
+    dead_bit = int(dead_bit)
     size_decimal = size_word - size_integral - dead_bit - 1
 
     integral_mask = 0
@@ -110,13 +110,13 @@ def convertion_hex64_float(valeur_hexa):
         res_total = (decimal + integral)
     return(str(res_total))
 
-def convertion_hex32_float(valeur_hexa):
+def convertion_hex32_float(valeur_hexa,size_integral,dead_bit):
     valeur_hexa = supprimer_espaces(valeur_hexa)
     valeur_hexa = int(valeur_hexa,16)
 
     size_word = 32
-    size_integral = 2
-    dead_bit = 0
+    size_integral = int(size_integral)
+    dead_bit = int(dead_bit)
     size_decimal = size_word - size_integral - dead_bit - 1
     
     integral_mask = 0
@@ -145,7 +145,7 @@ def ajouter_separateur(texte, n=4, sep=" "):
     if (zero_missing < 4):
         for i in range(zero_missing):
             string_added += "0"
-        print(string_added)
+        #print(string_added)
 
     prefixe = ""
     if texte.startswith("0x"):
@@ -176,7 +176,7 @@ def maj_ligne_float_to_hex32(*args):
     v_dec = 31 - int(n_int) - int(n_dead)
     modifier_resultat(lbl_v_dec_1, v_dec)
     if valeur:
-        res = convertion_float_hex32(valeur)
+        res = convertion_float_hex32(valeur,n_int,n_dead)
         modifier_resultat(res_1, ajouter_separateur(res))
     else:
         modifier_resultat(res_1, "")
@@ -187,7 +187,7 @@ def maj_ligne_float_to_hex64(*args):
     n_dead = var_dead_2.get() or "0"
     v_dec = 63 - int(n_int) - int(n_dead)
     modifier_resultat(lbl_v_dec_2, v_dec)
-    res = convertion_float_hex64(valeur)
+    res = convertion_float_hex64(valeur,n_int,n_dead)
     modifier_resultat(res_2, ajouter_separateur(res))
 
 def maj_ligne_hex32_to_float(*args):
@@ -196,7 +196,7 @@ def maj_ligne_hex32_to_float(*args):
     n_dead = var_dead_3.get() or "0"
     v_dec = 31 - int(n_int) - int(n_dead)
     modifier_resultat(lbl_v_dec_3, v_dec)
-    res = convertion_hex32_float(valeur)
+    res = convertion_hex32_float(valeur,n_int,n_dead)
     modifier_resultat(res_3, str(res))
 
 def maj_ligne_hex64_to_float(*args):
@@ -205,7 +205,7 @@ def maj_ligne_hex64_to_float(*args):
     n_dead = var_dead_4.get() or "0"
     v_dec = 63 - int(n_int) - int(n_dead)
     modifier_resultat(lbl_v_dec_4, v_dec)
-    res = convertion_hex64_float(valeur)
+    res = convertion_hex64_float(valeur,n_int,n_dead)
     modifier_resultat(res_4, res)
 
 # --- 3. INITIALISATION ---
@@ -239,10 +239,10 @@ tk.Label(f_g2, text="VALEUR FLOTTANTE 64 bits :", font=("Arial", 10, "bold")).pa
 var_entree_2 = tk.StringVar(); var_entree_2.trace_add("write", maj_ligne_float_to_hex64)
 tk.Entry(f_g2, textvariable=var_entree_2).pack(fill="x", pady=5)
 fb2 = tk.Frame(f_g2); fb2.pack(anchor="w")
-tk.Label(fb2, text="Int:").grid(row=0, column=0); var_int_2 = tk.StringVar(value="2"); var_int_2.trace_add("write", maj_ligne_float_to_hex64)
+tk.Label(fb2, text="Int:").grid(row=0, column=0); var_int_2 = tk.StringVar(value="4"); var_int_2.trace_add("write", maj_ligne_float_to_hex64)
 tk.Spinbox(fb2, from_=0, to=31, width=5, textvariable=var_int_2, command=maj_ligne_float_to_hex64).grid(row=1, column=0, padx=2)
 tk.Label(fb2, text="Dec:").grid(row=0, column=1); lbl_v_dec_2 = tk.Entry(fb2, width=5, state="readonly", relief="sunken", justify="center"); lbl_v_dec_2.grid(row=1, column=1, padx=2)
-tk.Label(fb2, text="Dead:").grid(row=0, column=2); var_dead_2 = tk.StringVar(value="0"); var_dead_2.trace_add("write", maj_ligne_float_to_hex64)
+tk.Label(fb2, text="Dead:").grid(row=0, column=2); var_dead_2 = tk.StringVar(value="1"); var_dead_2.trace_add("write", maj_ligne_float_to_hex64)
 tk.Spinbox(fb2, from_=0, to=31, width=5, textvariable=var_dead_2, command=maj_ligne_float_to_hex64).grid(row=1, column=2, padx=2)
 f_d2 = tk.Frame(root, padx=20, pady=10); f_d2.grid(row=1, column=1, sticky="ew")
 tk.Label(f_d2, text="Format FP64 (Copiable) :", fg="blue").pack(anchor="w")
@@ -269,10 +269,10 @@ tk.Label(f_g4, text="VALEUR HEXADECIMALE SUR 64 BITS :", font=("Arial", 10, "bol
 var_entree_4 = tk.StringVar(); var_entree_4.trace_add("write", maj_ligne_hex64_to_float)
 tk.Entry(f_g4, textvariable=var_entree_4).pack(fill="x", pady=5)
 fb4 = tk.Frame(f_g4); fb4.pack(anchor="w")
-tk.Label(fb4, text="Int:").grid(row=0, column=0); var_int_4 = tk.StringVar(value="2"); var_int_4.trace_add("write", maj_ligne_hex64_to_float)
+tk.Label(fb4, text="Int:").grid(row=0, column=0); var_int_4 = tk.StringVar(value="4"); var_int_4.trace_add("write", maj_ligne_hex64_to_float)
 tk.Spinbox(fb4, from_=0, to=31, width=5, textvariable=var_int_4, command=maj_ligne_hex64_to_float).grid(row=1, column=0, padx=2)
 tk.Label(fb4, text="Dec:").grid(row=0, column=1); lbl_v_dec_4 = tk.Entry(fb4, width=5, state="readonly", relief="sunken", justify="center"); lbl_v_dec_4.grid(row=1, column=1, padx=2)
-tk.Label(fb4, text="Dead:").grid(row=0, column=2); var_dead_4 = tk.StringVar(value="0"); var_dead_4.trace_add("write", maj_ligne_hex64_to_float)
+tk.Label(fb4, text="Dead:").grid(row=0, column=2); var_dead_4 = tk.StringVar(value="1"); var_dead_4.trace_add("write", maj_ligne_hex64_to_float)
 tk.Spinbox(fb4, from_=0, to=31, width=5, textvariable=var_dead_4, command=maj_ligne_hex64_to_float).grid(row=1, column=2, padx=2)
 f_d4 = tk.Frame(root, padx=20, pady=10); f_d4.grid(row=3, column=1, sticky="ew")
 tk.Label(f_d4, text="Résulat en flottant : (Copiable) :", fg="blue").pack(anchor="w")
