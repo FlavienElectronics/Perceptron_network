@@ -82,6 +82,7 @@ def convertion_float_hex64(valeur_float):
     return hex(final_value)
 
 def convertion_hex64_float(valeur_hexa):
+    valeur_hexa = supprimer_espaces(valeur_hexa)
     valeur_hexa = int(valeur_hexa,16)
 
     size_word = 64
@@ -110,6 +111,7 @@ def convertion_hex64_float(valeur_hexa):
     return(str(res_total))
 
 def convertion_hex32_float(valeur_hexa):
+    valeur_hexa = supprimer_espaces(valeur_hexa)
     valeur_hexa = int(valeur_hexa,16)
 
     size_word = 32
@@ -154,6 +156,9 @@ def ajouter_separateur(texte, n=4, sep=" "):
     # range(0, len(texte), n) crée des indices : 0, 4, 8...
     morceaux = [texte[i:i+n] for i in range(0, len(texte), n)]
     return prefixe + sep.join(morceaux)
+
+def supprimer_espaces(texte):
+    return texte.replace(" ", "")
 
 # Fonction utilitaire pour modifier une case en lecture seule
 def modifier_resultat(widget, texte):
