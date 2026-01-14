@@ -177,7 +177,7 @@ def maj_ligne_float_to_hex32(*args):
     modifier_resultat(lbl_v_dec_1, v_dec)
     if valeur:
         res = convertion_float_hex32(valeur,n_int,n_dead)
-        modifier_resultat(res_1, ajouter_separateur(res))
+        modifier_resultat(res_1, ajouter_separateur(res).upper())
     else:
         modifier_resultat(res_1, "")
 
@@ -188,7 +188,7 @@ def maj_ligne_float_to_hex64(*args):
     v_dec = 63 - int(n_int) - int(n_dead)
     modifier_resultat(lbl_v_dec_2, v_dec)
     res = convertion_float_hex64(valeur,n_int,n_dead)
-    modifier_resultat(res_2, ajouter_separateur(res))
+    modifier_resultat(res_2, ajouter_separateur(res).upper())
 
 def maj_ligne_hex32_to_float(*args):
     valeur = var_entree_3.get()
@@ -197,7 +197,7 @@ def maj_ligne_hex32_to_float(*args):
     v_dec = 31 - int(n_int) - int(n_dead)
     modifier_resultat(lbl_v_dec_3, v_dec)
     res = convertion_hex32_float(valeur,n_int,n_dead)
-    modifier_resultat(res_3, str(res))
+    modifier_resultat(res_3, str(res).upper())
 
 def maj_ligne_hex64_to_float(*args):
     valeur = var_entree_4.get()
@@ -206,7 +206,7 @@ def maj_ligne_hex64_to_float(*args):
     v_dec = 63 - int(n_int) - int(n_dead)
     modifier_resultat(lbl_v_dec_4, v_dec)
     res = convertion_hex64_float(valeur,n_int,n_dead)
-    modifier_resultat(res_4, res)
+    modifier_resultat(res_4, res.upper())
 
 # --- 3. INITIALISATION ---
 root = tk.Tk()
