@@ -2147,3 +2147,234 @@ selectCodeEditor("Perceptron.vhd", 342, 438); // ae (Perceptron.vhd)
 // Tcl Message: save_wave_config {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} 
 // TclEventType: FILE_SET_CHANGE
 // HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:15:49 PM CET
+// Elapsed time: 26 seconds
+selectCodeEditor("Perceptron.vhd", 383, 502); // ae (Perceptron.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:16:29 PM CET
+// Elapsed time: 33 seconds
+selectCodeEditor("Perceptron.vhd", 528, 227); // ae (Perceptron.vhd)
+selectCodeEditor("Perceptron.vhd", 350, 214); // ae (Perceptron.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:17:09 PM CET
+// Elapsed time: 23 seconds
+selectCodeEditor("Perceptron.vhd", 97, 234); // ae (Perceptron.vhd)
+typeControlKey((HResource) null, "Perceptron.vhd", 'v'); // ae (Perceptron.vhd)
+// Elapsed time: 12 seconds
+selectCodeEditor("Perceptron.vhd", 248, 229); // ae (Perceptron.vhd)
+typeControlKey((HResource) null, "Perceptron.vhd", 'v'); // ae (Perceptron.vhd)
+// Elapsed time: 22 seconds
+selectCodeEditor("Perceptron.vhd", 310, 253); // ae (Perceptron.vhd)
+selectCodeEditor("Perceptron.vhd", 346, 225); // ae (Perceptron.vhd)
+typeControlKey((HResource) null, "Perceptron.vhd", 'c'); // ae (Perceptron.vhd)
+selectCodeEditor("Perceptron.vhd", 66, 247); // ae (Perceptron.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:17:49 PM CET
+typeControlKey((HResource) null, "Perceptron.vhd", 'v'); // ae (Perceptron.vhd)
+selectCodeEditor("Perceptron.vhd", 180, 248); // ae (Perceptron.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:18:29 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 52m:05s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 52m:07s
+// Elapsed time: 51 seconds
+selectCodeEditor("Perceptron.vhd", 162, 230); // ae (Perceptron.vhd)
+selectCodeEditor("Perceptron.vhd", 162, 230, false, false, false, false, true); // ae (Perceptron.vhd) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("Perceptron.vhd", 840, 230); // ae (Perceptron.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 119 MB. Current time: 1/14/26, 9:19:09 PM CET
+// Elapsed time: 16 seconds
+selectCodeEditor("Perceptron.vhd", 339, 317); // ae (Perceptron.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:19:49 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 53m:25s
+// Elapsed time: 43 seconds
+selectCodeEditor("Perceptron.vhd", 148, 331); // ae (Perceptron.vhd)
+selectCodeEditor("Perceptron.vhd", 148, 331, false, false, false, false, true); // ae (Perceptron.vhd) - Double Click
+// TclEventType: DG_GRAPH_GENERATED
+typeControlKey((HResource) null, "Perceptron.vhd", 'c'); // ae (Perceptron.vhd)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 53m:27s
+selectCodeEditor("Perceptron.vhd", 305, 250); // ae (Perceptron.vhd)
+selectCodeEditor("Perceptron.vhd", 257, 229); // ae (Perceptron.vhd)
+typeControlKey((HResource) null, "Perceptron.vhd", 'v'); // ae (Perceptron.vhd)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 53m:35s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 53m:37s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 53m:53s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 53m:55s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 117 MB. Current time: 1/14/26, 9:20:30 PM CET
+// Elapsed time: 31 seconds
+selectCodeEditor("Perceptron.vhd", 932, 332); // ae (Perceptron.vhd)
+typeControlKey((HResource) null, "Perceptron.vhd", 'v'); // ae (Perceptron.vhd)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 54m:07s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 54m:09s
+// Elapsed time: 17 seconds
+selectCodeEditor("Perceptron.vhd", 199, 435); // ae (Perceptron.vhd)
+typeControlKey((HResource) null, "Perceptron.vhd", 'v'); // ae (Perceptron.vhd)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 54m:31s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 54m:33s
+// Elapsed time: 11 seconds
+selectCodeEditor("Perceptron.vhd", 268, 261); // ae (Perceptron.vhd)
+// Run Command: RDIResourceCommand.RDICommands_WAVEFORM_SAVE_CONFIGURATION
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// Tcl Message: save_wave_config {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} 
+// Run Command: RDIResourceCommand.RDICommands_WAVEFORM_SAVE_CONFIGURATION
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// Tcl Message: save_wave_config {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} 
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ap (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+selectButton("OptionPane.button", "Yes", "Simulation is Already Running"); // JButton (OptionPane.button)
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 112 MB. Current time: 1/14/26, 9:21:10 PM CET
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bk (Close Progress)
+// TclEventType: LAUNCH_SIM
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl --incr --relax -prj simulation_Perceptron_vhdl.prj" INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Perceptron.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'Perceptron' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "simulation_Perceptron_behav -key {Behavioral:sim_1:Functional:simulation_Perceptron} -tclbatch {simulation_Perceptron.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // x (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 118 MB. Current time: 1/14/26, 9:21:15 PM CET
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg 
+// Tcl Message: source simulation_Perceptron.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Perceptron_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// 'd' command handler elapsed time: 7 seconds
+dismissDialog("Run Simulation"); // e (Run Simulation Progress)
+selectButton((HResource) null, "RDIResource.FrameControlsPanel_MAXIMIZE_PlanAheadTabBaseWorkspace_JideTabbedPane"); // P.a (RDIResource.FrameControlsPanel_MAXIMIZE_PlanAheadTabBaseWorkspace_JideTabbedPane)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // K (PAResourceOtoP.PAViews_BASE_WORKSPACE, PlanAheadTabBaseWorkspace)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 119 MB. Current time: 1/14/26, 9:21:17 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 119 MB. Current time: 1/14/26, 9:21:19 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 118 MB. Current time: 1/14/26, 9:21:20 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 438, 274); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform View_viewer)
+/********** leftMouseClick (1013, 460, true); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform View_viewer) **********/
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 118 MB. Current time: 1/14/26, 9:21:24 PM CET
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 599, 272); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform View_viewer)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+/********** leftMouseClick (1174, 458, true); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform View_viewer) **********/
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 842, 279); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform View_viewer)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+/********** startDrag (1417, 465); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform View_viewer) **********/
+/********** endDrag (1417, 465); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform View_viewer) **********/
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 118 MB. Current time: 1/14/26, 9:21:34 PM CET
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 1085, 271); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform View_viewer)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+/********** leftMouseClick (1659, 457, true); // b (RDIResource.RDIViews_WAVEFORM_VIEWER, PlanAheadTabWaveform View_viewer) **********/
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (PAResourceTtoZ.TaskBanner_CLOSE)
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - simulation_Perceptron", "DesignTask.SIMULATION");
+selectButton(RDIResource.BaseDialog_OK, "OK", "Confirm Close"); // f (RDIResource.BaseDialog_OK)
+// TclEventType: WAVEFORM_CLOSE_WCFG
+dismissDialog("Confirm Close"); // x (dialog3)
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bk (Close Progress)

@@ -44,8 +44,11 @@ entity Perceptron is
 end Perceptron;
 
 architecture Behavioral of Perceptron is
-    constant weight_array_size : integer := 4; -- Désigne la taille du vecteur de poids
+    constant weight_array_size : integer := 5; -- Désigne la taille du vecteur de poids
+    
     constant size_integral_32bit : integer := 2; -- Désigne le nombre de bit codant la partie entière du mot de 32 bits
+    constant size_integral_64bit : integer := size_integral_32bit * 2; -- Désigne le nombre de bit codant la partie entière du mot de 64 bits
+    constant dead_bit_word_64bit : integer := 1; -- Bit inutilisé
     
     type Weights_type is array(0 to weight_array_size-1) of std_logic_vector (31 downto  0);
     signal Weight : Weights_type := (others => X"00000000");
@@ -54,7 +57,7 @@ architecture Behavioral of Perceptron is
     signal res_mul: std_logic_vector(63 downto 0);
     signal mul_mask: std_logic_vector(63 downto 0);
     
-    -- S = signe / I = partie intégrale / D = partie décimale
+    -- S = signe / I = partie intégrale / D = partie décimale / X = bit inutile
     
     -- res_sum (binary) : 0000 0000 0000 0000 0000 0000 0000 0000
     --                    SIID DDDD DDDD DDDD DDDD DDDD DDDD DDDD 
@@ -73,8 +76,6 @@ architecture Behavioral of Perceptron is
     
     signal A_is_positive: std_logic;
     signal B_is_positive: std_logic;
-    --signal sum_is_positive: std_logic;
-    --signal mul_is_positive: std_logic;
     signal A_is_greater_than_B: std_logic;
     signal A_is_equal_to_B: std_logic;
     
@@ -101,27 +102,9 @@ begin
                 Weight(1) <= X"10000000"; -- = 0.5
                 Weight(2) <= X"A0000000"; -- = -1.0
                 Weight(3) <= X"40000000"; -- =  2.0
+                Weight(4) <= X"BE000000"; -- =  -1.9375
             end if;
             if intern_valid = '0' and Enable = '1' then
-                -- MULTIPLICATEUR
-                --res_mul <= (Weight(TO_INTEGER(unsigned(index))) AND not X"80000000") * (Input_Value AND not X"80000000");
-                -- SUMMATEUR
-                
---                -- 1 valeur est négative et somme totale > multiplication
---                if (res_xor = '1' and dif_pos = '1') then
---                    res_sum <= (res_sum - (res_mul(47 downto 16)) OR X"80000000");
-                
---                -- 1 valeur est négative et somme totale < multiplication
---                elsif (res_xor = '1' and dif_pos = '0') then
---                   res_sum <= ((res_mul(47 downto 16) - res_sum) OR X"80000000");
-                   
---                -- Les deux valeurs sont soit négatives soit positives 
---                else
---                    res_sum <= (res_sum + (res_mul(47 downto 16)) AND not X"80000000");
---                end if;
-
-
-                -- A = res_sum and B = res_mul
                 --                                          ON SOMME
                 --              CASE A > 0 and B > 0
                 if (A_is_positive = '1' and B_is_positive = '1') then 
@@ -155,7 +138,6 @@ begin
                     res_sum <= X"00000000";
                 end if;
                 
-                
                 -- UPDATE INDEX
                 index <= index + 1;
                 if index >= (weight_array_size-1) then
@@ -169,14 +151,8 @@ begin
     
     actualWeight <= (Weight(TO_INTEGER(unsigned(index))));
     
---    weight_is_positive <= '1' when Weight(TO_INTEGER(unsigned(index)))(31) = '0' else '0';
---    input_is_positive <= '1' when Input_Value(31) = '0' else '0';
---    sum_is_positive <= '1' when res_sum(31) = '0' else '0';
---    mul_is_positive <= '1' when res_mul(31) = '0' else '0';
---    sum_is_greater_than_mul <= '1' when res_sum > res_mul(47 downto 16) else '0';
-    
     A <= res_sum;
-    B <= res_mul(63) & res_mul(59 downto 29); -- problème ici
+    B <= res_mul(63) & res_mul((62 - size_integral_32bit- dead_bit_word_64bit) downto (62 - size_integral_32bit- dead_bit_word_64bit) - (32 - size_integral_32bit)); 
     
     A_is_positive <= '1' when A(31) = '0' else '0';
     B_is_positive <= '1' when B(31) = '0' else '0';
