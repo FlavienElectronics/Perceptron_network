@@ -707,3 +707,7 @@ source simulation_Perceptron.tcl
 # run 1000ns
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Perceptron_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 15 00:16:26 2026...
