@@ -2,10 +2,11 @@
 2020.2
 Nov  8 2024
 22:36:55
-/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.ip_user_files/bd/design_1/ip/design_1_BRAM_user_0_0/sim/design_1_BRAM_user_0_0.v,1768472375,verilog,,/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.ip_user_files/bd/design_1/sim/design_1.v,,design_1_BRAM_user_0_0,,,,,,,,
-/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.ip_user_files/bd/design_1/ip/design_1_Perceptron_BRAM_0_0/sim/design_1_Perceptron_BRAM_0_0.v,1768472375,verilog,,/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.ip_user_files/bd/design_1/ip/design_1_BRAM_user_0_0/sim/design_1_BRAM_user_0_0.v,,design_1_Perceptron_BRAM_0_0,,,,,,,,
-/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.ip_user_files/bd/design_1/sim/design_1.v,1768472565,verilog,,,,design_1,,,,,,,,
+/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v,1768475441,verilog,,,,design_1_wrapper,,,,,,,,
+/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.ip_user_files/bd/design_1/ip/design_1_BRAM_user_0_0/sim/design_1_BRAM_user_0_0.v,1768475442,verilog,,/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.ip_user_files/bd/design_1/sim/design_1.v,,design_1_BRAM_user_0_0,,,,,,,,
+/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.ip_user_files/bd/design_1/ip/design_1_Perceptron_BRAM_0_0/sim/design_1_Perceptron_BRAM_0_0.v,1768475441,verilog,,/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.ip_user_files/bd/design_1/ip/design_1_BRAM_user_0_0/sim/design_1_BRAM_user_0_0.v,,design_1_Perceptron_BRAM_0_0,,,,,,,,
+/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.ip_user_files/bd/design_1/sim/design_1.v,1768475441,verilog,,/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v,,design_1,,,,,,,,
 /home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,,,,,,,
-/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Perceptron.vhd,1768472538,vhdl,,,,simulation_perceptron,,,,,,,,
-/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.srcs/sources_1/new/BRAM_user.vhd,1768472938,vhdl,,,,bram_user,,,,,,,,
-/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.srcs/sources_1/new/Perceptron_BRAM.vhd,1768472944,vhdl,,,,perceptron_bram,,,,,,,,
+/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Perceptron.vhd,1768475529,vhdl,,,,simulation_perceptron,,,,,,,,
+/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.srcs/sources_1/new/BRAM_user.vhd,1768475082,vhdl,,,,bram_user,,,,,,,,
+/home/lespiaucq/5SEE/Implementation Materielle Perceptron/Perceptron_network/MLP/MLP.srcs/sources_1/new/Perceptron_BRAM.vhd,1768475404,vhdl,,,,perceptron_bram,,,,,,,,

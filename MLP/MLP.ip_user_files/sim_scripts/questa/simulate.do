@@ -1,7 +1,7 @@
 onbreak {quit -f}
 onerror {quit -f}
 
-vsim  -lib xil_defaultlib simulation_Perceptron_opt
+vsim  -lib xil_defaultlib design_1_wrapper_opt
 
 set NumericStdNoWarnings 1
 set StdArithNoWarnings 1
@@ -12,7 +12,7 @@ view wave
 view structure
 view signals
 
-do {simulation_Perceptron.udo}
+do {design_1_wrapper.udo}
 
 run 1000ns
 

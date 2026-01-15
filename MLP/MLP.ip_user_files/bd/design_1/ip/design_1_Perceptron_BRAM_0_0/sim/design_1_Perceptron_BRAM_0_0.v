@@ -59,10 +59,10 @@ module design_1_Perceptron_BRAM_0_0 (
   Input_Value,
   Clock,
   Reset,
+  w_in,
   Valid,
   Output_Value,
-  addr,
-  w_in
+  addr
 );
 
 input wire Enable;
@@ -75,19 +75,23 @@ input wire Clock;
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME Reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 input wire Reset;
+input wire [31 : 0] w_in;
 output wire Valid;
 output wire [31 : 0] Output_Value;
 output wire [7 : 0] addr;
-input wire [31 : 0] w_in;
 
-  Perceptron_BRAM inst (
+  Perceptron_BRAM #(
+    .weight_array_size(7),
+    .size_integral_32bit(2),
+    .dead_bit_word_64bit(1)
+  ) inst (
     .Enable(Enable),
     .Input_Value(Input_Value),
     .Clock(Clock),
     .Reset(Reset),
+    .w_in(w_in),
     .Valid(Valid),
     .Output_Value(Output_Value),
-    .addr(addr),
-    .w_in(w_in)
+    .addr(addr)
   );
 endmodule

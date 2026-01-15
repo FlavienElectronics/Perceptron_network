@@ -1,7 +1,6 @@
 vhdl xil_defaultlib  \
 "../../../MLP.srcs/sources_1/new/Perceptron_BRAM.vhd" \
 "../../../MLP.srcs/sources_1/new/BRAM_user.vhd" \
-"../../../MLP.srcs/sim_1/new/simulation_Perceptron.vhd" \
 
 # Do not sort compile order
 nosort

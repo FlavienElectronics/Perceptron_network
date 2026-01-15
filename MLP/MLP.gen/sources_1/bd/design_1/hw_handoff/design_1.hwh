@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan 15 11:22:45 2026" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan 15 12:10:42 2026" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:basys3:part0:1.2" DEVICE="7a35t" NAME="design_1" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" NAME="CLK" SIGIS="undef" SIGNAME="External_Ports_CLK">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="BRAM_user_0" PORT="CLK"/>
         <CONNECTION INSTANCE="Perceptron_BRAM_0" PORT="Clock"/>
+        <CONNECTION INSTANCE="BRAM_user_0" PORT="CLK"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="Enable" SIGIS="undef" SIGNAME="External_Ports_Enable">
@@ -43,6 +43,13 @@
     <MODULE COREREVISION="1" FULLNAME="/BRAM_user_0" HWVERSION="1.0" INSTANCE="BRAM_user_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BRAM_user" VLNV="xilinx.com:module_ref:BRAM_user:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
+        <PARAMETER NAME="w0" VALUE="0x30000000"/>
+        <PARAMETER NAME="w1" VALUE="0x10000000"/>
+        <PARAMETER NAME="w2" VALUE="0xA0000000"/>
+        <PARAMETER NAME="w3" VALUE="0x40000000"/>
+        <PARAMETER NAME="w4" VALUE="0xBE000000"/>
+        <PARAMETER NAME="w5" VALUE="0xD1EB851E"/>
+        <PARAMETER NAME="w6" VALUE="0x3BD70A3D"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_BRAM_user_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -68,6 +75,9 @@
     <MODULE COREREVISION="1" FULLNAME="/Perceptron_BRAM_0" HWVERSION="1.0" INSTANCE="Perceptron_BRAM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Perceptron_BRAM" VLNV="xilinx.com:module_ref:Perceptron_BRAM:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
+        <PARAMETER NAME="dead_bit_word_64bit" VALUE="1"/>
+        <PARAMETER NAME="size_integral_32bit" VALUE="2"/>
+        <PARAMETER NAME="weight_array_size" VALUE="7"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_Perceptron_BRAM_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>

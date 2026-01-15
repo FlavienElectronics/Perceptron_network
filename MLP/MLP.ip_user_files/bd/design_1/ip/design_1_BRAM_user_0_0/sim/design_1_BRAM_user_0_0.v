@@ -67,7 +67,15 @@ input wire [7 : 0] addr;
 input wire CLK;
 output wire [31 : 0] data_out;
 
-  BRAM_user inst (
+  BRAM_user #(
+    .w0(32'H30000000),
+    .w1(32'H10000000),
+    .w2(32'HA0000000),
+    .w3(32'H40000000),
+    .w4(32'HBE000000),
+    .w5(32'HD1EB851E),
+    .w6(32'H3BD70A3D)
+  ) inst (
     .addr(addr),
     .CLK(CLK),
     .data_out(data_out)

@@ -33,7 +33,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9fd486fa</spirit:value>
+            <spirit:value>f33b73ce</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -46,7 +46,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9fd486fa</spirit:value>
+            <spirit:value>f33b73ce</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -108,6 +108,43 @@
         </spirit:wire>
       </spirit:port>
     </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="STD_LOGIC_VECTOR(31 downto 0)">
+        <spirit:name>w0</spirit:name>
+        <spirit:displayName>W0</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.w0" spirit:bitStringLength="32">0x30000000</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="STD_LOGIC_VECTOR(31 downto 0)">
+        <spirit:name>w1</spirit:name>
+        <spirit:displayName>W1</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.w1" spirit:bitStringLength="32">0x10000000</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="STD_LOGIC_VECTOR(31 downto 0)">
+        <spirit:name>w2</spirit:name>
+        <spirit:displayName>W2</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.w2" spirit:bitStringLength="32">0xA0000000</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="STD_LOGIC_VECTOR(31 downto 0)">
+        <spirit:name>w3</spirit:name>
+        <spirit:displayName>W3</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.w3" spirit:bitStringLength="32">0x40000000</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="STD_LOGIC_VECTOR(31 downto 0)">
+        <spirit:name>w4</spirit:name>
+        <spirit:displayName>W4</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.w4" spirit:bitStringLength="32">0xBE000000</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="STD_LOGIC_VECTOR(31 downto 0)">
+        <spirit:name>w5</spirit:name>
+        <spirit:displayName>W5</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.w5" spirit:bitStringLength="32">0xD1EB851E</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="STD_LOGIC_VECTOR(31 downto 0)">
+        <spirit:name>w6</spirit:name>
+        <spirit:displayName>W6</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.w6" spirit:bitStringLength="32">0x3BD70A3D</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
   </spirit:model>
   <spirit:fileSets>
     <spirit:fileSet>
@@ -115,13 +152,48 @@
       <spirit:file>
         <spirit:name>xgui/BRAM_user_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f92e9879</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_26779f22</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
   <spirit:description>xilinx.com:module_ref:BRAM_user:1.0</spirit:description>
   <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>w0</spirit:name>
+      <spirit:displayName>W0</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.w0" spirit:bitStringLength="32">0x30000000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>w1</spirit:name>
+      <spirit:displayName>W1</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.w1" spirit:bitStringLength="32">0x10000000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>w2</spirit:name>
+      <spirit:displayName>W2</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.w2" spirit:bitStringLength="32">0xA0000000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>w3</spirit:name>
+      <spirit:displayName>W3</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.w3" spirit:bitStringLength="32">0x40000000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>w4</spirit:name>
+      <spirit:displayName>W4</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.w4" spirit:bitStringLength="32">0xBE000000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>w5</spirit:name>
+      <spirit:displayName>W5</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.w5" spirit:bitStringLength="32">0xD1EB851E</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>w6</spirit:name>
+      <spirit:displayName>W6</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.w6" spirit:bitStringLength="32">0x3BD70A3D</spirit:value>
+    </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">BRAM_user_v1_0</spirit:value>
@@ -142,7 +214,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-01-15T10:03:13Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2026-01-15T11:10:20Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2024.2</xilinx:xilinxVersion>

@@ -73,6 +73,11 @@
             "type": "rst",
             "direction": "I"
           },
+          "w_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
           "Valid": {
             "direction": "O"
           },
@@ -84,11 +89,6 @@
           "addr": {
             "direction": "O",
             "left": "7",
-            "right": "0"
-          },
-          "w_in": {
-            "direction": "I",
-            "left": "31",
             "right": "0"
           }
         }
@@ -168,8 +168,8 @@
       "clk_1": {
         "ports": [
           "CLK",
-          "BRAM_user_0/CLK",
-          "Perceptron_BRAM_0/Clock"
+          "Perceptron_BRAM_0/Clock",
+          "BRAM_user_0/CLK"
         ]
       }
     }

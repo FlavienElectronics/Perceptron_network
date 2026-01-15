@@ -33,6 +33,13 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity BRAM_user is
+    generic (w0 :  STD_LOGIC_VECTOR (31 downto 0) := x"30000000";
+             w1 :  STD_LOGIC_VECTOR (31 downto 0) := x"10000000";
+             w2 :  STD_LOGIC_VECTOR (31 downto 0) := x"A0000000";
+             w3 :  STD_LOGIC_VECTOR (31 downto 0) := x"40000000";
+             w4 :  STD_LOGIC_VECTOR (31 downto 0) := x"BE000000";
+             w5 :  STD_LOGIC_VECTOR (31 downto 0) := x"D1EB851E";
+             w6 :  STD_LOGIC_VECTOR (31 downto 0) := x"3BD70A3D");
     Port ( addr : in STD_LOGIC_VECTOR (7 downto 0);
            CLK : in STD_LOGIC;
            data_out : out STD_LOGIC_VECTOR (31 downto 0));
@@ -41,13 +48,13 @@ end BRAM_user;
 architecture Behavioral of BRAM_user is
     type mem_type is array(0 to 255) of STD_LOGIC_VECTOR(31 downto 0);
     signal data_mem : mem_type := (
-    0 => X"30000000",-- = 1.5     
-    1 => X"10000000",-- = 0.5     
-    2 => X"A0000000",-- = -1.0    
-    3 => X"40000000",-- =  2.0    
-    4 => X"BE000000",-- =  -1.9375
-    5 => X"D1EB851E",-- =  -2.56
-    6 => X"3BD70A3D", -- 1.87
+    0 => w0,
+    1 => w1,
+    2 => w2,
+    3 => w3,
+    4 => w4,
+    5 => w5,
+    6 => w6,
     others => X"00000000"
     );
 begin

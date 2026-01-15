@@ -8,7 +8,23 @@
     "gen_directory": "../../../../../../MLP.gen/sources_1/bd/design_1/ip/design_1_BRAM_user_0_0",
     "parameters": {
       "component_parameters": {
+        "w0": [ { "value": "0x30000000", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "w1": [ { "value": "0x10000000", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "w2": [ { "value": "0xA0000000", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "w3": [ { "value": "0x40000000", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "w4": [ { "value": "0xBE000000", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "w5": [ { "value": "0xD1EB851E", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "w6": [ { "value": "0x3BD70A3D", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "Component_Name": [ { "value": "design_1_BRAM_user_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "w0": [ { "value": "0x30000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "w1": [ { "value": "0x10000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "w2": [ { "value": "0xA0000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "w3": [ { "value": "0x40000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "w4": [ { "value": "0xBE000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "w5": [ { "value": "0xD1EB851E", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "w6": [ { "value": "0x3BD70A3D", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "artix7" } ],

@@ -22,5 +22,6 @@ Compiling module xil_defaultlib.design_1_BRAM_user_0_0
 Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
 Compiling module xil_defaultlib.design_1_Perceptron_BRAM_0_0
 Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
 Compiling architecture bench of entity xil_defaultlib.simulation_perceptron
 Built simulation snapshot simulation_Perceptron_behav
