@@ -44,7 +44,7 @@ entity Perceptron is
 end Perceptron;
 
 architecture Behavioral of Perceptron is
-    constant weight_array_size : integer := 5; -- Désigne la taille du vecteur de poids
+    constant weight_array_size : integer := 6; -- Désigne la taille du vecteur de poids
     
     constant size_integral_32bit : integer := 2; -- Désigne le nombre de bit codant la partie entière du mot de 32 bits
     constant size_integral_64bit : integer := size_integral_32bit * 2; -- Désigne le nombre de bit codant la partie entière du mot de 64 bits
@@ -103,6 +103,7 @@ begin
                 Weight(2) <= X"A0000000"; -- = -1.0
                 Weight(3) <= X"40000000"; -- =  2.0
                 Weight(4) <= X"BE000000"; -- =  -1.9375
+                Weight(5) <= X"D1EB851E"; -- =  -2.56
             end if;
             if intern_valid = '0' and Enable = '1' then
                 --                                          ON SOMME
