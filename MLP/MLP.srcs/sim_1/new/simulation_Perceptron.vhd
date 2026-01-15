@@ -44,7 +44,7 @@ architecture Bench of simulation_Perceptron is
     signal VALID        : STD_LOGIC;
     signal OUTPUT       : STD_LOGIC_VECTOR (31 downto 0);
     
-    component Perceptron is
+    component Perceptron_BRAM is
     Port ( Enable : in STD_LOGIC;
            Input_Value : in STD_LOGIC_VECTOR (31 downto 0);
            Clock : in STD_LOGIC;
@@ -53,7 +53,7 @@ architecture Bench of simulation_Perceptron is
            Output_Value : out STD_LOGIC_VECTOR (31 downto 0));
     end component;
 begin
-    percep: Perceptron port map(
+    percep: Perceptron_BRAM port map(
        Enable          =>      ENABLE,
        Input_Value     =>      INPUT,
        Clock           =>      CLOCK, 

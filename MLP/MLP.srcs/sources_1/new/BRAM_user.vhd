@@ -47,7 +47,7 @@ architecture Behavioral of BRAM_user is
     3 => X"40000000",-- =  2.0    
     4 => X"BE000000",-- =  -1.9375
     5 => X"D1EB851E",-- =  -2.56  
-    others => X"00"
+    others => X"00000000"
     );
 begin
     process(CLK)

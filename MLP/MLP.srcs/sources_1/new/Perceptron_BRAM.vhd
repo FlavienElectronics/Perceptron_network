@@ -97,7 +97,7 @@ begin
     BRAM : BRAM_user port map(
         index,
         Clock,
-        actual_weight
+        actualWeight
     );
 
     process(Clock)
