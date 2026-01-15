@@ -46,7 +46,7 @@ entity Perceptron_BRAM is
 end Perceptron_BRAM;
 
 architecture Behavioral of Perceptron_BRAM is
-    constant weight_array_size : integer := 6; -- Désigne la taille du vecteur de poids
+    constant weight_array_size : integer := 7; -- Désigne la taille du vecteur de poids
     
     constant size_integral_32bit : integer := 2; -- Désigne le nombre de bit codant la partie entière du mot de 32 bits
     constant size_integral_64bit : integer := size_integral_32bit * 2; -- Désigne le nombre de bit codant la partie entière du mot de 64 bits
