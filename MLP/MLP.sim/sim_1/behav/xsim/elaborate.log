@@ -1,9 +1,10 @@
 Vivado Simulator v2024.2.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /usr/local/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip -L xpm --snapshot simulation_Perceptron_behav xil_defaultlib.simulation_Perceptron -log elaborate.log 
+Running: /usr/local/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot simulation_Perceptron_behav xil_defaultlib.simulation_Perceptron xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
+Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -14,7 +15,12 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
 Compiling package ieee.numeric_std
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
 Compiling architecture behavioral of entity xil_defaultlib.BRAM_user [bram_user_default]
+Compiling module xil_defaultlib.design_1_BRAM_user_0_0
 Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling module xil_defaultlib.design_1_Perceptron_BRAM_0_0
+Compiling module xil_defaultlib.design_1
 Compiling architecture bench of entity xil_defaultlib.simulation_perceptron
 Built simulation snapshot simulation_Perceptron_behav

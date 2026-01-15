@@ -39,8 +39,10 @@ entity Perceptron_BRAM is
            Input_Value : in STD_LOGIC_VECTOR (31 downto 0);
            Clock : in STD_LOGIC;
            Reset : in STD_LOGIC;
+           w_in : in STD_LOGIC_VECTOR (31 downto 0);
            Valid : out STD_LOGIC;
-           Output_Value : out STD_LOGIC_VECTOR (31 downto 0));
+           Output_Value : out STD_LOGIC_VECTOR (31 downto 0);
+           addr : out STD_LOGIC_VECTOR (7 downto 0));
 end Perceptron_BRAM;
 
 architecture Behavioral of Perceptron_BRAM is
@@ -86,19 +88,21 @@ architecture Behavioral of Perceptron_BRAM is
     
     signal clock_wait : std_logic;
     
-    component  BRAM_user Port(
-           addr : in STD_LOGIC_VECTOR (7 downto 0);
-           CLK : in STD_LOGIC;
-           data_out : out STD_LOGIC_VECTOR (31 downto 0));
-    end component;
+--    component  BRAM_user Port(
+--           addr : in STD_LOGIC_VECTOR (7 downto 0);
+--           CLK : in STD_LOGIC;
+--           data_out : out STD_LOGIC_VECTOR (31 downto 0));
+--    end component;
 
 begin
 
-    BRAM : BRAM_user port map(
-        index,
-        Clock,
-        actualWeight
-    );
+--    BRAM : BRAM_user port map(
+--        index,
+--        Clock,
+--        actualWeight
+--    );
+    actualWeight <= w_in;
+    addr <= index; 
 
     process(Clock)
     begin

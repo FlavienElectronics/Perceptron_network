@@ -1,28 +1,53 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x0",
+      "boundary_crc": "0x511D462014B63EEC",
       "device": "xc7a35tcpg236-1",
       "gen_directory": "../../../../MLP.gen/sources_1/bd/design_1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2"
+      "tool_version": "2024.2",
+      "validated": "true"
     },
     "design_tree": {
-      "Perceptron_0": "",
-      "blk_mem_gen_0": ""
+      "Perceptron_BRAM_0": "",
+      "BRAM_user_0": ""
+    },
+    "ports": {
+      "CLK": {
+        "direction": "I"
+      },
+      "Output_Value": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "RST": {
+        "direction": "I"
+      },
+      "Enable": {
+        "direction": "I"
+      },
+      "Valid": {
+        "direction": "O"
+      },
+      "Input_Value": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      }
     },
     "components": {
-      "Perceptron_0": {
-        "vlnv": "xilinx.com:module_ref:Perceptron:1.0",
+      "Perceptron_BRAM_0": {
+        "vlnv": "xilinx.com:module_ref:Perceptron_BRAM:1.0",
         "ip_revision": "1",
-        "xci_name": "design_1_Perceptron_0_0",
-        "xci_path": "ip/design_1_Perceptron_0_0/design_1_Perceptron_0_0.xci",
-        "inst_hier_path": "Perceptron_0",
+        "xci_name": "design_1_Perceptron_BRAM_0_0",
+        "xci_path": "ip/design_1_Perceptron_BRAM_0_0/design_1_Perceptron_BRAM_0_0.xci",
+        "inst_hier_path": "Perceptron_BRAM_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "Perceptron",
+          "ref_name": "Perceptron_BRAM",
           "boundary_crc": "0x0"
         },
         "ports": {
@@ -55,15 +80,97 @@
             "direction": "O",
             "left": "31",
             "right": "0"
+          },
+          "addr": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "w_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
           }
         }
       },
-      "blk_mem_gen_0": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "ip_revision": "9",
-        "xci_name": "design_1_blk_mem_gen_0_0",
-        "xci_path": "ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0.xci",
-        "inst_hier_path": "blk_mem_gen_0"
+      "BRAM_user_0": {
+        "vlnv": "xilinx.com:module_ref:BRAM_user:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_BRAM_user_0_0",
+        "xci_path": "ip/design_1_BRAM_user_0_0/design_1_BRAM_user_0_0.xci",
+        "inst_hier_path": "BRAM_user_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "BRAM_user",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "BRAM_user_0_data_out": {
+        "ports": [
+          "BRAM_user_0/data_out",
+          "Perceptron_BRAM_0/w_in"
+        ]
+      },
+      "Enable_1": {
+        "ports": [
+          "Enable",
+          "Perceptron_BRAM_0/Enable"
+        ]
+      },
+      "Input_Value_1": {
+        "ports": [
+          "Input_Value",
+          "Perceptron_BRAM_0/Input_Value"
+        ]
+      },
+      "Perceptron_BRAM_0_Output_Value": {
+        "ports": [
+          "Perceptron_BRAM_0/Output_Value",
+          "Output_Value"
+        ]
+      },
+      "Perceptron_BRAM_0_Valid": {
+        "ports": [
+          "Perceptron_BRAM_0/Valid",
+          "Valid"
+        ]
+      },
+      "Perceptron_BRAM_0_addr": {
+        "ports": [
+          "Perceptron_BRAM_0/addr",
+          "BRAM_user_0/addr"
+        ]
+      },
+      "RST_1": {
+        "ports": [
+          "RST",
+          "Perceptron_BRAM_0/Reset"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "CLK",
+          "BRAM_user_0/CLK",
+          "Perceptron_BRAM_0/Clock"
+        ]
       }
     }
   }
