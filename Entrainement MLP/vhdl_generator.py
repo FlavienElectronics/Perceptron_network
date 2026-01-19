@@ -122,8 +122,9 @@ def write_layer_weights_mem(npz_path, layer_name="L1", data_width=8, data_encodi
             weight_value = weights[neuron_idx, input_idx]
             if data_encoding == "integer" or data_encoding == "fixed_point":
                 weight_value_converted = converted_weights[neuron_idx, input_idx]
-                hex_val = int_to_vhdl_hex(int(weight_value_converted.astype(np.int32)), data_width)
+                # hex_val = int_to_vhdl_hex(int(weight_value_converted.astype(np.int32)), data_width)
                 hex_weights[input_idx] = weight_value_converted.astype(np.int32)
+                hex_val = convertion_float_hex32(weight_value, integral)
             else:
                 raise ValueError("Unsupported data encoding")
             comma = "," if input_idx < n_inputs - 1 else ""
