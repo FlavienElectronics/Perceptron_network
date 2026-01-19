@@ -70,8 +70,10 @@ end component;
 
 begin
 
-
-
+WEIGHT : test_weights port map(clk,
+                                addr_i,
+                                dout_i
+                                );
 
 gen_dest : for i in 0 to weight_array_size generate
     percept : entity work.Perceptron_BRAM port map 
