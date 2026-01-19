@@ -35,9 +35,8 @@ use IEEE.numeric_std.ALL;
 
 entity Perceptron_BRAM is
     --generic (W : integer := 40);
-    generic(weight_array_size : integer := 7; -- Désigne la taille du vecteur de poids
-            size_integral_32bit : integer := 2; -- Désigne le nombre de bit codant la partie entière du mot de 32 bits
-            dead_bit_word_64bit : integer := 1); -- Bit inutilisé
+    generic(weight_array_size : integer := 10; -- Désigne la taille du vecteur de poids
+            size_integral_32bit : integer := 2); -- Désigne le nombre de bit codant la partie entière du mot de 32 bits)
             
     Port ( Enable : in STD_LOGIC;
            Input_Value : in STD_LOGIC_VECTOR (31 downto 0);
@@ -46,11 +45,12 @@ entity Perceptron_BRAM is
            w_in : in STD_LOGIC_VECTOR (31 downto 0);
            Valid : out STD_LOGIC;
            Output_Value : out STD_LOGIC_VECTOR (31 downto 0);
-           addr : out STD_LOGIC_VECTOR (7 downto 0));
+           addr : out STD_LOGIC_VECTOR (9 downto 0));
 end Perceptron_BRAM;
 
 architecture Behavioral of Perceptron_BRAM is
     constant size_integral_64bit : integer := size_integral_32bit * 2; -- Désigne le nombre de bit codant la partie entière du mot de 64 bits
+    constant dead_bit_word_64bit : integer := 1; -- Bit inutilisé
     
     signal actualWeight : std_logic_vector (31 downto  0);
     --signal w1 : integer := W;

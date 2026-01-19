@@ -3,27 +3,26 @@
    "Color Coded_ExpandedHierarchyInLayout":"",
    "Color Coded_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_CLK -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
-preplace port port-id_RST -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
-preplace port port-id_Enable -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
-preplace port port-id_Valid -pg 1 -lvl 3 -x 660 -y 80 -defaultsOSRD
-preplace portBus Output_Value -pg 1 -lvl 3 -x 660 -y 110 -defaultsOSRD
-preplace portBus Input_Value -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
-preplace inst Perceptron_BRAM_0 -pg 1 -lvl 2 -x 460 -y 110 -defaultsOSRD
-preplace inst BRAM_user_0 -pg 1 -lvl 1 -x 160 -y 200 -defaultsOSRD
-preplace netloc Perceptron_BRAM_0_addr 1 0 3 30 10 NJ 10 630
-preplace netloc clk_1 1 0 2 20 110 NJ
-preplace netloc Perceptron_BRAM_0_Output_Value 1 2 1 NJ 110
-preplace netloc RST_1 1 0 2 NJ 130 NJ
-preplace netloc Enable_1 1 0 2 NJ 60 290J
-preplace netloc Perceptron_BRAM_0_Valid 1 2 1 640J 80n
-preplace netloc BRAM_user_0_data_out 1 1 1 290 150n
-preplace netloc Input_Value_1 1 0 2 NJ 90 NJ
-levelinfo -pg 1 0 160 460 660
-pagesize -pg 1 -db -bbox -sgen -170 0 840 270
+preplace port port-id_CLK -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace port port-id_RST -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_Enable -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port port-id_Valid -pg 1 -lvl 3 -x 640 -y 70 -defaultsOSRD
+preplace portBus Output_Value -pg 1 -lvl 3 -x 640 -y 100 -defaultsOSRD
+preplace portBus Input_Value -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace inst Perceptron_BRAM_0 -pg 1 -lvl 2 -x 450 -y 100 -defaultsOSRD
+preplace inst test_weights_0 -pg 1 -lvl 1 -x 150 -y 220 -defaultsOSRD -orient R180
+preplace netloc Enable_1 1 0 2 NJ 50 280
+preplace netloc Input_Value_1 1 0 2 NJ 80 N
+preplace netloc Perceptron_BRAM_0_Output_Value 1 2 1 NJ 100
+preplace netloc Perceptron_BRAM_0_Valid 1 2 1 620J 70n
+preplace netloc RST_1 1 0 2 NJ 120 N
+preplace netloc clk_1 1 0 2 N 150 280
+preplace netloc Perceptron_BRAM_0_addr 1 1 2 N 210 620
+levelinfo -pg 1 0 150 450 640
+pagesize -pg 1 -db -bbox -sgen -170 0 820 290
 ",
    "Color Coded_ScaleFactor":"1.0",
-   "Color Coded_TopLeft":"-273,-88",
+   "Color Coded_TopLeft":"-283,-77",
    "Default View_ScaleFactor":"1.0",
    "Default View_TopLeft":"-310,-208",
    "ExpandedHierarchyInLayout":"",
@@ -39,4 +38,4 @@ levelinfo -pg 1 -20 170 360
 pagesize -pg 1 -db -bbox -sgen -20 -70 360 220
 "
 }
-
+0

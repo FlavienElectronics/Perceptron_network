@@ -7,12 +7,11 @@
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2",
-      "validated": "true"
+      "tool_version": "2024.2"
     },
     "design_tree": {
       "Perceptron_BRAM_0": "",
-      "BRAM_user_0": ""
+      "test_weights_0": ""
     },
     "ports": {
       "CLK": {
@@ -88,47 +87,41 @@
           },
           "addr": {
             "direction": "O",
-            "left": "7",
+            "left": "9",
             "right": "0"
           }
         }
       },
-      "BRAM_user_0": {
-        "vlnv": "xilinx.com:module_ref:BRAM_user:1.0",
+      "test_weights_0": {
+        "vlnv": "xilinx.com:module_ref:test_weights:1.0",
         "ip_revision": "1",
-        "xci_name": "design_1_BRAM_user_0_0",
-        "xci_path": "ip/design_1_BRAM_user_0_0/design_1_BRAM_user_0_0.xci",
-        "inst_hier_path": "BRAM_user_0",
+        "xci_name": "design_1_test_weights_0_1",
+        "xci_path": "ip/design_1_test_weights_0_1/design_1_test_weights_0_1.xci",
+        "inst_hier_path": "test_weights_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "BRAM_user",
+          "ref_name": "test_weights",
           "boundary_crc": "0x0"
         },
         "ports": {
-          "addr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "CLK": {
+          "clk": {
             "type": "clk",
             "direction": "I"
           },
-          "data_out": {
+          "addr": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "dout": {
             "direction": "O",
-            "left": "31",
+            "left": "319",
             "right": "0"
           }
         }
       }
     },
     "nets": {
-      "BRAM_user_0_data_out": {
-        "ports": [
-          "BRAM_user_0/data_out",
-          "Perceptron_BRAM_0/w_in"
-        ]
-      },
       "Enable_1": {
         "ports": [
           "Enable",
@@ -156,7 +149,7 @@
       "Perceptron_BRAM_0_addr": {
         "ports": [
           "Perceptron_BRAM_0/addr",
-          "BRAM_user_0/addr"
+          "test_weights_0/addr"
         ]
       },
       "RST_1": {
@@ -169,7 +162,7 @@
         "ports": [
           "CLK",
           "Perceptron_BRAM_0/Clock",
-          "BRAM_user_0/CLK"
+          "test_weights_0/clk"
         ]
       }
     }
