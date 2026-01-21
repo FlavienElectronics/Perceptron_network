@@ -70,16 +70,17 @@ end component;
 
 begin
 
-WEIGHT : WEIGHTS port map( clock_L,
-                           addr,
-                           w_in);
+WEIGHT : WEIGHTS port map( clk_w => clock_L,
+                           addr_w => addr,
+                           dout_W => w_in);
 
 gen_dest : for i in 0 to weight_array_size generate
     percept : entity work.Perceptron_BRAM port map(
-      clk       => Clock,
-      Reset     => Reset,
-      input_val => Input,
-      w_in      => dout(32*i-1 downto 32*(i-1)));
+      Clock         => clock_L,
+      Reset         => Reset_L,
+      Input_Value   => Input_L,
+      w_in          => dout_W(32*i-1 downto 32*(i-1)),
+      addr_i        => addr);
 end generate gen_dest;
 
 end Behavioral;
