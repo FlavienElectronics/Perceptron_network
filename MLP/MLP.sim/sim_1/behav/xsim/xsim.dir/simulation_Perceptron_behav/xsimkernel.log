@@ -1,7 +1,0 @@
-Running: xsim.dir/simulation_Perceptron_behav/xsimk -simmode gui -wdb simulation_Perceptron_behav.wdb -simrunnum 0 -socket 39277
-Design successfully loaded
-Design Loading Memory Usage: 180300 KB (Peak: 180420 KB)
-Design Loading CPU Usage: 960 ms
-Simulation completed
-Simulation Memory Usage: 270236 KB (Peak: 319568 KB)
-Simulation CPU Usage: 990 ms

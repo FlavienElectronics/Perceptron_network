@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../MLP.srcs/sources_1/new/Perceptron_BRAM.vhd" \
+"../../../../MLP.srcs/sources_1/new/Layer.vhd" \
+"../../../../MLP.srcs/sources_1/new/WEIGHTS.vhd" \
+"../../../../MLP.srcs/sim_1/new/simulation_Layer.vhd" \
+
+# Do not sort compile order
+nosort
