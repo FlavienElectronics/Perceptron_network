@@ -48,7 +48,10 @@ architecture Behavioral of Layer is
 signal clk_i : std_logic;
 signal addr_i : std_logic_vector (9 downto 0);
 signal dout_i : std_logic_vector(32*weight_array_size-1 downto 0);
- 
+
+type out_type is array(0 to weight_array_size-1) of STD_LOGIC_VECTOR(31 downto 0);
+signal out_read : out_type := (others => X"00000000");
+
 component WEIGHTS port(
         clk_W   : in  std_logic;
         addr_W  : in  std_logic_vector(9 downto 0); -- Same addr for all neurons within a layer
@@ -82,7 +85,8 @@ gen_dest : for i in 0 to weight_array_size-1 generate
       addr          => addr_i,
       Valid         => open,
       Enable        => Enable_L,
-      Output_Value   => open);
+      Output_Value   => out_read(i)
+      );
 end generate gen_dest;
 
 end Behavioral;

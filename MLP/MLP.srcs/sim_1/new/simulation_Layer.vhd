@@ -70,6 +70,9 @@ begin
     CLOCK <= not CLOCK after 5 ns;
     stimulus: process
     begin
+        INPUT <= x"00000000";
+        ENABLE <= '0';
+    
         RESET <= '0';
         wait for 20 ns;
         RESET <= '1';
