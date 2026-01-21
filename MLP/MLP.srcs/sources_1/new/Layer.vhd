@@ -70,20 +70,16 @@ end component;
 
 begin
 
-WEIGHT : test_weights port map(clk,
+WEIGHT : test_weights port map( clk,
                                 addr_i,
-                                dout_i
-                                );
+                                dout_i);
 
 gen_dest : for i in 0 to weight_array_size generate
-    percept : entity work.Perceptron_BRAM port map 
-    (
-      clk => Clock;
-      Reset => Reset;
-      input_val => Input;
-      w_in => dout(32*i-1 downto 32*(i-1))
-     
-    );
- end generate;
+    percept : entity work.Perceptron_BRAM port map(
+      clk     => Clock,
+      Reset     => Reset,
+      input_val => Input,
+      w_in      => dout(32*i-1 downto 32*(i-1)));
+end generate gen_dest;
 
 end Behavioral;
