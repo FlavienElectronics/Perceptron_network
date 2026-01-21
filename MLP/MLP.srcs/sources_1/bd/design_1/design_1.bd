@@ -7,11 +7,11 @@
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2"
+      "tool_version": "2024.2",
+      "validated": "true"
     },
     "design_tree": {
-      "Perceptron_BRAM_0": "",
-      "test_weights_0": ""
+      "Perceptron_BRAM_0": ""
     },
     "ports": {
       "CLK": {
@@ -91,34 +91,6 @@
             "right": "0"
           }
         }
-      },
-      "test_weights_0": {
-        "vlnv": "xilinx.com:module_ref:test_weights:1.0",
-        "ip_revision": "1",
-        "xci_name": "design_1_test_weights_0_1",
-        "xci_path": "ip/design_1_test_weights_0_1/design_1_test_weights_0_1.xci",
-        "inst_hier_path": "test_weights_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "test_weights",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "dout": {
-            "direction": "O",
-            "left": "319",
-            "right": "0"
-          }
-        }
       }
     },
     "nets": {
@@ -146,12 +118,6 @@
           "Valid"
         ]
       },
-      "Perceptron_BRAM_0_addr": {
-        "ports": [
-          "Perceptron_BRAM_0/addr",
-          "test_weights_0/addr"
-        ]
-      },
       "RST_1": {
         "ports": [
           "RST",
@@ -161,8 +127,7 @@
       "clk_1": {
         "ports": [
           "CLK",
-          "Perceptron_BRAM_0/Clock",
-          "test_weights_0/clk"
+          "Perceptron_BRAM_0/Clock"
         ]
       }
     }
