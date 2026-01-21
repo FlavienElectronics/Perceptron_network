@@ -1,23 +1,24 @@
--- VHDL Memory Module for Layer Weights: WEIGHTS
+-- VHDL Memory Module for Layer Weights: test_weights
 -- Number of Neurons: 10
 -- Number of Inputs per Neuron: 784
 -- Data Width: 32 bits
 -- Address Width: 10 bits
 -- Expected Data Encoding: fixed_point
--- Res for 0x02000000 : 0x[]
+-- Res for 0x02000000 : ['0000000040000000', '000000005E000000', '0000000068000000', 'FFFFFFFFB8000000', 'FFFFFFFFC0000000', '0000000068000000', 'FFFFFFFF9C000000', '0000000034000000', 'FFFFFFFF98000000', '000000004C000000']
+-- Res from input file mnist_sample_input.npz with label [2]: 0x['0000000009441262', 'FFFFFFFFBE133CFE', '000000004E3896F2', '0000000062DB7DFF', 'FFFFFFFFF2C7B377', 'FFFFFFFFA893E5C6', 'FFFFFFFFAF45DF4E', '0000000020AC5BA9', '00000000040D5587', '0000000008DB120C']
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity WEIGHTS is
+entity test_weights is
     port(
-        clk_W   : in  std_logic;
-        addr_W  : in  std_logic_vector(9 downto 0); -- Same addr for all neurons within a layer
-        dout_W  : out std_logic_vector(32*10-1 downto 0) -- DATA_WIDTH * N_NEURONS -> 320 bits
+        clk   : in  std_logic;
+        addr  : in  std_logic_vector(9 downto 0); -- Same addr for all neurons within a layer
+        dout  : out std_logic_vector(32*10-1 downto 0) -- DATA_WIDTH * N_NEURONS -> 320 bits
     );
-end WEIGHTS;
+end test_weights;
 
-architecture rtl of WEIGHTS is
+architecture rtl of test_weights is
     constant DATA_WIDTH : integer := 32;
     constant N_INPUTS  : integer := 784;
    type weight_array is array (0 to N_INPUTS-1) of std_logic_vector(DATA_WIDTH-1 downto 0);

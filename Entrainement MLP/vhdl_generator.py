@@ -2,9 +2,8 @@ import numpy as np
 from quantization_functions import *
 
 
-def write_test_input_coe(npz_path, input_name="input", data_width=8, data_encoding="integer"):
+def write_test_input_coe(npz_path, input_name="input", data_width=32, data_encoding="fixed_point", integral=2):
     data = np.load(npz_path)
-    print(data)
     input_data = data["input"]  # Assuming input data is stored under 'input'
     n_samples, n_features = input_data.shape
     if n_samples > 1 : 
@@ -12,13 +11,15 @@ def write_test_input_coe(npz_path, input_name="input", data_width=8, data_encodi
 
     coe_filename = f"{input_name}_test_input.coe"
     with open(coe_filename, "w") as f:
-        f.write("memory_initialization_radix = 16;\n")
+        f.write("memory_initialization_radix = 32;\n")
         memory_line = "memory_initialization_vector ="
 
         for feature_idx in range(n_features):
             value = input_data[0, feature_idx]
             if data_encoding == "integer":
                 int_value = int(np.round(value * (2**(data_width-1) - 1)))
+            if data_encoding == "fixed_point":
+                int_value = int(np.round(value * (2**(data_width - 1 - integral))))  # Assuming 2 bits for integral part
             else:
                 raise ValueError("Unsupported data encoding")
             hex_value = int_to_vhdl_hex(int_value, data_width)
@@ -59,24 +60,31 @@ def write_layer_weights_mem(npz_path, layer_name="L1", data_width=8, data_encodi
         test_input_data = np.load(test_input_path)
         test_hex_result = []
         test_input = test_input_data["input"]
-        if data_encoding == "integer":
+        if data_encoding == "integer" or data_encoding == "fixed_point":
             test_input_converted = np.round(test_input[0, :] * conversion_ratio).astype(np.int32)
+            print(f"Test input converted: {test_input_converted}, type: {type(test_input_converted)}")
         else:
             raise ValueError("Unsupported data encoding")
     hex_test_result = []
 
     # COmpute MAC for test values 
-    # for neuron_idx in range(n_neurons):
-    #     test_result[neuron_idx] = np.sum(converted_weights[neuron_idx, :]) * test_value_converted
-    #     if test_input_path is not None:
-    #         if data_encoding == "integer" or data_encoding == "fixed_point":
-    #             test_results_from_input_file[neuron_idx] =np.sum((test_input_converted)*(converted_weights[neuron_idx, :]))
-    #             test_hex_result.append(int_to_vhdl_hex(test_results_from_input_file[neuron_idx], data_width*2))
-    #             hex_val = int_to_vhdl_hex(test_result[neuron_idx], data_width*2)
-    #             hex_test_result.append(f"{hex_val}")
-    #         else : 
-    #             raise ValueError("Unsupported data encoding")
+    for neuron_idx in range(n_neurons):
+        test_result[neuron_idx] = (np.sum(converted_weights[neuron_idx, :]) * test_value_converted).astype(np.int32)
+        if test_input_path is not None:
+            if data_encoding == "integer" or data_encoding == "fixed_point":
+                test_results_from_input_file[neuron_idx] = (np.sum((test_input_converted)*(converted_weights[neuron_idx, :]))).astype(np.int32)
+                val = (test_results_from_input_file[neuron_idx])
+                print(val)
 
+                test_hex_result.append(int_to_vhdl_hex(int(test_results_from_input_file[neuron_idx]), data_width*2))
+
+                hex_val = int_to_vhdl_hex(int(test_result[neuron_idx]), data_width*2)
+
+                hex_test_result.append(f"{hex_val}")
+                print(f"hex_test_result: {hex_test_result}")
+
+            else : 
+                raise ValueError("Unsupported data encoding")
 
     # --------- WRITE HEADER ---------
     file_lines.append(f"-- VHDL Memory Module for Layer Weights: {entity_name}")
@@ -85,7 +93,7 @@ def write_layer_weights_mem(npz_path, layer_name="L1", data_width=8, data_encodi
     file_lines.append(f"-- Data Width: {data_width} bits")
     file_lines.append(f"-- Address Width: {addr_width} bits")
     file_lines.append(f"-- Expected Data Encoding: {data_encoding}")
-    file_lines.append(f"-- Res for 0x{int_to_vhdl_hex(test_value_converted, data_width)} : 0x{hex_test_result}")
+    file_lines.append(f"-- Res for 0x{int_to_vhdl_hex(test_value_converted, data_width)} : {hex_test_result}")
     if test_input_path is not None:
         file_lines.append(f"-- Res from input file {test_input_path} with label {test_input_data['label']}: 0x{test_hex_result}")
     file_lines.append("library ieee;")
@@ -162,5 +170,5 @@ def write_layer_weights_mem(npz_path, layer_name="L1", data_width=8, data_encodi
         vhd_file.write("\n".join(file_lines))
     print(f"VHDL file written to: {vhd_file_path}")
 
-write_layer_weights_mem(r"mnist_lone_layer_weights.npz", layer_name="test", data_width=32, data_encoding="fixed_point", integral=2, test_value=0.0625)
-#write_test_input_coe("mnist_sample_input.npz", input_name="test_input", data_width=8, data_encoding="integer")
+write_layer_weights_mem(r"mnist_lone_layer_weights.npz", layer_name="test", data_width=32, data_encoding="fixed_point", integral=2, test_value=0.0625, test_input_path="mnist_sample_input.npz")
+write_test_input_coe("mnist_sample_input.npz", input_name="test_input", data_width=32, data_encoding="fixed_point", integral=2)

@@ -45,6 +45,38 @@ def convertion_float_hex32(valeur_float,size_integral,dead_bit=0):
 
 print(convertion_float_hex32(-0.006904, 2))
 
+def supprimer_espaces(texte):
+    return texte.replace(" ", "")
+
+def convertion_hex64_float(valeur_hexa,size_integral,dead_bit=1):
+    valeur_hexa = supprimer_espaces(valeur_hexa)
+    valeur_hexa = int(valeur_hexa,16)
+
+    size_word = 64
+    size_integral = int(size_integral)
+    dead_bit = int(dead_bit)
+    size_decimal = size_word - size_integral - dead_bit - 1
+
+    integral_mask = 0
+
+    for i in range(size_integral):
+        integral_mask |= 1 << i
+
+    signe = (valeur_hexa & (1<<(size_word-1))) >> (size_word-1)
+
+    integral = ((valeur_hexa) >> size_decimal) & integral_mask
+    decimal = 0
+    for i in range(size_decimal-1):
+        bit = (valeur_hexa >> ((size_decimal-1) - i) ) & 0x1
+        decimal += bit * (2**-(i+1))
+        #print (" val" + str(i) + " = " + str(bit * (2**-(i+1))))
+
+    if (signe):
+        res_total = -(decimal + integral)
+    else :
+        res_total = (decimal + integral)
+    return(str(res_total))
+
 # ========== SAVE ==========
 
 # import numpy as np
