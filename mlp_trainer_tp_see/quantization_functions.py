@@ -21,3 +21,7 @@ def int_to_vhdl_hex(v: int, width_bits: int) -> str:
     if len(hex_res[2:]) < width_bits // 4:
         hex_res = hex_res[:2] + hex_res[2:].rjust(width_bits // 4, '0')
     return hex_res[2:].upper()
+
+
+a = int(-1)
+print(int_to_vhdl_hex(a,32))
