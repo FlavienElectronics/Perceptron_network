@@ -71,7 +71,7 @@ architecture Behavioral of Perceptron_BRAM is
     -- Integral : [61,58]
     -- Decimal : [57,0]
     signal res_sum: std_logic_vector(31 downto 0);
-    signal index: std_logic_vector(7 downto 0);
+    signal index: std_logic_vector(9 downto 0);
     signal intern_valid: std_logic;
     
     signal A_is_positive: std_logic;
@@ -108,7 +108,7 @@ begin
     begin
         if rising_edge(Clock) then
             if Reset = '0' then
-                index <= x"00";
+                index <= "0000000000";
                 valid <= '0';
                 intern_valid <= '0';
 --                res_mul <= x"0000000000000000";
@@ -161,7 +161,7 @@ begin
                 if index >= (weight_array_size-1) then
                     valid <= '1';
                     intern_valid <= '1';
-                    index <= x"00";
+                    index <= "0000000000";
                 end if;
             end if;
                 

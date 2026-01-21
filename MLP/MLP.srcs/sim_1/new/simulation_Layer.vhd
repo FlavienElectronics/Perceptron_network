@@ -45,14 +45,15 @@ architecture Bench of simulation_Layer is
     signal OUTPUT       : STD_LOGIC_VECTOR (31 downto 0);
     
     component Layer is
-    Port(
-            clock_L :  in  std_logic;
-            Enable_L : in STD_LOGIC;
-            Reset_L :  in STD_LOGIC;
-            Input_L :  in std_logic_vector (31 downto 0);
-            Valid_L :  out STD_LOGIC;
-            Output_L : out std_logic_vector (31 downto 0)
-         );
+        generic(weight_array_size : integer := 10);
+        Port(
+                clock_L :  in  std_logic;
+                Enable_L : in STD_LOGIC;
+                Reset_L :  in STD_LOGIC;
+                Input_L :  in std_logic_vector (31 downto 0);
+                Valid_L :  out STD_LOGIC;
+                Output_L : out std_logic_vector (31 downto 0)
+             );
     end component;
 
 begin

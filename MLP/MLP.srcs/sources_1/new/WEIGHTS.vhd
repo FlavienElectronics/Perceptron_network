@@ -2,7 +2,7 @@
 -- Number of Neurons: 10
 -- Number of Inputs per Neuron: 784
 -- Data Width: 32 bits
--- Address Width: 10 bits
+-- addr_Wess Width: 10 bits
 -- Expected Data Encoding: fixed_point
 -- Res for 0x02000000 : 0x[]
 library ieee;
@@ -12,7 +12,7 @@ use ieee.numeric_std.all;
 entity WEIGHTS is
     port(
         clk_W   : in  std_logic;
-        addr_W  : in  std_logic_vector(9 downto 0); -- Same addr for all neurons within a layer
+        addr_W  : in  std_logic_vector(9 downto 0); -- Same addr_W for all neurons within a layer
         dout_W  : out std_logic_vector(32*10-1 downto 0) -- DATA_WIDTH * N_NEURONS -> 320 bits
     );
 end WEIGHTS;
@@ -95,73 +95,73 @@ architecture rtl of WEIGHTS is
 
 begin
 
-    read_n0 : process(clk) is
+    read_n0 : process(clk_W) is
     begin
-        if rising_edge(clk) then
-            dout((1*DATA_WIDTH-1) downto (0*DATA_WIDTH)) <= weights_n0(to_integer(unsigned(addr)));
+        if rising_edge(clk_W) then
+            dout_W((1*DATA_WIDTH-1) downto (0*DATA_WIDTH)) <= weights_n0(to_integer(unsigned(addr_W)));
         end if;
     end process read_n0;
 
-    read_n1 : process(clk) is
+    read_n1 : process(clk_W) is
     begin
-        if rising_edge(clk) then
-            dout((2*DATA_WIDTH-1) downto (1*DATA_WIDTH)) <= weights_n1(to_integer(unsigned(addr)));
+        if rising_edge(clk_W) then
+            dout_W((2*DATA_WIDTH-1) downto (1*DATA_WIDTH)) <= weights_n1(to_integer(unsigned(addr_W)));
         end if;
     end process read_n1;
 
-    read_n2 : process(clk) is
+    read_n2 : process(clk_W) is
     begin
-        if rising_edge(clk) then
-            dout((3*DATA_WIDTH-1) downto (2*DATA_WIDTH)) <= weights_n2(to_integer(unsigned(addr)));
+        if rising_edge(clk_W) then
+            dout_W((3*DATA_WIDTH-1) downto (2*DATA_WIDTH)) <= weights_n2(to_integer(unsigned(addr_W)));
         end if;
     end process read_n2;
 
-    read_n3 : process(clk) is
+    read_n3 : process(clk_W) is
     begin
-        if rising_edge(clk) then
-            dout((4*DATA_WIDTH-1) downto (3*DATA_WIDTH)) <= weights_n3(to_integer(unsigned(addr)));
+        if rising_edge(clk_W) then
+            dout_W((4*DATA_WIDTH-1) downto (3*DATA_WIDTH)) <= weights_n3(to_integer(unsigned(addr_W)));
         end if;
     end process read_n3;
 
-    read_n4 : process(clk) is
+    read_n4 : process(clk_W) is
     begin
-        if rising_edge(clk) then
-            dout((5*DATA_WIDTH-1) downto (4*DATA_WIDTH)) <= weights_n4(to_integer(unsigned(addr)));
+        if rising_edge(clk_W) then
+            dout_W((5*DATA_WIDTH-1) downto (4*DATA_WIDTH)) <= weights_n4(to_integer(unsigned(addr_W)));
         end if;
     end process read_n4;
 
-    read_n5 : process(clk) is
+    read_n5 : process(clk_W) is
     begin
-        if rising_edge(clk) then
-            dout((6*DATA_WIDTH-1) downto (5*DATA_WIDTH)) <= weights_n5(to_integer(unsigned(addr)));
+        if rising_edge(clk_W) then
+            dout_W((6*DATA_WIDTH-1) downto (5*DATA_WIDTH)) <= weights_n5(to_integer(unsigned(addr_W)));
         end if;
     end process read_n5;
 
-    read_n6 : process(clk) is
+    read_n6 : process(clk_W) is
     begin
-        if rising_edge(clk) then
-            dout((7*DATA_WIDTH-1) downto (6*DATA_WIDTH)) <= weights_n6(to_integer(unsigned(addr)));
+        if rising_edge(clk_W) then
+            dout_W((7*DATA_WIDTH-1) downto (6*DATA_WIDTH)) <= weights_n6(to_integer(unsigned(addr_W)));
         end if;
     end process read_n6;
 
-    read_n7 : process(clk) is
+    read_n7 : process(clk_W) is
     begin
-        if rising_edge(clk) then
-            dout((8*DATA_WIDTH-1) downto (7*DATA_WIDTH)) <= weights_n7(to_integer(unsigned(addr)));
+        if rising_edge(clk_W) then
+            dout_W((8*DATA_WIDTH-1) downto (7*DATA_WIDTH)) <= weights_n7(to_integer(unsigned(addr_W)));
         end if;
     end process read_n7;
 
-    read_n8 : process(clk) is
+    read_n8 : process(clk_W) is
     begin
-        if rising_edge(clk) then
-            dout((9*DATA_WIDTH-1) downto (8*DATA_WIDTH)) <= weights_n8(to_integer(unsigned(addr)));
+        if rising_edge(clk_W) then
+            dout_W((9*DATA_WIDTH-1) downto (8*DATA_WIDTH)) <= weights_n8(to_integer(unsigned(addr_W)));
         end if;
     end process read_n8;
 
-    read_n9 : process(clk) is
+    read_n9 : process(clk_W) is
     begin
-        if rising_edge(clk) then
-            dout((10*DATA_WIDTH-1) downto (9*DATA_WIDTH)) <= weights_n9(to_integer(unsigned(addr)));
+        if rising_edge(clk_W) then
+            dout_W((10*DATA_WIDTH-1) downto (9*DATA_WIDTH)) <= weights_n9(to_integer(unsigned(addr_W)));
         end if;
     end process read_n9;
 

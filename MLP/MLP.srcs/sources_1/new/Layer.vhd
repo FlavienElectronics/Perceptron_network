@@ -49,7 +49,6 @@ signal clk_i : std_logic;
 signal addr_i : std_logic_vector (9 downto 0);
 signal dout_i : std_logic_vector(32*weight_array_size-1 downto 0);
  
-
 component WEIGHTS port(
         clk_W   : in  std_logic;
         addr_W  : in  std_logic_vector(9 downto 0); -- Same addr for all neurons within a layer
@@ -70,20 +69,20 @@ end component;
 
 begin
 
-WEIGHT : WEIGHTS port map( clk_w => clock_L,
-                           addr_w => addr_i,
+WEIGHT : WEIGHTS port map( clk_W => clock_L,
+                           addr_W => addr_i,
                            dout_W => dout_i);
 
-gen_dest : for i in 1 to weight_array_size+1 generate
+gen_dest : for i in 0 to weight_array_size-1 generate
     percept : entity work.Perceptron_BRAM port map(
       Clock         => clock_L,
       Reset         => Reset_L,
       Input_Value   => Input_L,
-      w_in          => dout_i(32*i-1 downto 32*(i-1)),
+      w_in          => dout_i((32*i)+31 downto 32*i),
       addr          => addr_i,
       Valid         => open,
       Enable        => Enable_L,
-      Ouput_Value   => open);
+      Output_Value   => open);
 end generate gen_dest;
 
 end Behavioral;
