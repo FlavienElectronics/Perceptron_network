@@ -2,7 +2,7 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-// Date        : Thu Jan 29 13:31:35 2026
+// Date        : Thu Jan 29 14:31:31 2026
 // Host        : fixe_flavien running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.gen/sources_1/bd/design_1/ip/design_1_Perceptron_BRAM_0_0/design_1_Perceptron_BRAM_0_0_stub.v
@@ -14,11 +14,11 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* CHECK_LICENSE_TYPE = "design_1_Perceptron_BRAM_0_0,Perceptron_BRAM,{}" *) (* CORE_GENERATION_INFO = "design_1_Perceptron_BRAM_0_0,Perceptron_BRAM,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Perceptron_BRAM,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,weight_array_size=7,size_integral_32bit=2,dead_bit_word_64bit=1}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
+(* CHECK_LICENSE_TYPE = "design_1_Perceptron_BRAM_0_0,Perceptron_BRAM,{}" *) (* CORE_GENERATION_INFO = "design_1_Perceptron_BRAM_0_0,Perceptron_BRAM,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Perceptron_BRAM,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,weight_array_size=10,size_integral_32bit=2}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
 (* IP_DEFINITION_SOURCE = "module_ref" *) (* X_CORE_INFO = "Perceptron_BRAM,Vivado 2025.2" *) 
 module design_1_Perceptron_BRAM_0_0(Enable, Input_Value, Clock, Reset, w_in, Valid, 
   Output_Value, addr)
-/* synthesis syn_black_box black_box_pad_pin="Enable,Input_Value[31:0],Reset,w_in[31:0],Valid,Output_Value[31:0],addr[7:0]" */
+/* synthesis syn_black_box black_box_pad_pin="Enable,Input_Value[31:0],Reset,w_in[31:0],Valid,Output_Value[31:0],addr[9:0]" */
 /* synthesis syn_force_seq_prim="Clock" */;
   input Enable;
   input [31:0]Input_Value;
@@ -27,5 +27,5 @@ module design_1_Perceptron_BRAM_0_0(Enable, Input_Value, Clock, Reset, w_in, Val
   input [31:0]w_in;
   output Valid;
   output [31:0]Output_Value;
-  output [7:0]addr;
+  output [9:0]addr;
 endmodule

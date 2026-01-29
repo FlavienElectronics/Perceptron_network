@@ -78,12 +78,11 @@ input wire Reset;
 input wire [31 : 0] w_in;
 output wire Valid;
 output wire [31 : 0] Output_Value;
-output wire [7 : 0] addr;
+output wire [9 : 0] addr;
 
   Perceptron_BRAM #(
-    .weight_array_size(7),
-    .size_integral_32bit(2),
-    .dead_bit_word_64bit(1)
+    .weight_array_size(10),
+    .size_integral_32bit(2)
   ) inst (
     .Enable(Enable),
     .Input_Value(Input_Value),

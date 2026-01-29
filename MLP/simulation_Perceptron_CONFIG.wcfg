@@ -10,49 +10,77 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="211.536 ns"></ZoomEndTime>
-      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="99.260 ns"></ZoomStartTime>
+      <ZoomEndTime time="178.711 ns"></ZoomEndTime>
+      <Cursor1Time time="0.396 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="170"></NameColumnWidth>
-      <ValueColumnWidth column_width="127"></ValueColumnWidth>
+      <ValueColumnWidth column_width="115"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
-   <wvobject type="logic" fp_name="/simulation_Layer/ENABLE">
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/simulation_Layer/ENABLE" type="logic">
       <obj_property name="ElementShortName">ENABLE</obj_property>
       <obj_property name="ObjectShortName">ENABLE</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/simulation_Layer/INPUT">
+   <wvobject fp_name="/simulation_Layer/INPUT" type="array">
       <obj_property name="ElementShortName">INPUT[31:0]</obj_property>
       <obj_property name="ObjectShortName">INPUT[31:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/simulation_Layer/CLOCK">
+   <wvobject fp_name="/simulation_Layer/CLOCK" type="logic">
       <obj_property name="ElementShortName">CLOCK</obj_property>
       <obj_property name="ObjectShortName">CLOCK</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/simulation_Layer/RESET">
+   <wvobject fp_name="/simulation_Layer/RESET" type="logic">
       <obj_property name="ElementShortName">RESET</obj_property>
       <obj_property name="ObjectShortName">RESET</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/simulation_Layer/VALID">
-      <obj_property name="ElementShortName">VALID</obj_property>
-      <obj_property name="ObjectShortName">VALID</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/simulation_Layer/OUTPUT">
-      <obj_property name="ElementShortName">OUTPUT[31:0]</obj_property>
-      <obj_property name="ObjectShortName">OUTPUT[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/simulation_Layer/laye/Output_L">
-      <obj_property name="ElementShortName">Output_L[31:0]</obj_property>
-      <obj_property name="ObjectShortName">Output_L[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/simulation_Layer/laye/Output_L">
-      <obj_property name="ElementShortName">Output_L[31:0]</obj_property>
-      <obj_property name="ObjectShortName">Output_L[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/simulation_Layer/laye/dout_i">
+   <wvobject fp_name="/simulation_Layer/laye/dout_i" type="array">
       <obj_property name="ElementShortName">dout_i[319:0]</obj_property>
       <obj_property name="ObjectShortName">dout_i[319:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simulation_Layer/laye/out_read" type="array">
+      <obj_property name="ElementShortName">out_read[0:9][31:0]</obj_property>
+      <obj_property name="ObjectShortName">out_read[0:9][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simulation_Layer/laye/\gen_dest(0)\/percept/w_in" type="array">
+      <obj_property name="ElementShortName">w_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simulation_Layer/laye/\gen_dest(1)\/percept/w_in" type="array">
+      <obj_property name="ElementShortName">w_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simulation_Layer/laye/\gen_dest(2)\/percept/w_in" type="array">
+      <obj_property name="ElementShortName">w_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simulation_Layer/laye/\gen_dest(3)\/percept/w_in" type="array">
+      <obj_property name="ElementShortName">w_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simulation_Layer/laye/\gen_dest(4)\/percept/w_in" type="array">
+      <obj_property name="ElementShortName">w_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simulation_Layer/laye/\gen_dest(5)\/percept/w_in" type="array">
+      <obj_property name="ElementShortName">w_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simulation_Layer/laye/\gen_dest(6)\/percept/w_in" type="array">
+      <obj_property name="ElementShortName">w_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simulation_Layer/laye/\gen_dest(7)\/percept/w_in" type="array">
+      <obj_property name="ElementShortName">w_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simulation_Layer/laye/\gen_dest(8)\/percept/w_in" type="array">
+      <obj_property name="ElementShortName">w_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simulation_Layer/laye/\gen_dest(9)\/percept/w_in" type="array">
+      <obj_property name="ElementShortName">w_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_in[31:0]</obj_property>
    </wvobject>
 </wave_config>

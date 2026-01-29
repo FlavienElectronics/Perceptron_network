@@ -55,7 +55,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>885aba19</spirit:value>
+            <spirit:value>0608f43f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -68,7 +68,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>885aba19</spirit:value>
+            <spirit:value>0608f43f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -222,7 +222,7 @@
       <spirit:file>
         <spirit:name>xgui/Perceptron_BRAM_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_86c42040</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_8d1eff5e</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -259,10 +259,10 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-01-21T09:48:39Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2026-01-29T13:28:30Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2024.2</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2025.2</xilinx:xilinxVersion>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

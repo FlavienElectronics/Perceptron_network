@@ -2,7 +2,7 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-// Date        : Thu Jan 29 13:31:35 2026
+// Date        : Thu Jan 29 14:31:31 2026
 // Host        : fixe_flavien running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.gen/sources_1/bd/design_1/ip/design_1_Perceptron_BRAM_0_0/design_1_Perceptron_BRAM_0_0_sim_netlist.v
@@ -32,7 +32,7 @@ module design_1_Perceptron_BRAM_0_0
   input [31:0]w_in;
   output Valid;
   output [31:0]Output_Value;
-  output [7:0]addr;
+  output [9:0]addr;
 
   wire \<const0> ;
   wire Clock;
@@ -41,17 +41,18 @@ module design_1_Perceptron_BRAM_0_0
   wire [30:0]\^Output_Value ;
   wire Reset;
   wire Valid;
-  wire [2:0]\^addr ;
+  wire [3:0]\^addr ;
   wire [31:0]w_in;
 
   assign Output_Value[31] = \<const0> ;
   assign Output_Value[30:0] = \^Output_Value [30:0];
+  assign addr[9] = \<const0> ;
+  assign addr[8] = \<const0> ;
   assign addr[7] = \<const0> ;
   assign addr[6] = \<const0> ;
   assign addr[5] = \<const0> ;
   assign addr[4] = \<const0> ;
-  assign addr[3] = \<const0> ;
-  assign addr[2:0] = \^addr [2:0];
+  assign addr[3:0] = \^addr [3:0];
   GND GND
        (.G(\<const0> ));
   design_1_Perceptron_BRAM_0_0_Perceptron_BRAM inst
@@ -64,14 +65,16 @@ module design_1_Perceptron_BRAM_0_0
         .\index_reg[0]_0 (\^addr [0]),
         .\index_reg[1]_0 (\^addr [1]),
         .\index_reg[2]_0 (\^addr [2]),
+        .\index_reg[3]_0 (\^addr [3]),
         .w_in(w_in));
 endmodule
 
 (* ORIG_REF_NAME = "Perceptron_BRAM" *) 
 module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
-   (\index_reg[2]_0 ,
+   (\index_reg[3]_0 ,
     \index_reg[1]_0 ,
     \index_reg[0]_0 ,
+    \index_reg[2]_0 ,
     Valid_reg_0,
     Output_Value,
     Clock,
@@ -79,9 +82,10 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     Input_Value,
     Enable,
     Reset);
-  output \index_reg[2]_0 ;
+  output \index_reg[3]_0 ;
   output \index_reg[1]_0 ;
   output \index_reg[0]_0 ;
+  output \index_reg[2]_0 ;
   output Valid_reg_0;
   output [30:0]Output_Value;
   input Clock;
@@ -97,6 +101,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
   wire [31:0]R;
   wire Reset;
   wire Valid_i_1_n_0;
+  wire Valid_i_2_n_0;
   wire Valid_reg_0;
   wire clock_wait;
   wire clock_wait_i_1_n_0;
@@ -204,11 +209,12 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
   wire i__carry_i_4_n_0;
   wire \index[0]_i_1_n_0 ;
   wire \index[1]_i_1_n_0 ;
-  wire \index[2]_i_2_n_0 ;
+  wire \index[2]_i_1_n_0 ;
+  wire \index[3]_i_2_n_0 ;
   wire \index_reg[0]_0 ;
   wire \index_reg[1]_0 ;
   wire \index_reg[2]_0 ;
-  wire ltOp;
+  wire \index_reg[3]_0 ;
   wire minusOp_carry__0_i_1_n_0;
   wire minusOp_carry__0_i_2_n_0;
   wire minusOp_carry__0_i_3_n_0;
@@ -769,6 +775,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
   wire \res_mul_reg[59]_i_3_n_0 ;
   wire \res_mul_reg[59]_i_4_n_0 ;
   wire \res_mul_reg[59]_i_5_n_0 ;
+  wire \res_mul_reg[63]_i_2_n_0 ;
   wire [0:0]res_sum;
   wire \res_sum[0]_i_1_n_0 ;
   wire \res_sum[0]_i_2_n_0 ;
@@ -782,28 +789,28 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
   wire \res_sum[11]_i_7_n_0 ;
   wire \res_sum[12]_i_1_n_0 ;
   wire \res_sum[12]_i_2_n_0 ;
-  wire \res_sum[12]_i_4_n_0 ;
-  wire \res_sum[12]_i_5_n_0 ;
-  wire \res_sum[12]_i_6_n_0 ;
-  wire \res_sum[12]_i_7_n_0 ;
   wire \res_sum[13]_i_1_n_0 ;
   wire \res_sum[13]_i_2_n_0 ;
   wire \res_sum[14]_i_1_n_0 ;
   wire \res_sum[14]_i_2_n_0 ;
   wire \res_sum[15]_i_1_n_0 ;
   wire \res_sum[15]_i_2_n_0 ;
+  wire \res_sum[15]_i_4_n_0 ;
+  wire \res_sum[15]_i_5_n_0 ;
+  wire \res_sum[15]_i_6_n_0 ;
+  wire \res_sum[15]_i_7_n_0 ;
   wire \res_sum[16]_i_1_n_0 ;
   wire \res_sum[16]_i_2_n_0 ;
   wire \res_sum[17]_i_1_n_0 ;
   wire \res_sum[17]_i_2_n_0 ;
   wire \res_sum[18]_i_1_n_0 ;
   wire \res_sum[18]_i_2_n_0 ;
-  wire \res_sum[18]_i_4_n_0 ;
-  wire \res_sum[18]_i_5_n_0 ;
-  wire \res_sum[18]_i_6_n_0 ;
-  wire \res_sum[18]_i_7_n_0 ;
   wire \res_sum[19]_i_1_n_0 ;
   wire \res_sum[19]_i_2_n_0 ;
+  wire \res_sum[19]_i_4_n_0 ;
+  wire \res_sum[19]_i_5_n_0 ;
+  wire \res_sum[19]_i_6_n_0 ;
+  wire \res_sum[19]_i_7_n_0 ;
   wire \res_sum[1]_i_1_n_0 ;
   wire \res_sum[1]_i_2_n_0 ;
   wire \res_sum[20]_i_1_n_0 ;
@@ -837,29 +844,28 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
   wire \res_sum[29]_i_3_n_0 ;
   wire \res_sum[2]_i_1_n_0 ;
   wire \res_sum[2]_i_2_n_0 ;
-  wire \res_sum[2]_i_4_n_0 ;
-  wire \res_sum[2]_i_5_n_0 ;
-  wire \res_sum[2]_i_6_n_0 ;
-  wire \res_sum[2]_i_7_n_0 ;
   wire \res_sum[30]_i_1_n_0 ;
   wire \res_sum[30]_i_2_n_0 ;
   wire \res_sum[30]_i_4_n_0 ;
   wire \res_sum[30]_i_5_n_0 ;
   wire \res_sum[30]_i_6_n_0 ;
   wire \res_sum[31]_i_1_n_0 ;
-  wire \res_sum[31]_i_2_n_0 ;
   wire \res_sum[3]_i_1_n_0 ;
   wire \res_sum[3]_i_2_n_0 ;
+  wire \res_sum[3]_i_4_n_0 ;
+  wire \res_sum[3]_i_5_n_0 ;
+  wire \res_sum[3]_i_6_n_0 ;
+  wire \res_sum[3]_i_7_n_0 ;
   wire \res_sum[4]_i_1_n_0 ;
   wire \res_sum[4]_i_2_n_0 ;
+  wire \res_sum[4]_i_4_n_0 ;
+  wire \res_sum[4]_i_5_n_0 ;
+  wire \res_sum[4]_i_6_n_0 ;
+  wire \res_sum[4]_i_7_n_0 ;
   wire \res_sum[5]_i_1_n_0 ;
   wire \res_sum[5]_i_2_n_0 ;
   wire \res_sum[6]_i_1_n_0 ;
   wire \res_sum[6]_i_2_n_0 ;
-  wire \res_sum[6]_i_4_n_0 ;
-  wire \res_sum[6]_i_5_n_0 ;
-  wire \res_sum[6]_i_6_n_0 ;
-  wire \res_sum[6]_i_7_n_0 ;
   wire \res_sum[7]_i_1_n_0 ;
   wire \res_sum[7]_i_2_n_0 ;
   wire \res_sum[8]_i_1_n_0 ;
@@ -870,14 +876,14 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
   wire \res_sum_reg[11]_i_3_n_1 ;
   wire \res_sum_reg[11]_i_3_n_2 ;
   wire \res_sum_reg[11]_i_3_n_3 ;
-  wire \res_sum_reg[12]_i_3_n_0 ;
-  wire \res_sum_reg[12]_i_3_n_1 ;
-  wire \res_sum_reg[12]_i_3_n_2 ;
-  wire \res_sum_reg[12]_i_3_n_3 ;
-  wire \res_sum_reg[18]_i_3_n_0 ;
-  wire \res_sum_reg[18]_i_3_n_1 ;
-  wire \res_sum_reg[18]_i_3_n_2 ;
-  wire \res_sum_reg[18]_i_3_n_3 ;
+  wire \res_sum_reg[15]_i_3_n_0 ;
+  wire \res_sum_reg[15]_i_3_n_1 ;
+  wire \res_sum_reg[15]_i_3_n_2 ;
+  wire \res_sum_reg[15]_i_3_n_3 ;
+  wire \res_sum_reg[19]_i_3_n_0 ;
+  wire \res_sum_reg[19]_i_3_n_1 ;
+  wire \res_sum_reg[19]_i_3_n_2 ;
+  wire \res_sum_reg[19]_i_3_n_3 ;
   wire \res_sum_reg[23]_i_3_n_0 ;
   wire \res_sum_reg[23]_i_3_n_1 ;
   wire \res_sum_reg[23]_i_3_n_2 ;
@@ -886,16 +892,16 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
   wire \res_sum_reg[27]_i_3_n_1 ;
   wire \res_sum_reg[27]_i_3_n_2 ;
   wire \res_sum_reg[27]_i_3_n_3 ;
-  wire \res_sum_reg[2]_i_3_n_0 ;
-  wire \res_sum_reg[2]_i_3_n_1 ;
-  wire \res_sum_reg[2]_i_3_n_2 ;
-  wire \res_sum_reg[2]_i_3_n_3 ;
   wire \res_sum_reg[30]_i_3_n_2 ;
   wire \res_sum_reg[30]_i_3_n_3 ;
-  wire \res_sum_reg[6]_i_3_n_0 ;
-  wire \res_sum_reg[6]_i_3_n_1 ;
-  wire \res_sum_reg[6]_i_3_n_2 ;
-  wire \res_sum_reg[6]_i_3_n_3 ;
+  wire \res_sum_reg[3]_i_3_n_0 ;
+  wire \res_sum_reg[3]_i_3_n_1 ;
+  wire \res_sum_reg[3]_i_3_n_2 ;
+  wire \res_sum_reg[3]_i_3_n_3 ;
+  wire \res_sum_reg[4]_i_3_n_0 ;
+  wire \res_sum_reg[4]_i_3_n_1 ;
+  wire \res_sum_reg[4]_i_3_n_2 ;
+  wire \res_sum_reg[4]_i_3_n_3 ;
   wire \res_sum_reg_n_0_[0] ;
   wire \res_sum_reg_n_0_[10] ;
   wire \res_sum_reg_n_0_[11] ;
@@ -991,210 +997,210 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
        (.I0(\res_sum_reg_n_0_[0] ),
         .I1(p_0_in),
         .O(Output_Value[0]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[10]_INST_0 
        (.I0(\res_sum_reg_n_0_[10] ),
         .I1(p_0_in),
         .O(Output_Value[10]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[11]_INST_0 
        (.I0(\res_sum_reg_n_0_[11] ),
         .I1(p_0_in),
         .O(Output_Value[11]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[12]_INST_0 
        (.I0(\res_sum_reg_n_0_[12] ),
         .I1(p_0_in),
         .O(Output_Value[12]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[13]_INST_0 
        (.I0(\res_sum_reg_n_0_[13] ),
         .I1(p_0_in),
         .O(Output_Value[13]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[14]_INST_0 
        (.I0(\res_sum_reg_n_0_[14] ),
         .I1(p_0_in),
         .O(Output_Value[14]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[15]_INST_0 
        (.I0(\res_sum_reg_n_0_[15] ),
         .I1(p_0_in),
         .O(Output_Value[15]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[16]_INST_0 
        (.I0(\res_sum_reg_n_0_[16] ),
         .I1(p_0_in),
         .O(Output_Value[16]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[17]_INST_0 
        (.I0(\res_sum_reg_n_0_[17] ),
         .I1(p_0_in),
         .O(Output_Value[17]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[18]_INST_0 
        (.I0(\res_sum_reg_n_0_[18] ),
         .I1(p_0_in),
         .O(Output_Value[18]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[19]_INST_0 
        (.I0(\res_sum_reg_n_0_[19] ),
         .I1(p_0_in),
         .O(Output_Value[19]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[1]_INST_0 
        (.I0(\res_sum_reg_n_0_[1] ),
         .I1(p_0_in),
         .O(Output_Value[1]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[20]_INST_0 
        (.I0(\res_sum_reg_n_0_[20] ),
         .I1(p_0_in),
         .O(Output_Value[20]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[21]_INST_0 
        (.I0(\res_sum_reg_n_0_[21] ),
         .I1(p_0_in),
         .O(Output_Value[21]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[22]_INST_0 
        (.I0(\res_sum_reg_n_0_[22] ),
         .I1(p_0_in),
         .O(Output_Value[22]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[23]_INST_0 
        (.I0(\res_sum_reg_n_0_[23] ),
         .I1(p_0_in),
         .O(Output_Value[23]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[24]_INST_0 
        (.I0(\res_sum_reg_n_0_[24] ),
         .I1(p_0_in),
         .O(Output_Value[24]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[25]_INST_0 
        (.I0(\res_sum_reg_n_0_[25] ),
         .I1(p_0_in),
         .O(Output_Value[25]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[26]_INST_0 
        (.I0(\res_sum_reg_n_0_[26] ),
         .I1(p_0_in),
         .O(Output_Value[26]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[27]_INST_0 
        (.I0(\res_sum_reg_n_0_[27] ),
         .I1(p_0_in),
         .O(Output_Value[27]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[28]_INST_0 
        (.I0(\res_sum_reg_n_0_[28] ),
         .I1(p_0_in),
         .O(Output_Value[28]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[29]_INST_0 
        (.I0(\res_sum_reg_n_0_[29] ),
         .I1(p_0_in),
         .O(Output_Value[29]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[2]_INST_0 
        (.I0(\res_sum_reg_n_0_[2] ),
         .I1(p_0_in),
         .O(Output_Value[2]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[30]_INST_0 
        (.I0(\res_sum_reg_n_0_[30] ),
         .I1(p_0_in),
         .O(Output_Value[30]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[3]_INST_0 
        (.I0(\res_sum_reg_n_0_[3] ),
         .I1(p_0_in),
         .O(Output_Value[3]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[4]_INST_0 
        (.I0(\res_sum_reg_n_0_[4] ),
         .I1(p_0_in),
         .O(Output_Value[4]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[5]_INST_0 
        (.I0(\res_sum_reg_n_0_[5] ),
         .I1(p_0_in),
         .O(Output_Value[5]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[6]_INST_0 
        (.I0(\res_sum_reg_n_0_[6] ),
         .I1(p_0_in),
         .O(Output_Value[6]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[7]_INST_0 
        (.I0(\res_sum_reg_n_0_[7] ),
         .I1(p_0_in),
         .O(Output_Value[7]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[8]_INST_0 
        (.I0(\res_sum_reg_n_0_[8] ),
         .I1(p_0_in),
         .O(Output_Value[8]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Output_Value[9]_INST_0 
@@ -1202,15 +1208,23 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .I1(p_0_in),
         .O(Output_Value[9]));
   LUT6 #(
-    .INIT(64'hF8F0F0F008000000)) 
+    .INIT(64'hFFFF80AA80AA80AA)) 
     Valid_i_1
+       (.I0(Valid_i_2_n_0),
+        .I1(\index_reg[3]_0 ),
+        .I2(\index_reg[0]_0 ),
+        .I3(\res_mul_reg[63]_i_2_n_0 ),
+        .I4(Reset),
+        .I5(Valid_reg_0),
+        .O(Valid_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    Valid_i_2
        (.I0(clock_wait),
         .I1(Enable),
         .I2(Valid_reg_0),
-        .I3(\index_reg[1]_0 ),
-        .I4(\index_reg[2]_0 ),
-        .I5(Reset),
-        .O(Valid_i_1_n_0));
+        .O(Valid_i_2_n_0));
   FDRE Valid_reg
        (.C(Clock),
         .CE(1'b1),
@@ -1825,44 +1839,53 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
        (.I0(R[0]),
         .I1(\res_sum_reg_n_0_[0] ),
         .O(i__carry_i_4_n_0));
-  LUT6 #(
-    .INIT(64'h0000004000400040)) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h00022222)) 
     \index[0]_i_1 
-       (.I0(\index_reg[0]_0 ),
-        .I1(clock_wait),
-        .I2(Enable),
-        .I3(Valid_reg_0),
-        .I4(\index_reg[1]_0 ),
-        .I5(\index_reg[2]_0 ),
+       (.I0(Valid_i_2_n_0),
+        .I1(\index_reg[0]_0 ),
+        .I2(\index_reg[2]_0 ),
+        .I3(\index_reg[1]_0 ),
+        .I4(\index_reg[3]_0 ),
         .O(\index[0]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000008000400080)) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'h0220)) 
     \index[1]_i_1 
-       (.I0(\index_reg[0]_0 ),
-        .I1(clock_wait),
-        .I2(Enable),
-        .I3(Valid_reg_0),
-        .I4(\index_reg[1]_0 ),
-        .I5(\index_reg[2]_0 ),
+       (.I0(Valid_i_2_n_0),
+        .I1(\index_reg[3]_0 ),
+        .I2(\index_reg[0]_0 ),
+        .I3(\index_reg[1]_0 ),
         .O(\index[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h02222000)) 
+    \index[2]_i_1 
+       (.I0(Valid_i_2_n_0),
+        .I1(\index_reg[3]_0 ),
+        .I2(\index_reg[1]_0 ),
+        .I3(\index_reg[0]_0 ),
+        .I4(\index_reg[2]_0 ),
+        .O(\index[2]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h08FF)) 
-    \index[2]_i_1 
+    \index[3]_i_1 
        (.I0(clock_wait),
         .I1(Enable),
         .I2(Valid_reg_0),
         .I3(Reset),
         .O(res_sum));
-  LUT6 #(
-    .INIT(64'h000000C000800000)) 
-    \index[2]_i_2 
-       (.I0(\index_reg[0]_0 ),
-        .I1(clock_wait),
-        .I2(Enable),
-        .I3(Valid_reg_0),
-        .I4(\index_reg[1]_0 ),
-        .I5(\index_reg[2]_0 ),
-        .O(\index[2]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'h00028000)) 
+    \index[3]_i_2 
+       (.I0(Valid_i_2_n_0),
+        .I1(\index_reg[0]_0 ),
+        .I2(\index_reg[2]_0 ),
+        .I3(\index_reg[1]_0 ),
+        .I4(\index_reg[3]_0 ),
+        .O(\index[3]_i_2_n_0 ));
   FDRE \index_reg[0] 
        (.C(Clock),
         .CE(res_sum),
@@ -1878,8 +1901,14 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
   FDRE \index_reg[2] 
        (.C(Clock),
         .CE(res_sum),
-        .D(\index[2]_i_2_n_0 ),
+        .D(\index[2]_i_1_n_0 ),
         .Q(\index_reg[2]_0 ),
+        .R(1'b0));
+  FDRE \index_reg[3] 
+       (.C(Clock),
+        .CE(res_sum),
+        .D(\index[3]_i_2_n_0 ),
+        .Q(\index_reg[3]_0 ),
         .R(1'b0));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 minusOp_carry
@@ -2510,7 +2539,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[29] 
        (.CLR(1'b0),
         .D(multOp__3[29]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[0]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2520,7 +2549,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[30] 
        (.CLR(1'b0),
         .D(multOp__3[30]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[1]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2530,7 +2559,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[31] 
        (.CLR(1'b0),
         .D(multOp__3[31]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[2]));
   CARRY4 \res_mul_reg[31]_i_1 
@@ -2658,7 +2687,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[32] 
        (.CLR(1'b0),
         .D(multOp__3[32]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[3]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2668,7 +2697,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[33] 
        (.CLR(1'b0),
         .D(multOp__3[33]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[4]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2678,7 +2707,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[34] 
        (.CLR(1'b0),
         .D(multOp__3[34]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[5]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2688,7 +2717,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[35] 
        (.CLR(1'b0),
         .D(multOp__3[35]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[6]));
   CARRY4 \res_mul_reg[35]_i_1 
@@ -2729,7 +2758,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[36] 
        (.CLR(1'b0),
         .D(multOp__3[36]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[7]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2739,7 +2768,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[37] 
        (.CLR(1'b0),
         .D(multOp__3[37]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[8]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2749,7 +2778,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[38] 
        (.CLR(1'b0),
         .D(multOp__3[38]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[9]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2759,7 +2788,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[39] 
        (.CLR(1'b0),
         .D(multOp__3[39]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[10]));
   CARRY4 \res_mul_reg[39]_i_1 
@@ -2800,7 +2829,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[40] 
        (.CLR(1'b0),
         .D(multOp__3[40]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[11]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2810,7 +2839,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[41] 
        (.CLR(1'b0),
         .D(multOp__3[41]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[12]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2820,7 +2849,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[42] 
        (.CLR(1'b0),
         .D(multOp__3[42]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[13]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2830,7 +2859,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[43] 
        (.CLR(1'b0),
         .D(multOp__3[43]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[14]));
   CARRY4 \res_mul_reg[43]_i_1 
@@ -2871,7 +2900,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[44] 
        (.CLR(1'b0),
         .D(multOp__3[44]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[15]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2881,7 +2910,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[45] 
        (.CLR(1'b0),
         .D(multOp__3[45]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[16]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2891,7 +2920,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[46] 
        (.CLR(1'b0),
         .D(multOp__3[46]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[17]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2901,7 +2930,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[47] 
        (.CLR(1'b0),
         .D(multOp__3[47]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[18]));
   CARRY4 \res_mul_reg[47]_i_1 
@@ -2942,7 +2971,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[48] 
        (.CLR(1'b0),
         .D(multOp__3[48]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[19]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2952,7 +2981,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[49] 
        (.CLR(1'b0),
         .D(multOp__3[49]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[20]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2962,7 +2991,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[50] 
        (.CLR(1'b0),
         .D(multOp__3[50]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[21]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2972,7 +3001,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[51] 
        (.CLR(1'b0),
         .D(multOp__3[51]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[22]));
   CARRY4 \res_mul_reg[51]_i_1 
@@ -3013,7 +3042,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[52] 
        (.CLR(1'b0),
         .D(multOp__3[52]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[23]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -3023,7 +3052,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[53] 
        (.CLR(1'b0),
         .D(multOp__3[53]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[24]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -3033,7 +3062,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[54] 
        (.CLR(1'b0),
         .D(multOp__3[54]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[25]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -3043,7 +3072,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[55] 
        (.CLR(1'b0),
         .D(multOp__3[55]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[26]));
   CARRY4 \res_mul_reg[55]_i_1 
@@ -3084,7 +3113,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[56] 
        (.CLR(1'b0),
         .D(multOp__3[56]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[27]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -3094,7 +3123,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[57] 
        (.CLR(1'b0),
         .D(multOp__3[57]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[28]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -3104,7 +3133,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[58] 
        (.CLR(1'b0),
         .D(multOp__3[58]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[29]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -3114,7 +3143,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[59] 
        (.CLR(1'b0),
         .D(multOp__3[59]),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[30]));
   CARRY4 \res_mul_reg[59]_i_1 
@@ -3155,7 +3184,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
     \res_mul_reg[63] 
        (.CLR(1'b0),
         .D(mul_sign),
-        .G(ltOp),
+        .G(\res_mul_reg[63]_i_2_n_0 ),
         .GE(1'b1),
         .Q(R[31]));
   LUT2 #(
@@ -3165,12 +3194,12 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .I1(w_in[31]),
         .O(mul_sign));
   LUT3 #(
-    .INIT(8'h7F)) 
+    .INIT(8'h57)) 
     \res_mul_reg[63]_i_2 
-       (.I0(\index_reg[2]_0 ),
+       (.I0(\index_reg[3]_0 ),
         .I1(\index_reg[1]_0 ),
-        .I2(\index_reg[0]_0 ),
-        .O(ltOp));
+        .I2(\index_reg[2]_0 ),
+        .O(\res_mul_reg[63]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h000000005555FD5D)) 
     \res_sum[0]_i_1 
@@ -3255,49 +3284,26 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
        (.I0(\res_sum_reg_n_0_[8] ),
         .I1(R[8]),
         .O(\res_sum[11]_i_7_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFBF0080)) 
+  LUT6 #(
+    .INIT(64'h000000005555FD5D)) 
     \res_sum[12]_i_1 
-       (.I0(\res_sum[12]_i_2_n_0 ),
-        .I1(clock_wait),
-        .I2(Enable),
-        .I3(Valid_reg_0),
-        .I4(Reset),
+       (.I0(\res_sum[29]_i_2_n_0 ),
+        .I1(minusOp_carry__2_n_7),
+        .I2(gtOp),
+        .I3(\minusOp_inferred__0/i__carry__2_n_7 ),
+        .I4(eqOp),
+        .I5(\res_sum[12]_i_2_n_0 ),
         .O(\res_sum[12]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00E2FFFF00E20000)) 
+    .INIT(64'hBFBFBFBFFFBFBFFF)) 
     \res_sum[12]_i_2 
-       (.I0(minusOp_carry__2_n_7),
-        .I1(gtOp),
-        .I2(\minusOp_inferred__0/i__carry__2_n_7 ),
-        .I3(eqOp),
-        .I4(\res_sum[29]_i_2_n_0 ),
+       (.I0(Valid_reg_0),
+        .I1(Enable),
+        .I2(clock_wait),
+        .I3(p_0_in),
+        .I4(R[31]),
         .I5(data1[12]),
         .O(\res_sum[12]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[12]_i_4 
-       (.I0(\res_sum_reg_n_0_[15] ),
-        .I1(R[15]),
-        .O(\res_sum[12]_i_4_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[12]_i_5 
-       (.I0(\res_sum_reg_n_0_[14] ),
-        .I1(R[14]),
-        .O(\res_sum[12]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[12]_i_6 
-       (.I0(\res_sum_reg_n_0_[13] ),
-        .I1(R[13]),
-        .O(\res_sum[12]_i_6_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[12]_i_7 
-       (.I0(\res_sum_reg_n_0_[12] ),
-        .I1(R[12]),
-        .O(\res_sum[12]_i_7_n_0 ));
   LUT6 #(
     .INIT(64'h000000005555FD5D)) 
     \res_sum[13]_i_1 
@@ -3358,23 +3364,48 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .I4(R[31]),
         .I5(data1[15]),
         .O(\res_sum[15]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFBF0080)) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[15]_i_4 
+       (.I0(\res_sum_reg_n_0_[15] ),
+        .I1(R[15]),
+        .O(\res_sum[15]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[15]_i_5 
+       (.I0(\res_sum_reg_n_0_[14] ),
+        .I1(R[14]),
+        .O(\res_sum[15]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[15]_i_6 
+       (.I0(\res_sum_reg_n_0_[13] ),
+        .I1(R[13]),
+        .O(\res_sum[15]_i_6_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[15]_i_7 
+       (.I0(\res_sum_reg_n_0_[12] ),
+        .I1(R[12]),
+        .O(\res_sum[15]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000005555FD5D)) 
     \res_sum[16]_i_1 
-       (.I0(\res_sum[16]_i_2_n_0 ),
-        .I1(clock_wait),
-        .I2(Enable),
-        .I3(Valid_reg_0),
-        .I4(Reset),
+       (.I0(\res_sum[29]_i_2_n_0 ),
+        .I1(minusOp_carry__3_n_7),
+        .I2(gtOp),
+        .I3(\minusOp_inferred__0/i__carry__3_n_7 ),
+        .I4(eqOp),
+        .I5(\res_sum[16]_i_2_n_0 ),
         .O(\res_sum[16]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0D08FFFF0D080000)) 
+    .INIT(64'hBFBFBFBFFFBFBFFF)) 
     \res_sum[16]_i_2 
-       (.I0(gtOp),
-        .I1(\minusOp_inferred__0/i__carry__3_n_7 ),
-        .I2(eqOp),
-        .I3(minusOp_carry__3_n_7),
-        .I4(\res_sum[29]_i_2_n_0 ),
+       (.I0(Valid_reg_0),
+        .I1(Enable),
+        .I2(clock_wait),
+        .I3(p_0_in),
+        .I4(R[31]),
         .I5(data1[16]),
         .O(\res_sum[16]_i_2_n_0 ));
   LUT6 #(
@@ -3397,49 +3428,26 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .I4(R[31]),
         .I5(data1[17]),
         .O(\res_sum[17]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFBF0080)) 
+  LUT6 #(
+    .INIT(64'h000000005555FD5D)) 
     \res_sum[18]_i_1 
-       (.I0(\res_sum[18]_i_2_n_0 ),
-        .I1(clock_wait),
-        .I2(Enable),
-        .I3(Valid_reg_0),
-        .I4(Reset),
+       (.I0(\res_sum[29]_i_2_n_0 ),
+        .I1(minusOp_carry__3_n_5),
+        .I2(gtOp),
+        .I3(\minusOp_inferred__0/i__carry__3_n_5 ),
+        .I4(eqOp),
+        .I5(\res_sum[18]_i_2_n_0 ),
         .O(\res_sum[18]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00E2FFFF00E20000)) 
+    .INIT(64'hBFBFBFBFFFBFBFFF)) 
     \res_sum[18]_i_2 
-       (.I0(minusOp_carry__3_n_5),
-        .I1(gtOp),
-        .I2(\minusOp_inferred__0/i__carry__3_n_5 ),
-        .I3(eqOp),
-        .I4(\res_sum[29]_i_2_n_0 ),
+       (.I0(Valid_reg_0),
+        .I1(Enable),
+        .I2(clock_wait),
+        .I3(p_0_in),
+        .I4(R[31]),
         .I5(data1[18]),
         .O(\res_sum[18]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[18]_i_4 
-       (.I0(\res_sum_reg_n_0_[19] ),
-        .I1(R[19]),
-        .O(\res_sum[18]_i_4_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[18]_i_5 
-       (.I0(\res_sum_reg_n_0_[18] ),
-        .I1(R[18]),
-        .O(\res_sum[18]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[18]_i_6 
-       (.I0(\res_sum_reg_n_0_[17] ),
-        .I1(R[17]),
-        .O(\res_sum[18]_i_6_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[18]_i_7 
-       (.I0(\res_sum_reg_n_0_[16] ),
-        .I1(R[16]),
-        .O(\res_sum[18]_i_7_n_0 ));
   LUT6 #(
     .INIT(64'h000000005555FD5D)) 
     \res_sum[19]_i_1 
@@ -3460,23 +3468,48 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .I4(R[31]),
         .I5(data1[19]),
         .O(\res_sum[19]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFBF0080)) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[19]_i_4 
+       (.I0(\res_sum_reg_n_0_[19] ),
+        .I1(R[19]),
+        .O(\res_sum[19]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[19]_i_5 
+       (.I0(\res_sum_reg_n_0_[18] ),
+        .I1(R[18]),
+        .O(\res_sum[19]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[19]_i_6 
+       (.I0(\res_sum_reg_n_0_[17] ),
+        .I1(R[17]),
+        .O(\res_sum[19]_i_6_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[19]_i_7 
+       (.I0(\res_sum_reg_n_0_[16] ),
+        .I1(R[16]),
+        .O(\res_sum[19]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000005555FD5D)) 
     \res_sum[1]_i_1 
-       (.I0(\res_sum[1]_i_2_n_0 ),
-        .I1(clock_wait),
-        .I2(Enable),
-        .I3(Valid_reg_0),
-        .I4(Reset),
+       (.I0(\res_sum[29]_i_2_n_0 ),
+        .I1(minusOp_carry_n_6),
+        .I2(gtOp),
+        .I3(\minusOp_inferred__0/i__carry_n_6 ),
+        .I4(eqOp),
+        .I5(\res_sum[1]_i_2_n_0 ),
         .O(\res_sum[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0D08FFFF0D080000)) 
+    .INIT(64'hBFBFBFBFFFBFBFFF)) 
     \res_sum[1]_i_2 
-       (.I0(gtOp),
-        .I1(\minusOp_inferred__0/i__carry_n_6 ),
-        .I2(eqOp),
-        .I3(minusOp_carry_n_6),
-        .I4(\res_sum[29]_i_2_n_0 ),
+       (.I0(Valid_reg_0),
+        .I1(Enable),
+        .I2(clock_wait),
+        .I3(p_0_in),
+        .I4(R[31]),
         .I5(data1[1]),
         .O(\res_sum[1]_i_2_n_0 ));
   LUT6 #(
@@ -3687,23 +3720,24 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
        (.I0(\res_sum_reg_n_0_[24] ),
         .I1(R[24]),
         .O(\res_sum[27]_i_7_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFBF0080)) 
+  LUT6 #(
+    .INIT(64'h000000005555FD5D)) 
     \res_sum[28]_i_1 
-       (.I0(\res_sum[28]_i_2_n_0 ),
-        .I1(clock_wait),
-        .I2(Enable),
-        .I3(Valid_reg_0),
-        .I4(Reset),
+       (.I0(\res_sum[29]_i_2_n_0 ),
+        .I1(minusOp_carry__6_n_7),
+        .I2(gtOp),
+        .I3(\minusOp_inferred__0/i__carry__6_n_7 ),
+        .I4(eqOp),
+        .I5(\res_sum[28]_i_2_n_0 ),
         .O(\res_sum[28]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00E2FFFF00E20000)) 
+    .INIT(64'hBFBFBFBFFFBFBFFF)) 
     \res_sum[28]_i_2 
-       (.I0(minusOp_carry__6_n_7),
-        .I1(gtOp),
-        .I2(\minusOp_inferred__0/i__carry__6_n_7 ),
-        .I3(eqOp),
-        .I4(\res_sum[29]_i_2_n_0 ),
+       (.I0(Valid_reg_0),
+        .I1(Enable),
+        .I2(clock_wait),
+        .I3(p_0_in),
+        .I4(R[31]),
         .I5(data1[28]),
         .O(\res_sum[28]_i_2_n_0 ));
   LUT6 #(
@@ -3732,50 +3766,27 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .I4(R[31]),
         .I5(data1[29]),
         .O(\res_sum[29]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFBF0080)) 
+  LUT6 #(
+    .INIT(64'h000000005555FD5D)) 
     \res_sum[2]_i_1 
-       (.I0(\res_sum[2]_i_2_n_0 ),
-        .I1(clock_wait),
-        .I2(Enable),
-        .I3(Valid_reg_0),
-        .I4(Reset),
+       (.I0(\res_sum[29]_i_2_n_0 ),
+        .I1(minusOp_carry_n_5),
+        .I2(gtOp),
+        .I3(\minusOp_inferred__0/i__carry_n_5 ),
+        .I4(eqOp),
+        .I5(\res_sum[2]_i_2_n_0 ),
         .O(\res_sum[2]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0D08FFFF0D080000)) 
+    .INIT(64'hBFBFBFBFFFBFBFFF)) 
     \res_sum[2]_i_2 
-       (.I0(gtOp),
-        .I1(\minusOp_inferred__0/i__carry_n_5 ),
-        .I2(eqOp),
-        .I3(minusOp_carry_n_5),
-        .I4(\res_sum[29]_i_2_n_0 ),
+       (.I0(Valid_reg_0),
+        .I1(Enable),
+        .I2(clock_wait),
+        .I3(p_0_in),
+        .I4(R[31]),
         .I5(data1[2]),
         .O(\res_sum[2]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[2]_i_4 
-       (.I0(\res_sum_reg_n_0_[3] ),
-        .I1(R[3]),
-        .O(\res_sum[2]_i_4_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[2]_i_5 
-       (.I0(\res_sum_reg_n_0_[2] ),
-        .I1(R[2]),
-        .O(\res_sum[2]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[2]_i_6 
-       (.I0(\res_sum_reg_n_0_[1] ),
-        .I1(R[1]),
-        .O(\res_sum[2]_i_6_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[2]_i_7 
-       (.I0(\res_sum_reg_n_0_[0] ),
-        .I1(R[0]),
-        .O(\res_sum[2]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'hFFBF0080)) 
     \res_sum[30]_i_1 
@@ -3820,56 +3831,94 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .I1(R[31]),
         .I2(p_0_in),
         .I3(eqOp),
-        .I4(\res_sum[31]_i_2_n_0 ),
+        .I4(Valid_i_2_n_0),
         .O(\res_sum[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h08)) 
-    \res_sum[31]_i_2 
-       (.I0(clock_wait),
-        .I1(Enable),
-        .I2(Valid_reg_0),
-        .O(\res_sum[31]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h000000005555FD5D)) 
+  LUT5 #(
+    .INIT(32'hFFBF0080)) 
     \res_sum[3]_i_1 
-       (.I0(\res_sum[29]_i_2_n_0 ),
-        .I1(minusOp_carry_n_4),
-        .I2(gtOp),
-        .I3(\minusOp_inferred__0/i__carry_n_4 ),
-        .I4(eqOp),
-        .I5(\res_sum[3]_i_2_n_0 ),
+       (.I0(\res_sum[3]_i_2_n_0 ),
+        .I1(clock_wait),
+        .I2(Enable),
+        .I3(Valid_reg_0),
+        .I4(Reset),
         .O(\res_sum[3]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hBFBFBFBFFFBFBFFF)) 
+    .INIT(64'h00E2FFFF00E20000)) 
     \res_sum[3]_i_2 
-       (.I0(Valid_reg_0),
-        .I1(Enable),
-        .I2(clock_wait),
-        .I3(p_0_in),
-        .I4(R[31]),
+       (.I0(minusOp_carry_n_4),
+        .I1(gtOp),
+        .I2(\minusOp_inferred__0/i__carry_n_4 ),
+        .I3(eqOp),
+        .I4(\res_sum[29]_i_2_n_0 ),
         .I5(data1[3]),
         .O(\res_sum[3]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h000000005555FD5D)) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[3]_i_4 
+       (.I0(\res_sum_reg_n_0_[3] ),
+        .I1(R[3]),
+        .O(\res_sum[3]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[3]_i_5 
+       (.I0(\res_sum_reg_n_0_[2] ),
+        .I1(R[2]),
+        .O(\res_sum[3]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[3]_i_6 
+       (.I0(\res_sum_reg_n_0_[1] ),
+        .I1(R[1]),
+        .O(\res_sum[3]_i_6_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[3]_i_7 
+       (.I0(\res_sum_reg_n_0_[0] ),
+        .I1(R[0]),
+        .O(\res_sum[3]_i_7_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFBF0080)) 
     \res_sum[4]_i_1 
-       (.I0(\res_sum[29]_i_2_n_0 ),
-        .I1(minusOp_carry__0_n_7),
-        .I2(gtOp),
-        .I3(\minusOp_inferred__0/i__carry__0_n_7 ),
-        .I4(eqOp),
-        .I5(\res_sum[4]_i_2_n_0 ),
+       (.I0(\res_sum[4]_i_2_n_0 ),
+        .I1(clock_wait),
+        .I2(Enable),
+        .I3(Valid_reg_0),
+        .I4(Reset),
         .O(\res_sum[4]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hBFBFBFBFFFBFBFFF)) 
+    .INIT(64'h00E2FFFF00E20000)) 
     \res_sum[4]_i_2 
-       (.I0(Valid_reg_0),
-        .I1(Enable),
-        .I2(clock_wait),
-        .I3(p_0_in),
-        .I4(R[31]),
+       (.I0(minusOp_carry__0_n_7),
+        .I1(gtOp),
+        .I2(\minusOp_inferred__0/i__carry__0_n_7 ),
+        .I3(eqOp),
+        .I4(\res_sum[29]_i_2_n_0 ),
         .I5(data1[4]),
         .O(\res_sum[4]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[4]_i_4 
+       (.I0(\res_sum_reg_n_0_[7] ),
+        .I1(R[7]),
+        .O(\res_sum[4]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[4]_i_5 
+       (.I0(\res_sum_reg_n_0_[6] ),
+        .I1(R[6]),
+        .O(\res_sum[4]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[4]_i_6 
+       (.I0(\res_sum_reg_n_0_[5] ),
+        .I1(R[5]),
+        .O(\res_sum[4]_i_6_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \res_sum[4]_i_7 
+       (.I0(\res_sum_reg_n_0_[4] ),
+        .I1(R[4]),
+        .O(\res_sum[4]_i_7_n_0 ));
   LUT6 #(
     .INIT(64'h000000005555FD5D)) 
     \res_sum[5]_i_1 
@@ -3890,49 +3939,26 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .I4(R[31]),
         .I5(data1[5]),
         .O(\res_sum[5]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFBF0080)) 
+  LUT6 #(
+    .INIT(64'h000000005555FD5D)) 
     \res_sum[6]_i_1 
-       (.I0(\res_sum[6]_i_2_n_0 ),
-        .I1(clock_wait),
-        .I2(Enable),
-        .I3(Valid_reg_0),
-        .I4(Reset),
+       (.I0(\res_sum[29]_i_2_n_0 ),
+        .I1(minusOp_carry__0_n_5),
+        .I2(gtOp),
+        .I3(\minusOp_inferred__0/i__carry__0_n_5 ),
+        .I4(eqOp),
+        .I5(\res_sum[6]_i_2_n_0 ),
         .O(\res_sum[6]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0D08FFFF0D080000)) 
+    .INIT(64'hBFBFBFBFFFBFBFFF)) 
     \res_sum[6]_i_2 
-       (.I0(gtOp),
-        .I1(\minusOp_inferred__0/i__carry__0_n_5 ),
-        .I2(eqOp),
-        .I3(minusOp_carry__0_n_5),
-        .I4(\res_sum[29]_i_2_n_0 ),
+       (.I0(Valid_reg_0),
+        .I1(Enable),
+        .I2(clock_wait),
+        .I3(p_0_in),
+        .I4(R[31]),
         .I5(data1[6]),
         .O(\res_sum[6]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[6]_i_4 
-       (.I0(\res_sum_reg_n_0_[7] ),
-        .I1(R[7]),
-        .O(\res_sum[6]_i_4_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[6]_i_5 
-       (.I0(\res_sum_reg_n_0_[6] ),
-        .I1(R[6]),
-        .O(\res_sum[6]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[6]_i_6 
-       (.I0(\res_sum_reg_n_0_[5] ),
-        .I1(R[5]),
-        .O(\res_sum[6]_i_6_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \res_sum[6]_i_7 
-       (.I0(\res_sum_reg_n_0_[4] ),
-        .I1(R[4]),
-        .O(\res_sum[6]_i_7_n_0 ));
   LUT6 #(
     .INIT(64'h000000005555FD5D)) 
     \res_sum[7]_i_1 
@@ -4013,7 +4039,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .R(1'b0));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \res_sum_reg[11]_i_3 
-       (.CI(\res_sum_reg[6]_i_3_n_0 ),
+       (.CI(\res_sum_reg[4]_i_3_n_0 ),
         .CO({\res_sum_reg[11]_i_3_n_0 ,\res_sum_reg[11]_i_3_n_1 ,\res_sum_reg[11]_i_3_n_2 ,\res_sum_reg[11]_i_3_n_3 }),
         .CYINIT(1'b0),
         .DI({\res_sum_reg_n_0_[11] ,\res_sum_reg_n_0_[10] ,\res_sum_reg_n_0_[9] ,\res_sum_reg_n_0_[8] }),
@@ -4025,14 +4051,6 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .D(\res_sum[12]_i_1_n_0 ),
         .Q(\res_sum_reg_n_0_[12] ),
         .R(1'b0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \res_sum_reg[12]_i_3 
-       (.CI(\res_sum_reg[11]_i_3_n_0 ),
-        .CO({\res_sum_reg[12]_i_3_n_0 ,\res_sum_reg[12]_i_3_n_1 ,\res_sum_reg[12]_i_3_n_2 ,\res_sum_reg[12]_i_3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\res_sum_reg_n_0_[15] ,\res_sum_reg_n_0_[14] ,\res_sum_reg_n_0_[13] ,\res_sum_reg_n_0_[12] }),
-        .O(data1[15:12]),
-        .S({\res_sum[12]_i_4_n_0 ,\res_sum[12]_i_5_n_0 ,\res_sum[12]_i_6_n_0 ,\res_sum[12]_i_7_n_0 }));
   FDRE \res_sum_reg[13] 
        (.C(Clock),
         .CE(res_sum),
@@ -4051,6 +4069,14 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .D(\res_sum[15]_i_1_n_0 ),
         .Q(\res_sum_reg_n_0_[15] ),
         .R(1'b0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \res_sum_reg[15]_i_3 
+       (.CI(\res_sum_reg[11]_i_3_n_0 ),
+        .CO({\res_sum_reg[15]_i_3_n_0 ,\res_sum_reg[15]_i_3_n_1 ,\res_sum_reg[15]_i_3_n_2 ,\res_sum_reg[15]_i_3_n_3 }),
+        .CYINIT(1'b0),
+        .DI({\res_sum_reg_n_0_[15] ,\res_sum_reg_n_0_[14] ,\res_sum_reg_n_0_[13] ,\res_sum_reg_n_0_[12] }),
+        .O(data1[15:12]),
+        .S({\res_sum[15]_i_4_n_0 ,\res_sum[15]_i_5_n_0 ,\res_sum[15]_i_6_n_0 ,\res_sum[15]_i_7_n_0 }));
   FDRE \res_sum_reg[16] 
        (.C(Clock),
         .CE(res_sum),
@@ -4069,20 +4095,20 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .D(\res_sum[18]_i_1_n_0 ),
         .Q(\res_sum_reg_n_0_[18] ),
         .R(1'b0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \res_sum_reg[18]_i_3 
-       (.CI(\res_sum_reg[12]_i_3_n_0 ),
-        .CO({\res_sum_reg[18]_i_3_n_0 ,\res_sum_reg[18]_i_3_n_1 ,\res_sum_reg[18]_i_3_n_2 ,\res_sum_reg[18]_i_3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\res_sum_reg_n_0_[19] ,\res_sum_reg_n_0_[18] ,\res_sum_reg_n_0_[17] ,\res_sum_reg_n_0_[16] }),
-        .O(data1[19:16]),
-        .S({\res_sum[18]_i_4_n_0 ,\res_sum[18]_i_5_n_0 ,\res_sum[18]_i_6_n_0 ,\res_sum[18]_i_7_n_0 }));
   FDRE \res_sum_reg[19] 
        (.C(Clock),
         .CE(res_sum),
         .D(\res_sum[19]_i_1_n_0 ),
         .Q(\res_sum_reg_n_0_[19] ),
         .R(1'b0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \res_sum_reg[19]_i_3 
+       (.CI(\res_sum_reg[15]_i_3_n_0 ),
+        .CO({\res_sum_reg[19]_i_3_n_0 ,\res_sum_reg[19]_i_3_n_1 ,\res_sum_reg[19]_i_3_n_2 ,\res_sum_reg[19]_i_3_n_3 }),
+        .CYINIT(1'b0),
+        .DI({\res_sum_reg_n_0_[19] ,\res_sum_reg_n_0_[18] ,\res_sum_reg_n_0_[17] ,\res_sum_reg_n_0_[16] }),
+        .O(data1[19:16]),
+        .S({\res_sum[19]_i_4_n_0 ,\res_sum[19]_i_5_n_0 ,\res_sum[19]_i_6_n_0 ,\res_sum[19]_i_7_n_0 }));
   FDRE \res_sum_reg[1] 
        (.C(Clock),
         .CE(res_sum),
@@ -4115,7 +4141,7 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .R(1'b0));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \res_sum_reg[23]_i_3 
-       (.CI(\res_sum_reg[18]_i_3_n_0 ),
+       (.CI(\res_sum_reg[19]_i_3_n_0 ),
         .CO({\res_sum_reg[23]_i_3_n_0 ,\res_sum_reg[23]_i_3_n_1 ,\res_sum_reg[23]_i_3_n_2 ,\res_sum_reg[23]_i_3_n_3 }),
         .CYINIT(1'b0),
         .DI({\res_sum_reg_n_0_[23] ,\res_sum_reg_n_0_[22] ,\res_sum_reg_n_0_[21] ,\res_sum_reg_n_0_[20] }),
@@ -4171,14 +4197,6 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .D(\res_sum[2]_i_1_n_0 ),
         .Q(\res_sum_reg_n_0_[2] ),
         .R(1'b0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \res_sum_reg[2]_i_3 
-       (.CI(1'b0),
-        .CO({\res_sum_reg[2]_i_3_n_0 ,\res_sum_reg[2]_i_3_n_1 ,\res_sum_reg[2]_i_3_n_2 ,\res_sum_reg[2]_i_3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\res_sum_reg_n_0_[3] ,\res_sum_reg_n_0_[2] ,\res_sum_reg_n_0_[1] ,\res_sum_reg_n_0_[0] }),
-        .O(data1[3:0]),
-        .S({\res_sum[2]_i_4_n_0 ,\res_sum[2]_i_5_n_0 ,\res_sum[2]_i_6_n_0 ,\res_sum[2]_i_7_n_0 }));
   FDRE \res_sum_reg[30] 
        (.C(Clock),
         .CE(res_sum),
@@ -4205,12 +4223,28 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .D(\res_sum[3]_i_1_n_0 ),
         .Q(\res_sum_reg_n_0_[3] ),
         .R(1'b0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \res_sum_reg[3]_i_3 
+       (.CI(1'b0),
+        .CO({\res_sum_reg[3]_i_3_n_0 ,\res_sum_reg[3]_i_3_n_1 ,\res_sum_reg[3]_i_3_n_2 ,\res_sum_reg[3]_i_3_n_3 }),
+        .CYINIT(1'b0),
+        .DI({\res_sum_reg_n_0_[3] ,\res_sum_reg_n_0_[2] ,\res_sum_reg_n_0_[1] ,\res_sum_reg_n_0_[0] }),
+        .O(data1[3:0]),
+        .S({\res_sum[3]_i_4_n_0 ,\res_sum[3]_i_5_n_0 ,\res_sum[3]_i_6_n_0 ,\res_sum[3]_i_7_n_0 }));
   FDRE \res_sum_reg[4] 
        (.C(Clock),
         .CE(res_sum),
         .D(\res_sum[4]_i_1_n_0 ),
         .Q(\res_sum_reg_n_0_[4] ),
         .R(1'b0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \res_sum_reg[4]_i_3 
+       (.CI(\res_sum_reg[3]_i_3_n_0 ),
+        .CO({\res_sum_reg[4]_i_3_n_0 ,\res_sum_reg[4]_i_3_n_1 ,\res_sum_reg[4]_i_3_n_2 ,\res_sum_reg[4]_i_3_n_3 }),
+        .CYINIT(1'b0),
+        .DI({\res_sum_reg_n_0_[7] ,\res_sum_reg_n_0_[6] ,\res_sum_reg_n_0_[5] ,\res_sum_reg_n_0_[4] }),
+        .O(data1[7:4]),
+        .S({\res_sum[4]_i_4_n_0 ,\res_sum[4]_i_5_n_0 ,\res_sum[4]_i_6_n_0 ,\res_sum[4]_i_7_n_0 }));
   FDRE \res_sum_reg[5] 
        (.C(Clock),
         .CE(res_sum),
@@ -4223,14 +4257,6 @@ module design_1_Perceptron_BRAM_0_0_Perceptron_BRAM
         .D(\res_sum[6]_i_1_n_0 ),
         .Q(\res_sum_reg_n_0_[6] ),
         .R(1'b0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \res_sum_reg[6]_i_3 
-       (.CI(\res_sum_reg[2]_i_3_n_0 ),
-        .CO({\res_sum_reg[6]_i_3_n_0 ,\res_sum_reg[6]_i_3_n_1 ,\res_sum_reg[6]_i_3_n_2 ,\res_sum_reg[6]_i_3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\res_sum_reg_n_0_[7] ,\res_sum_reg_n_0_[6] ,\res_sum_reg_n_0_[5] ,\res_sum_reg_n_0_[4] }),
-        .O(data1[7:4]),
-        .S({\res_sum[6]_i_4_n_0 ,\res_sum[6]_i_5_n_0 ,\res_sum[6]_i_6_n_0 ,\res_sum[6]_i_7_n_0 }));
   FDRE \res_sum_reg[7] 
        (.C(Clock),
         .CE(res_sum),

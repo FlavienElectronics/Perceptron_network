@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "Perceptron_BRAM,Vivado 2025.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_Perceptron_BRAM_0_0,Perceptron_BRAM,{}" *)
-(* CORE_GENERATION_INFO = "design_1_Perceptron_BRAM_0_0,Perceptron_BRAM,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Perceptron_BRAM,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,weight_array_size=7,size_integral_32bit=2,dead_bit_word_64bit=1}" *)
+(* CORE_GENERATION_INFO = "design_1_Perceptron_BRAM_0_0,Perceptron_BRAM,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Perceptron_BRAM,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,weight_array_size=10,size_integral_32bit=2}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_Perceptron_BRAM_0_0 (
@@ -79,12 +79,11 @@ input wire Reset;
 input wire [31 : 0] w_in;
 output wire Valid;
 output wire [31 : 0] Output_Value;
-output wire [7 : 0] addr;
+output wire [9 : 0] addr;
 
   Perceptron_BRAM #(
-    .weight_array_size(7),
-    .size_integral_32bit(2),
-    .dead_bit_word_64bit(1)
+    .weight_array_size(10),
+    .size_integral_32bit(2)
   ) inst (
     .Enable(Enable),
     .Input_Value(Input_Value),

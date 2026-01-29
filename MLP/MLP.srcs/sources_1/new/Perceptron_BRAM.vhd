@@ -35,7 +35,7 @@ use IEEE.numeric_std.ALL;
 
 entity Perceptron_BRAM is
     --generic (W : integer := 40);
-    generic(weight_array_size : integer := 10; -- Désigne la taille du vecteur de poids
+    generic(weight_array_size : integer := 784; -- Désigne la taille du vecteur de poids
             size_integral_32bit : integer := 2); -- Désigne le nombre de bit codant la partie entière du mot de 32 bits)
             
     Port ( Enable : in STD_LOGIC;
