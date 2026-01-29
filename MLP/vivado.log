@@ -3,10 +3,10 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Wed Jan 14 20:26:13 2026
-# Process ID         : 9648
+# Start of session at: Thu Jan 29 10:08:56 2026
+# Process ID         : 13020
 # Current directory  : C:/Users/flavi/Desktop/Perceptron_network/MLP
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent3276 C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.xpr
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent10120 C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.xpr
 # Log file           : C:/Users/flavi/Desktop/Perceptron_network/MLP/vivado.log
 # Journal file       : C:/Users/flavi/Desktop/Perceptron_network/MLP\vivado.jou
 # Running On         : fixe_flavien
@@ -19,7 +19,7 @@
 # Host memory        : 34281 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36429 MB
-# Available Virtual  : 22855 MB
+# Available Virtual  : 23964 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.xpr
@@ -74,8 +74,8 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available 
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Program/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.4\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at C:/Program/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.5\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Program/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc709\1.8\board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Program/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
 INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.gen/sources_1'.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Program/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Program/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Program/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Program/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
@@ -130,4 +130,4 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Program/2025.2/Vivado/data/ip'.
-open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 1671.449 ; gain = 239.715
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 1686.523 ; gain = 248.465

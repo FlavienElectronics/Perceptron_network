@@ -67,9 +67,16 @@ begin
         RESET <= '0';
         wait for 20 ns;
         RESET <= '1';
-        INPUT <= x"20000000"; -- = 1.0
-        wait for 20 ns;
         ENABLE <= '1';
+        
+        INPUT <= x"20000000"; -- = 1.0
+        wait for 10 ns;
+        INPUT <= x"2F5C28F5"; -- = 1.48
+        wait for 10 ns;
+        INPUT <= x"80A3D70A"; -- = -0.02
+        wait for 10 ns;
+        INPUT <= x"1916872B"; -- = 0.784
+        wait for 10 ns;
         
         wait;
     end process;
