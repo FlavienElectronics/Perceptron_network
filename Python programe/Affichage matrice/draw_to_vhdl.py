@@ -54,8 +54,8 @@ class DigitDrawer:
 
     def paint(self, event):
         gx, gy = event.x / self.pixel_size, event.y / self.pixel_size
-        radius = 1.4
-        strength = 0.35
+        radius = 1
+        strength = 0.2
         for x in range(int(gx - radius), int(gx + radius) + 1):
             for y in range(int(gy - radius), int(gy + radius) + 1):
                 if 0 <= x < self.grid_size and 0 <= y < self.grid_size:
