@@ -82,7 +82,7 @@ def convertion_hex64_float(valeur_hexa,size_integral,dead_bit):
     try:
         valeur_hexa = supprimer_espaces(valeur_hexa)
         valeur_hexa = int(valeur_hexa,16)
-    except: return "N/A"
+    except: return None
 
     size_word = 64
     size_integral = int(size_integral)
@@ -101,14 +101,14 @@ def convertion_hex64_float(valeur_hexa,size_integral,dead_bit):
         decimal += bit * (2**-(i+1))
 
     res_total = -(decimal + integral) if signe else (decimal + integral)
-    return str(res_total)
+    return res_total
 
 def convertion_hex32_float(valeur_hexa,size_integral,dead_bit):
     try:
         valeur_hexa = supprimer_espaces(valeur_hexa)
         if valeur_hexa.startswith("0x"): valeur_hexa = valeur_hexa[2:]
         valeur_hexa = int(valeur_hexa,16)
-    except: return "N/A"
+    except: return None
 
     size_word = 32
     size_integral = int(size_integral)
@@ -127,7 +127,7 @@ def convertion_hex32_float(valeur_hexa,size_integral,dead_bit):
         decimal += bit * (2**-(i+1))
 
     res_total = -(decimal + integral) if signe else (decimal + integral)
-    return str(res_total)
+    return res_total
 
 def ajouter_separateur(texte, n=4, sep=" "):
     if not texte.startswith("0x"): return texte
@@ -140,10 +140,19 @@ def ajouter_separateur(texte, n=4, sep=" "):
 def supprimer_espaces(texte):
     return texte.replace(" ", "").replace("\n", "").replace("\t", "")
 
-def modifier_resultat(widget, texte):
+def modifier_resultat(widget, texte, highlight=False):
     widget.config(state="normal")
     widget.delete(0, tk.END)
-    widget.insert(0, texte)
+    if texte is not None:
+        widget.insert(0, str(texte))
+    
+    # Gestion de la mise en évidence SANS toucher à la police (font)
+    if highlight:
+        widget.config(readonlybackground="#FFFF00", fg="black")
+    else:
+        # On remet les couleurs par défaut (gris clair et vert foncé selon vos réglages)
+        widget.config(readonlybackground="#F0F0F0", fg="darkgreen")
+    
     widget.config(state="readonly")
 
 # --- 2. FONCTIONS DE MISE À JOUR ---
@@ -175,7 +184,7 @@ def maj_ligne_hex32_to_float(*args):
     v_dec = 31 - int(n_int) - int(n_dead)
     modifier_resultat(lbl_v_dec_3, v_dec)
     res = convertion_hex32_float(valeur,n_int,n_dead)
-    modifier_resultat(res_3, str(res).upper())
+    modifier_resultat(res_3, str(res).upper() if res is not None else "N/A")
 
 def maj_ligne_hex64_to_float(*args):
     valeur = var_entree_4.get()
@@ -184,32 +193,44 @@ def maj_ligne_hex64_to_float(*args):
     v_dec = 63 - int(n_int) - int(n_dead)
     modifier_resultat(lbl_v_dec_4, v_dec)
     res = convertion_hex64_float(valeur,n_int,n_dead)
-    modifier_resultat(res_4, res.upper())
+    modifier_resultat(res_4, str(res).upper() if res is not None else "N/A")
 
 def maj_bloc_10(*args):
     entree = var_entree_bloc.get().replace(" ", "")
     n_int = var_int_bloc.get() or "0"
     n_dead = var_dead_bloc.get() or "0"
     
-    # Séparation par virgule
     valeurs_hexa = entree.split(",")
-    
+    floats_calcules = []
+
     for i in range(10):
         if i < len(valeurs_hexa) and valeurs_hexa[i]:
-            res = convertion_hex32_float(valeurs_hexa[i], n_int, n_dead)
-            modifier_resultat(res_bloc_list[i], res)
+            val = convertion_hex32_float(valeurs_hexa[i], n_int, n_dead)
+            floats_calcules.append(val)
         else:
-            modifier_resultat(res_bloc_list[i], "")
+            floats_calcules.append(None)
+
+    # Recherche de la valeur positive la plus élevée
+    max_val = -float('inf')
+    max_idx = -1
+    for i, v in enumerate(floats_calcules):
+        if v is not None and v > max_val:
+            max_val = v
+            max_idx = i
+
+    # Mise à jour des cases avec coloration
+    for i in range(10):
+        is_max = (i == max_idx and max_idx != -1)
+        modifier_resultat(res_bloc_list[i], floats_calcules[i], highlight=is_max)
 
 # --- 3. INITIALISATION ---
 root = tk.Tk()
 root.title("Convertisseur Fixed-Point")
 root.geometry("850x750")
 
-# LIGNES 1 à 4 (Identiques à votre code)
 for i in range(2): root.columnconfigure(i, weight=1)
 
-# --- UI Ligne 1 ---
+# UI Ligne 1
 f_g1 = tk.Frame(root, padx=20, pady=10); f_g1.grid(row=0, column=0, sticky="ew")
 tk.Label(f_g1, text="VALEUR FLOTTANTE 32 BITS :", font=("Arial", 10, "bold")).pack(anchor="w")
 var_entree_1 = tk.StringVar(); var_entree_1.trace_add("write", maj_ligne_float_to_hex32)
@@ -224,7 +245,7 @@ f_d1 = tk.Frame(root, padx=20, pady=10); f_d1.grid(row=0, column=1, sticky="ew")
 tk.Label(f_d1, text="Format FP32 (Copiable) :", fg="blue").pack(anchor="w")
 res_1 = tk.Entry(f_d1, state="readonly", fg="blue", font=("Consolas", 12), relief="flat"); res_1.pack(fill="x", pady=5)
 
-# --- UI Ligne 2 ---
+# UI Ligne 2
 f_g2 = tk.Frame(root, padx=20, pady=10); f_g2.grid(row=1, column=0, sticky="ew")
 tk.Label(f_g2, text="VALEUR FLOTTANTE 64 bits :", font=("Arial", 10, "bold")).pack(anchor="w")
 var_entree_2 = tk.StringVar(); var_entree_2.trace_add("write", maj_ligne_float_to_hex64)
@@ -239,7 +260,7 @@ f_d2 = tk.Frame(root, padx=20, pady=10); f_d2.grid(row=1, column=1, sticky="ew")
 tk.Label(f_d2, text="Format FP64 (Copiable) :", fg="blue").pack(anchor="w")
 res_2 = tk.Entry(f_d2, state="readonly", fg="blue", font=("Consolas", 12), relief="flat"); res_2.pack(fill="x", pady=5)
 
-# --- UI Ligne 3 ---
+# UI Ligne 3
 f_g3 = tk.Frame(root, padx=20, pady=10); f_g3.grid(row=2, column=0, sticky="ew")
 tk.Label(f_g3, text="VALEUR HEXADECIMALE SUR 32 BITS :", font=("Arial", 10, "bold")).pack(anchor="w")
 var_entree_3 = tk.StringVar(); var_entree_3.trace_add("write", maj_ligne_hex32_to_float)
@@ -254,7 +275,7 @@ f_d3 = tk.Frame(root, padx=20, pady=10); f_d3.grid(row=2, column=1, sticky="ew")
 tk.Label(f_d3, text="Résulat en flottant (Copiable) :", fg="blue").pack(anchor="w")
 res_3 = tk.Entry(f_d3, state="readonly", fg="blue", font=("Consolas", 12), relief="flat"); res_3.pack(fill="x", pady=5)
 
-# --- UI Ligne 4 ---
+# UI Ligne 4
 f_g4 = tk.Frame(root, padx=20, pady=10); f_g4.grid(row=3, column=0, sticky="ew")
 tk.Label(f_g4, text="VALEUR HEXADECIMALE SUR 64 BITS :", font=("Arial", 10, "bold")).pack(anchor="w")
 var_entree_4 = tk.StringVar(); var_entree_4.trace_add("write", maj_ligne_hex64_to_float)
@@ -269,28 +290,20 @@ f_d4 = tk.Frame(root, padx=20, pady=10); f_d4.grid(row=3, column=1, sticky="ew")
 tk.Label(f_d4, text="Résulat en flottant : (Copiable) :", fg="blue").pack(anchor="w")
 res_4 = tk.Entry(f_d4, state="readonly", fg="blue", font=("Consolas", 12), relief="flat"); res_4.pack(fill="x", pady=5)
 
-
-# --- NOUVEAU BLOC DE 10 VALEURS ---
+# BLOC DE 10 VALEURS
 f_sep = tk.Frame(root, height=2, bd=1, relief="sunken"); f_sep.grid(row=4, column=0, columnspan=2, sticky="ew", pady=20)
-
 f_bloc = tk.Frame(root, padx=20, pady=10); f_bloc.grid(row=5, column=0, columnspan=2, sticky="ew")
 tk.Label(f_bloc, text="BLOC DE 10 VALEURS HEXA (32 BITS) SEPARÉES PAR VIRGULES :", font=("Arial", 10, "bold"), fg="darkgreen").pack(anchor="w")
-
-var_entree_bloc = tk.StringVar()
-var_entree_bloc.trace_add("write", maj_bloc_10)
+var_entree_bloc = tk.StringVar(); var_entree_bloc.trace_add("write", maj_bloc_10)
 tk.Entry(f_bloc, textvariable=var_entree_bloc, font=("Consolas", 10)).pack(fill="x", pady=5)
-
-# Réglages pour le bloc
 fb_settings = tk.Frame(f_bloc); fb_settings.pack(anchor="w", pady=5)
 tk.Label(fb_settings, text="Int:").grid(row=0, column=0)
 var_int_bloc = tk.StringVar(value="2"); var_int_bloc.trace_add("write", maj_bloc_10)
 tk.Spinbox(fb_settings, from_=0, to=31, width=5, textvariable=var_int_bloc, command=maj_bloc_10).grid(row=0, column=1, padx=5)
-
 tk.Label(fb_settings, text="Dead:").grid(row=0, column=2)
 var_dead_bloc = tk.StringVar(value="0"); var_dead_bloc.trace_add("write", maj_bloc_10)
 tk.Spinbox(fb_settings, from_=0, to=31, width=5, textvariable=var_dead_bloc, command=maj_bloc_10).grid(row=0, column=3, padx=5)
 
-# Grille de résultats (2 lignes de 5)
 f_grid = tk.Frame(f_bloc); f_grid.pack(fill="x", pady=10)
 res_bloc_list = []
 for i in range(10):
