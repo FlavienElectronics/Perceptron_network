@@ -215,7 +215,8 @@ begin
     --dif_pos <= '1' when res_sum > res_mul(47 downto 16) else '0';
     
     -- FONCTION D'ACTIVATION ReLu
-    Output_Value <= x"00000000" when res_sum(31) = '1' else res_sum;
+--    Output_Value <= x"00000000" when res_sum(31) = '1' else res_sum;
+Output_Value <= res_sum;
     
     -- Fonctions d'activations à mettre en concurents
     -- Gérer le signe pour les fonctions d'activations

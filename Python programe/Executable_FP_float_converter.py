@@ -6,7 +6,7 @@ def convertion_float_hex32(valeur_float,size_integral,dead_bit):
     try:
         valeur_float = float(valeur_float)
     except ValueError:
-        return "Erreur : format invalide"
+        return "Erreur"
 
     size_word = 32
     size_integral = int(size_integral)
@@ -14,7 +14,6 @@ def convertion_float_hex32(valeur_float,size_integral,dead_bit):
     size_decimal = size_word - size_integral - dead_bit - 1
     max_value_integral = 0
     
-    # Calcul de la valeur initiale (bit de signe)
     if valeur_float < 0:
         integral = int(valeur_float)
         decimal = - (valeur_float - integral)
@@ -30,7 +29,7 @@ def convertion_float_hex32(valeur_float,size_integral,dead_bit):
         max_value_integral |= 1 << i
 
     if absolute_integral > max_value_integral:
-        return "ERROR : trop grand"
+        return "TROP GRAND"
         
     for i in range(size_decimal):
         current_bit = 2**-(i+1)
@@ -41,12 +40,11 @@ def convertion_float_hex32(valeur_float,size_integral,dead_bit):
     final_value |= absolute_integral << (size_word - size_integral - dead_bit - 1)
     return hex(final_value)
 
-
 def convertion_float_hex64(valeur_float,size_integral,dead_bit):
     try:
         valeur_float = float(valeur_float)
     except ValueError:
-        return "Erreur : format invalide"
+        return "Erreur"
 
     size_word = 64
     size_integral = int(size_integral)
@@ -54,7 +52,6 @@ def convertion_float_hex64(valeur_float,size_integral,dead_bit):
     size_decimal = size_word - size_integral - dead_bit - 1
     max_value_integral = 0
     
-    # Calcul de la valeur initiale (bit de signe)
     if valeur_float < 0:
         integral = int(valeur_float)
         decimal = - (valeur_float - integral)
@@ -70,7 +67,7 @@ def convertion_float_hex64(valeur_float,size_integral,dead_bit):
         max_value_integral |= 1 << i
 
     if absolute_integral > max_value_integral:
-        return "ERROR : trop grand"
+        return "TROP GRAND"
         
     for i in range(size_decimal):
         current_bit = 2**-(i+1)
@@ -82,8 +79,10 @@ def convertion_float_hex64(valeur_float,size_integral,dead_bit):
     return hex(final_value)
 
 def convertion_hex64_float(valeur_hexa,size_integral,dead_bit):
-    valeur_hexa = supprimer_espaces(valeur_hexa)
-    valeur_hexa = int(valeur_hexa,16)
+    try:
+        valeur_hexa = supprimer_espaces(valeur_hexa)
+        valeur_hexa = int(valeur_hexa,16)
+    except: return "N/A"
 
     size_word = 64
     size_integral = int(size_integral)
@@ -91,28 +90,25 @@ def convertion_hex64_float(valeur_hexa,size_integral,dead_bit):
     size_decimal = size_word - size_integral - dead_bit - 1
 
     integral_mask = 0
-
     for i in range(size_integral):
         integral_mask |= 1 << i
 
     signe = (valeur_hexa & (1<<(size_word-1))) >> (size_word-1)
-
     integral = ((valeur_hexa) >> size_decimal) & integral_mask
     decimal = 0
     for i in range(size_decimal-1):
         bit = (valeur_hexa >> ((size_decimal-1) - i) ) & 0x1
         decimal += bit * (2**-(i+1))
-        #print (" val" + str(i) + " = " + str(bit * (2**-(i+1))))
 
-    if (signe):
-        res_total = -(decimal + integral)
-    else :
-        res_total = (decimal + integral)
-    return(str(res_total))
+    res_total = -(decimal + integral) if signe else (decimal + integral)
+    return str(res_total)
 
 def convertion_hex32_float(valeur_hexa,size_integral,dead_bit):
-    valeur_hexa = supprimer_espaces(valeur_hexa)
-    valeur_hexa = int(valeur_hexa,16)
+    try:
+        valeur_hexa = supprimer_espaces(valeur_hexa)
+        if valeur_hexa.startswith("0x"): valeur_hexa = valeur_hexa[2:]
+        valeur_hexa = int(valeur_hexa,16)
+    except: return "N/A"
 
     size_word = 32
     size_integral = int(size_integral)
@@ -120,54 +116,37 @@ def convertion_hex32_float(valeur_hexa,size_integral,dead_bit):
     size_decimal = size_word - size_integral - dead_bit - 1
     
     integral_mask = 0
-
     for i in range(size_integral):
         integral_mask |= 1 << i
 
     signe = (valeur_hexa & (1<<(size_word-1))) >> (size_word-1)
-
     integral = ((valeur_hexa) >> size_decimal) & integral_mask
     decimal = 0
     for i in range(size_decimal-1):
         bit = (valeur_hexa >> ((size_decimal-1) - i) ) & 0x1
         decimal += bit * (2**-(i+1))
-        #print (" val" + str(i) + " = " + str(bit * (2**-(i+1))))
 
-    if (signe):
-        res_total = -(decimal + integral)
-    else :
-        res_total = (decimal + integral)
-    return(str(res_total))
+    res_total = -(decimal + integral) if signe else (decimal + integral)
+    return str(res_total)
 
 def ajouter_separateur(texte, n=4, sep=" "):
-    zero_missing = 4 - (len(texte[2:]) % 4) 
-    string_added = ""
-    if (zero_missing < 4):
-        for i in range(zero_missing):
-            string_added += "0"
-        #print(string_added)
-
-    prefixe = ""
-    if texte.startswith("0x"):
-        prefixe = "0x "
-        texte = string_added+texte[2:]
-    
-    # On découpe et on rejoint
-    # range(0, len(texte), n) crée des indices : 0, 4, 8...
-    morceaux = [texte[i:i+n] for i in range(0, len(texte), n)]
-    return prefixe + sep.join(morceaux)
+    if not texte.startswith("0x"): return texte
+    val = texte[2:]
+    zero_missing = (n - (len(val) % n)) % n
+    val = ("0" * zero_missing) + val
+    morceaux = [val[i:i+n] for i in range(0, len(val), n)]
+    return "0x " + sep.join(morceaux)
 
 def supprimer_espaces(texte):
-    return texte.replace(" ", "")
+    return texte.replace(" ", "").replace("\n", "").replace("\t", "")
 
-# Fonction utilitaire pour modifier une case en lecture seule
 def modifier_resultat(widget, texte):
-    widget.config(state="normal") # Déverrouille
-    widget.delete(0, tk.END)      # Efface
-    widget.insert(0, texte)       # Écrit
-    widget.config(state="readonly") # Verrouille
+    widget.config(state="normal")
+    widget.delete(0, tk.END)
+    widget.insert(0, texte)
+    widget.config(state="readonly")
 
-# --- FONCTIONS DE MISE À JOUR (Trigger) ---
+# --- 2. FONCTIONS DE MISE À JOUR ---
 
 def maj_ligne_float_to_hex32(*args):
     valeur = var_entree_1.get()
@@ -178,8 +157,7 @@ def maj_ligne_float_to_hex32(*args):
     if valeur:
         res = convertion_float_hex32(valeur,n_int,n_dead)
         modifier_resultat(res_1, ajouter_separateur(res).upper())
-    else:
-        modifier_resultat(res_1, "")
+    else: modifier_resultat(res_1, "")
 
 def maj_ligne_float_to_hex64(*args):
     valeur = var_entree_2.get()
@@ -208,16 +186,30 @@ def maj_ligne_hex64_to_float(*args):
     res = convertion_hex64_float(valeur,n_int,n_dead)
     modifier_resultat(res_4, res.upper())
 
+def maj_bloc_10(*args):
+    entree = var_entree_bloc.get().replace(" ", "")
+    n_int = var_int_bloc.get() or "0"
+    n_dead = var_dead_bloc.get() or "0"
+    
+    # Séparation par virgule
+    valeurs_hexa = entree.split(",")
+    
+    for i in range(10):
+        if i < len(valeurs_hexa) and valeurs_hexa[i]:
+            res = convertion_hex32_float(valeurs_hexa[i], n_int, n_dead)
+            modifier_resultat(res_bloc_list[i], res)
+        else:
+            modifier_resultat(res_bloc_list[i], "")
+
 # --- 3. INITIALISATION ---
 root = tk.Tk()
 root.title("Convertisseur Fixed-Point")
-root.geometry("800x475")
+root.geometry("850x750")
 
-# On crée deux grandes colonnes principales
-root.columnconfigure(0, weight=1)
-root.columnconfigure(1, weight=1)
-# LIGNE 1
+# LIGNES 1 à 4 (Identiques à votre code)
+for i in range(2): root.columnconfigure(i, weight=1)
 
+# --- UI Ligne 1 ---
 f_g1 = tk.Frame(root, padx=20, pady=10); f_g1.grid(row=0, column=0, sticky="ew")
 tk.Label(f_g1, text="VALEUR FLOTTANTE 32 BITS :", font=("Arial", 10, "bold")).pack(anchor="w")
 var_entree_1 = tk.StringVar(); var_entree_1.trace_add("write", maj_ligne_float_to_hex32)
@@ -232,8 +224,7 @@ f_d1 = tk.Frame(root, padx=20, pady=10); f_d1.grid(row=0, column=1, sticky="ew")
 tk.Label(f_d1, text="Format FP32 (Copiable) :", fg="blue").pack(anchor="w")
 res_1 = tk.Entry(f_d1, state="readonly", fg="blue", font=("Consolas", 12), relief="flat"); res_1.pack(fill="x", pady=5)
 
-# --- 4. LIGNE 2 
-
+# --- UI Ligne 2 ---
 f_g2 = tk.Frame(root, padx=20, pady=10); f_g2.grid(row=1, column=0, sticky="ew")
 tk.Label(f_g2, text="VALEUR FLOTTANTE 64 bits :", font=("Arial", 10, "bold")).pack(anchor="w")
 var_entree_2 = tk.StringVar(); var_entree_2.trace_add("write", maj_ligne_float_to_hex64)
@@ -248,7 +239,7 @@ f_d2 = tk.Frame(root, padx=20, pady=10); f_d2.grid(row=1, column=1, sticky="ew")
 tk.Label(f_d2, text="Format FP64 (Copiable) :", fg="blue").pack(anchor="w")
 res_2 = tk.Entry(f_d2, state="readonly", fg="blue", font=("Consolas", 12), relief="flat"); res_2.pack(fill="x", pady=5)
 
-# --- 5. LIGNE 3 
+# --- UI Ligne 3 ---
 f_g3 = tk.Frame(root, padx=20, pady=10); f_g3.grid(row=2, column=0, sticky="ew")
 tk.Label(f_g3, text="VALEUR HEXADECIMALE SUR 32 BITS :", font=("Arial", 10, "bold")).pack(anchor="w")
 var_entree_3 = tk.StringVar(); var_entree_3.trace_add("write", maj_ligne_hex32_to_float)
@@ -263,7 +254,7 @@ f_d3 = tk.Frame(root, padx=20, pady=10); f_d3.grid(row=2, column=1, sticky="ew")
 tk.Label(f_d3, text="Résulat en flottant (Copiable) :", fg="blue").pack(anchor="w")
 res_3 = tk.Entry(f_d3, state="readonly", fg="blue", font=("Consolas", 12), relief="flat"); res_3.pack(fill="x", pady=5)
 
-# --- 6. LIGNE 4 
+# --- UI Ligne 4 ---
 f_g4 = tk.Frame(root, padx=20, pady=10); f_g4.grid(row=3, column=0, sticky="ew")
 tk.Label(f_g4, text="VALEUR HEXADECIMALE SUR 64 BITS :", font=("Arial", 10, "bold")).pack(anchor="w")
 var_entree_4 = tk.StringVar(); var_entree_4.trace_add("write", maj_ligne_hex64_to_float)
@@ -278,8 +269,38 @@ f_d4 = tk.Frame(root, padx=20, pady=10); f_d4.grid(row=3, column=1, sticky="ew")
 tk.Label(f_d4, text="Résulat en flottant : (Copiable) :", fg="blue").pack(anchor="w")
 res_4 = tk.Entry(f_d4, state="readonly", fg="blue", font=("Consolas", 12), relief="flat"); res_4.pack(fill="x", pady=5)
 
-# --- CONFIGURATION GRILLE ---
-root.columnconfigure(0, weight=1)
-root.columnconfigure(1, weight=1)
+
+# --- NOUVEAU BLOC DE 10 VALEURS ---
+f_sep = tk.Frame(root, height=2, bd=1, relief="sunken"); f_sep.grid(row=4, column=0, columnspan=2, sticky="ew", pady=20)
+
+f_bloc = tk.Frame(root, padx=20, pady=10); f_bloc.grid(row=5, column=0, columnspan=2, sticky="ew")
+tk.Label(f_bloc, text="BLOC DE 10 VALEURS HEXA (32 BITS) SEPARÉES PAR VIRGULES :", font=("Arial", 10, "bold"), fg="darkgreen").pack(anchor="w")
+
+var_entree_bloc = tk.StringVar()
+var_entree_bloc.trace_add("write", maj_bloc_10)
+tk.Entry(f_bloc, textvariable=var_entree_bloc, font=("Consolas", 10)).pack(fill="x", pady=5)
+
+# Réglages pour le bloc
+fb_settings = tk.Frame(f_bloc); fb_settings.pack(anchor="w", pady=5)
+tk.Label(fb_settings, text="Int:").grid(row=0, column=0)
+var_int_bloc = tk.StringVar(value="2"); var_int_bloc.trace_add("write", maj_bloc_10)
+tk.Spinbox(fb_settings, from_=0, to=31, width=5, textvariable=var_int_bloc, command=maj_bloc_10).grid(row=0, column=1, padx=5)
+
+tk.Label(fb_settings, text="Dead:").grid(row=0, column=2)
+var_dead_bloc = tk.StringVar(value="0"); var_dead_bloc.trace_add("write", maj_bloc_10)
+tk.Spinbox(fb_settings, from_=0, to=31, width=5, textvariable=var_dead_bloc, command=maj_bloc_10).grid(row=0, column=3, padx=5)
+
+# Grille de résultats (2 lignes de 5)
+f_grid = tk.Frame(f_bloc); f_grid.pack(fill="x", pady=10)
+res_bloc_list = []
+for i in range(10):
+    row = i // 5
+    col = i % 5
+    cell = tk.Frame(f_grid, padx=5, pady=5)
+    cell.grid(row=row, column=col, sticky="nsew")
+    tk.Label(cell, text=f"{i} =").pack(side="left")
+    e = tk.Entry(cell, width=15, state="readonly", font=("Consolas", 10), fg="darkgreen")
+    e.pack(side="left")
+    res_bloc_list.append(e)
 
 root.mainloop()

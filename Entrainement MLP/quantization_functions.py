@@ -7,7 +7,7 @@ def int_to_vhdl_hex(v, width_bits) -> str:
 
 #print(int_to_vhdl_hex(-6393170, 32))
 
-def convertion_float_hex32(valeur_float,size_integral,dead_bit=0):
+def convertion_float_hex32(valeur_float,size_integral = 2,dead_bit=0):
     try:
         valeur_float = float(valeur_float)
     except ValueError:
