@@ -48,3 +48,57 @@ launch_simulation
 open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
 source simulation_Layer.tcl
 close_sim
+launch_simulation
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+run all
+run 15 us
+reset_run synth_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+run 15 us
+close_sim
+launch_simulation
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+run 15 us
+close_sim
+launch_simulation
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+run 15 us
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+run 15 us
+close_sim
+launch_simulation
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+run 15 us
+close_sim
+launch_simulation
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+run 15 us
+close_sim
+launch_simulation
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+run 15 us
