@@ -79,6 +79,8 @@ architecture Behavioral of Perceptron_BRAM is
     signal A_is_greater_than_B: std_logic;
     signal A_is_equal_to_B: std_logic;
     
+    signal overflow_flag: std_logic;
+    
     signal A: std_logic_vector(31 downto 0);
     signal B: std_logic_vector(31 downto 0);
     
@@ -123,37 +125,42 @@ begin
             else
                 clock_wait <= '0';
                 if intern_valid = '0' and Enable = '1' then
-                --                                          ON SOMME
-                --              CASE A > 0 and B > 0
-                if (A_is_positive = '1' and B_is_positive = '1') then 
-                    res_sum <=  ((A + B) AND not X"80000000"); -- effacement du bit de signe
-                    
-                --              CASE A < 0 and B < 0 
-                elsif (A_is_positive = '0' and B_is_positive = '0') then 
-                    res_sum <=  ((A + B) OR X"80000000"); -- mise à 1 du bit de signe
-                    
-                --              CASE A > 0 and B < 0   
-                elsif (A_is_positive = '1' and B_is_positive = '0') then     
-                    if (A_is_equal_to_B = '1') then
-                        res_sum <= X"00000000";
-                    elsif (A_is_greater_than_B = '1') then
-                        res_sum <=  ((A - B) AND not X"80000000"); -- effacement du bit de signe
-                    else 
-                        res_sum <=  ((B - A) OR X"80000000"); -- mise à 1 du bit de signe
-                    end if;
-                    
-                --              CASE A < 0 and B > 0   
-                elsif (A_is_positive = '0' and B_is_positive = '1') then     
-                    if (A_is_equal_to_B = '1') then
-                        res_sum <= X"00000000";
-                    elsif (A_is_greater_than_B = '1') then
-                        res_sum <=  ((A - B) OR X"80000000"); -- mise à 1 du bit de signe
-                    else 
-                        res_sum <=  ((B - A) AND not X"80000000"); -- effacement du bit de signe
-                    end if;
                 
+                if (overflow_flag = '1') then
+                    res_sum <= x"7FFFFFFF";
                 else
-                    res_sum <= X"00000000";
+                    --                                          ON SOMME
+                    --              CASE A > 0 and B > 0
+                    if (A_is_positive = '1' and B_is_positive = '1') then 
+                        res_sum <=  ((A + B) AND not X"80000000"); -- effacement du bit de signe
+                        
+                    --              CASE A < 0 and B < 0 
+                    elsif (A_is_positive = '0' and B_is_positive = '0') then 
+                        res_sum <=  ((A + B) OR X"80000000"); -- mise à 1 du bit de signe
+                        
+                    --              CASE A > 0 and B < 0   
+                    elsif (A_is_positive = '1' and B_is_positive = '0') then     
+                        if (A_is_equal_to_B = '1') then
+                            res_sum <= X"00000000";
+                        elsif (A_is_greater_than_B = '1') then
+                            res_sum <=  ((A - B) AND not X"80000000"); -- effacement du bit de signe
+                        else 
+                            res_sum <=  ((B - A) OR X"80000000"); -- mise à 1 du bit de signe
+                        end if;
+                        
+                    --              CASE A < 0 and B > 0   
+                    elsif (A_is_positive = '0' and B_is_positive = '1') then     
+                        if (A_is_equal_to_B = '1') then
+                            res_sum <= X"00000000";
+                        elsif (A_is_greater_than_B = '1') then
+                            res_sum <=  ((A - B) OR X"80000000"); -- mise à 1 du bit de signe
+                        else 
+                            res_sum <=  ((B - A) AND not X"80000000"); -- effacement du bit de signe
+                        end if;
+                    
+                    else
+                        res_sum <= X"00000000";
+                    end if;
                 end if;
                 
                 -- UPDATE INDEX
@@ -169,6 +176,10 @@ begin
             
         end if;
     end process;
+    
+    overflow_flag <= '1' when (A_is_positive = '1') 
+                            and (B_is_positive = '1')
+                            and ((A+B) < A  or (A+B) < B);
     
     A <= res_sum;
     B <= res_mul(63) & res_mul((62 - size_integral_32bit- dead_bit_word_64bit) downto (62 - size_integral_32bit- dead_bit_word_64bit) - (32 - size_integral_32bit)); 

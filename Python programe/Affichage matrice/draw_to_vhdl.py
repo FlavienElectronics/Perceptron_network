@@ -67,7 +67,7 @@ class DigitDrawer:
                 on_pixels.append(f"    {i} => x\"{hex_val}\"")
         
         if on_pixels:
-            vhdl_code += ",\n".join(on_pixels)
+            vhdl_code += ",".join(on_pixels)
             vhdl_code += ",\n    others => x\"00000000\"\n);"
         else:
             vhdl_code += "    others => x\"00000000\"\n);"
