@@ -10,13 +10,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="15,785.120 ns"></ZoomStartTime>
-      <ZoomEndTime time="15,884.164 ns"></ZoomEndTime>
-      <Cursor1Time time="15,821.197 ns"></Cursor1Time>
+      <ZoomStartTime time="16,897.136 ns"></ZoomStartTime>
+      <ZoomEndTime time="17,020.573 ns"></ZoomEndTime>
+      <Cursor1Time time="16,946.249 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="170"></NameColumnWidth>
-      <ValueColumnWidth column_width="111"></ValueColumnWidth>
+      <ValueColumnWidth column_width="107"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="16" />
    <wvobject fp_name="/simulation_Layer/ENABLE" type="logic">

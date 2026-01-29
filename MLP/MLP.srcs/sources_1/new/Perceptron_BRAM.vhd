@@ -81,7 +81,6 @@ architecture Behavioral of Perceptron_BRAM is
     
     signal overflow_flag_sup: std_logic;
     signal overflow_flag_inf: std_logic;
-    
     signal buffer_addition : std_logic_vector(31 downto 0);
     
     signal A: std_logic_vector(31 downto 0);
@@ -192,6 +191,8 @@ begin
                             and (B_is_positive = '0')
                             and (buffer_addition(31) = '1')
                             else '0';
+--overflow_flag_sup <= '0';
+--overflow_flag_inf <= '0';
  
     A <= res_sum;
     B <= res_mul(63) & res_mul((62 - size_integral_32bit- dead_bit_word_64bit) downto (62 - size_integral_32bit- dead_bit_word_64bit) - (32 - size_integral_32bit)); 
