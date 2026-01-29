@@ -79,7 +79,10 @@ architecture Behavioral of Perceptron_BRAM is
     signal A_is_greater_than_B: std_logic;
     signal A_is_equal_to_B: std_logic;
     
-    signal overflow_flag: std_logic;
+    signal overflow_flag_sup: std_logic;
+    signal overflow_flag_inf: std_logic;
+    
+    signal buffer_addition : std_logic_vector(31 downto 0);
     
     signal A: std_logic_vector(31 downto 0);
     signal B: std_logic_vector(31 downto 0);
@@ -126,8 +129,10 @@ begin
                 clock_wait <= '0';
                 if intern_valid = '0' and Enable = '1' then
                 
-                if (overflow_flag = '1') then
+                if (overflow_flag_sup = '1') then
                     res_sum <= x"7FFFFFFF";
+                elsif (overflow_flag_inf = '1') then
+                    res_sum <= x"FFFFFFFF";
                 else
                     --                                          ON SOMME
                     --              CASE A > 0 and B > 0
@@ -177,10 +182,17 @@ begin
         end if;
     end process;
     
-    overflow_flag <= '1' when (A_is_positive = '1') 
-                            and (B_is_positive = '1')
-                            and ((A+B) < A  or (A+B) < B);
+    buffer_addition <= (A AND not x"80000000") + (B AND not x"80000000");
     
+    overflow_flag_sup <= '1' when (A_is_positive = '1') 
+                            and (B_is_positive = '1')
+                            and (buffer_addition(31) = '1')
+                            else '0';
+    overflow_flag_inf <= '1' when (A_is_positive = '0')
+                            and (B_is_positive = '0')
+                            and (buffer_addition(31) = '1')
+                            else '0';
+ 
     A <= res_sum;
     B <= res_mul(63) & res_mul((62 - size_integral_32bit- dead_bit_word_64bit) downto (62 - size_integral_32bit- dead_bit_word_64bit) - (32 - size_integral_32bit)); 
     

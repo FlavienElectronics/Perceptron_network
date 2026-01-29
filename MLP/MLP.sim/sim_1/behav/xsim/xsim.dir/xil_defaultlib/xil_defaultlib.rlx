@@ -2,11 +2,11 @@
 2020.2
 Nov 14 2025
 19:37:27
-C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd,1769715436,vhdl,,,,simulation_layer,,,,,,,,
+C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd,1769717506,vhdl,,,,simulation_layer,,,,,,,,
 C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Perceptron.vhd,1769689477,vhdl,,,,simulation_perceptron,,,,,,,,
 C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/BRAM_user.vhd,1769689477,vhdl,,,,bram_user,,,,,,,,
 C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Layer.vhd,1769691894,vhdl,,,,layer,,,,,,,,
 C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/MLP.vhd,1769686557,vhdl,,,,mlp,,,,,,,,
 C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Perceptron.vhd,1769686311,vhdl,,,,perceptron,,,,,,,,
-C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Perceptron_BRAM.vhd,1769716884,vhdl,C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Layer.vhd,,,perceptron_bram,,,,,,,,
+C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Perceptron_BRAM.vhd,1769718611,vhdl,C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Layer.vhd,,,perceptron_bram,,,,,,,,
 C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd,1769691894,vhdl,,,,weights,,,,,,,,
