@@ -7452,3 +7452,1849 @@ INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loa
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
 launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 4557.633 ; gain = 0.000
 run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 22:33:17 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'WEIGHTS'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 4557.633 ; gain = 0.000
+run 16 us
+close_sim
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 22:33:58 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+ERROR: [Common 17-39] 'get_xpm_libraries' failed due to earlier errors.
+
+    while executing
+"rdi::get_xpm_libraries"
+    (procedure "xcs_get_xpm_libraries" line 14)
+    invoked from within
+"xcs_get_xpm_libraries"
+    (procedure "usf_xsim_setup_simulation" line 50)
+    invoked from within
+"usf_xsim_setup_simulation"
+    (procedure "tclapp::xilinx::xsim::setup" line 29)
+    invoked from within
+"tclapp::xilinx::xsim::setup { -simset sim_1 -mode behavioral -run_dir C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim -int_os_t..."
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 22:34:40 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 4557.633 ; gain = 0.000
+run 16 us
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 22:47:30 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 4704.160 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 22:48:51 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4704.160 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 22:57:09 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Perceptron_BRAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Perceptron_BRAM'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 4814.840 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 22:57:45 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Perceptron_BRAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Perceptron_BRAM'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 4814.840 ; gain = 0.000
+run 16 us
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 23:05:22 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4859.691 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 23:10:00 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 4859.691 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 23:31:55 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_weights'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 4859.691 ; gain = 0.000
+run 16 us
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 23:50:09 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4859.691 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 23:51:47 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4859.691 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 23:53:08 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4859.691 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 23:57:54 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4859.691 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Thu Jan 29 23:59:23 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4859.691 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Jan 30 00:01:25 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4859.691 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Jan 30 00:03:29 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4859.691 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Jan 30 00:05:12 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4859.691 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Jan 30 00:12:53 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4859.691 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Jan 30 00:16:23 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 4859.691 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Jan 30 00:28:41 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 4937.043 ; gain = 0.000
+run 16 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Jan 30 00:30:48 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'WEIGHTS'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sim_1/new/simulation_Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'simulation_Layer'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-718] formal port <clk_W> does not exist in entity <WEIGHTS>.  Please compare the definition of block <WEIGHTS> to its component declaration and its instantion to detect the mismatch. [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Layer.vhd:56]
+ERROR: [VRFC 10-718] formal port <addr_W> does not exist in entity <WEIGHTS>.  Please compare the definition of block <WEIGHTS> to its component declaration and its instantion to detect the mismatch. [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Layer.vhd:57]
+ERROR: [VRFC 10-718] formal port <dout_W> does not exist in entity <WEIGHTS>.  Please compare the definition of block <WEIGHTS> to its component declaration and its instantion to detect the mismatch. [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Layer.vhd:58]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit simulation_layer in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Jan 30 00:31:26 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'WEIGHTS'
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:102]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:101]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:99]
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:109]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:108]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:106]
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:116]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:115]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:113]
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:123]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:122]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:120]
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:130]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:129]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:127]
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:137]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:136]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:134]
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:144]
+INFO: [VRFC 10-10021] Sorry, too many errors..
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Jan 30 00:31:35 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'WEIGHTS'
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:102]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:101]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:99]
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:109]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:108]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:106]
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:116]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:115]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:113]
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:123]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:122]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:120]
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:130]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:129]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:127]
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:137]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:136]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:134]
+ERROR: [VRFC 10-2989] 'dout' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:144]
+INFO: [VRFC 10-10021] Sorry, too many errors..
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Jan 30 00:34:29 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Layer'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'WEIGHTS'
+ERROR: [VRFC 10-2989] 'addr' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:102]
+ERROR: [VRFC 10-9434] type conversion expression type for 'unsigned' cannot be uniquely determined [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:102]
+ERROR: [VRFC 10-2989] 'addr' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:109]
+ERROR: [VRFC 10-9434] type conversion expression type for 'unsigned' cannot be uniquely determined [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:109]
+ERROR: [VRFC 10-2989] 'addr' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:116]
+ERROR: [VRFC 10-9434] type conversion expression type for 'unsigned' cannot be uniquely determined [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:116]
+ERROR: [VRFC 10-2989] 'addr' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:123]
+ERROR: [VRFC 10-9434] type conversion expression type for 'unsigned' cannot be uniquely determined [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:123]
+ERROR: [VRFC 10-2989] 'addr' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:130]
+ERROR: [VRFC 10-9434] type conversion expression type for 'unsigned' cannot be uniquely determined [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:130]
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:129]
+ERROR: [VRFC 10-2989] 'addr' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:137]
+ERROR: [VRFC 10-9434] type conversion expression type for 'unsigned' cannot be uniquely determined [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:137]
+ERROR: [VRFC 10-2989] 'addr' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:144]
+ERROR: [VRFC 10-9434] type conversion expression type for 'unsigned' cannot be uniquely determined [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:144]
+ERROR: [VRFC 10-2989] 'addr' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:151]
+ERROR: [VRFC 10-9434] type conversion expression type for 'unsigned' cannot be uniquely determined [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:151]
+ERROR: [VRFC 10-2989] 'addr' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:158]
+ERROR: [VRFC 10-9434] type conversion expression type for 'unsigned' cannot be uniquely determined [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:158]
+INFO: [VRFC 10-10021] Sorry, too many errors..
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Jan 30 00:35:35 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Layer'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'WEIGHTS'
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:129]
+ERROR: [VRFC 10-9458] unit 'rtl' is ignored due to previous errors [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:21]
+INFO: [VRFC 10-8704] VHDL file 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Jan 30 00:36:56 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Layer'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'WEIGHTS'
+ERROR: [VRFC 10-2989] 'clk' is not declared [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:129]
+ERROR: [VRFC 10-9458] unit 'rtl' is ignored due to previous errors [C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd:21]
+INFO: [VRFC 10-8704] VHDL file 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\WEIGHTS.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sim_1\new\simulation_Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Perceptron_BRAM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\flavi\Desktop\Perceptron_network\MLP\MLP.srcs\sources_1\new\Layer.vhd:]
+ERROR: [Common 17-180] Spawn failed: The operation completed successfully.
+
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Fri Jan 30 00:38:38 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'simulation_Layer'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Program/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'simulation_Layer' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj simulation_Layer_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/Layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Layer'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.srcs/sources_1/new/WEIGHTS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'WEIGHTS'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Program/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simulation_Layer_behav xil_defaultlib.simulation_Layer -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Perceptron_BRAM [perceptron_bram_default]
+Compiling architecture rtl of entity xil_defaultlib.WEIGHTS [weights_default]
+Compiling architecture behavioral of entity xil_defaultlib.Layer [layer_default]
+Compiling architecture bench of entity xil_defaultlib.simulation_layer
+Built simulation snapshot simulation_Layer_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/flavi/Desktop/Perceptron_network/MLP/MLP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "simulation_Layer_behav -key {Behavioral:sim_1:Functional:simulation_Layer} -tclbatch {simulation_Layer.tcl} -view {C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/flavi/Desktop/Perceptron_network/MLP/simulation_Perceptron_CONFIG.wcfg
+source simulation_Layer.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'simulation_Layer_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 4937.043 ; gain = 0.000
+run 16 us
