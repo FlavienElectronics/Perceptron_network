@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="16,897.136 ns"></ZoomStartTime>
-      <ZoomEndTime time="17,020.573 ns"></ZoomEndTime>
-      <Cursor1Time time="16,946.249 ns"></Cursor1Time>
+      <ZoomStartTime time="3,460.860 ns"></ZoomStartTime>
+      <ZoomEndTime time="3,557.340 ns"></ZoomEndTime>
+      <Cursor1Time time="3,510.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="170"></NameColumnWidth>
-      <ValueColumnWidth column_width="107"></ValueColumnWidth>
+      <ValueColumnWidth column_width="95"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="18" />
    <wvobject fp_name="/simulation_Layer/ENABLE" type="logic">
       <obj_property name="ElementShortName">ENABLE</obj_property>
       <obj_property name="ObjectShortName">ENABLE</obj_property>
@@ -35,9 +35,18 @@
       <obj_property name="ElementShortName">RESET</obj_property>
       <obj_property name="ObjectShortName">RESET</obj_property>
    </wvobject>
+   <wvobject fp_name="/simulation_Layer/laye/\gen_dest(0)\/percept/Input_Value_minus_1" type="array">
+      <obj_property name="ElementShortName">Input_Value_minus_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Input_Value_minus_1[31:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/simulation_Layer/laye/dout_i" type="array">
       <obj_property name="ElementShortName">dout_i[319:0]</obj_property>
       <obj_property name="ObjectShortName">dout_i[319:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simulation_Layer/laye/addr_i" type="array">
+      <obj_property name="ElementShortName">addr_i[9:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_i[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/simulation_Layer/laye/out_read" type="array">
       <obj_property name="ElementShortName">out_read[0:9][31:0]</obj_property>

@@ -46,7 +46,9 @@ architecture Behavioral of Perceptron_BRAM is
     signal mul_sign: std_logic;
     signal dif_pos : std_logic;
     
-    signal clock_wait : std_logic;
+    signal data_BRAM_arrived : std_logic;
+    signal Input_Value_minus_1 : std_logic_vector (31 downto 0);
+    signal Input_Value_minus_2 : std_logic_vector (31 downto 0);
   
 begin
     actualWeight <= w_in;
@@ -60,62 +62,63 @@ begin
                 valid <= '0';
                 intern_valid <= '0';
                 res_sum <= x"00000000";
-                clock_wait <= '0';
-            end if;
-            if clock_wait = '0' then
-                clock_wait <= '1';
-            else
-                clock_wait <= '0';
-                if intern_valid = '0' and Enable = '1' then
+                data_BRAM_arrived <= '0';
+                Input_Value_minus_1 <= X"00000000";
+                Input_Value_minus_2 <= X"00000000";
+            elsif Enable = '1' and intern_valid = '0' then
+            
+            Input_Value_minus_1 <= Input_Value;
+            Input_Value_minus_2 <= Input_Value_minus_1;
+            data_BRAM_arrived <= '1';
+                if data_BRAM_arrived = '1' then
                 
-                if (overflow_flag_sup = '1') then
-                    res_sum <= x"7FFFFFFF";
-                elsif (overflow_flag_inf = '1') then
-                    res_sum <= x"FFFFFFFF";
-                else
-                    --                                          ON SOMME
-                    --              CASE A > 0 and B > 0
-                    if (A_is_positive = '1' and B_is_positive = '1') then 
-                        res_sum <=  ((A + B) AND not X"80000000"); -- effacement du bit de signe
-                        
-                    --              CASE A < 0 and B < 0 
-                    elsif (A_is_positive = '0' and B_is_positive = '0') then 
-                        res_sum <=  ((A + B) OR X"80000000"); -- mise à 1 du bit de signe
-                        
-                    --              CASE A > 0 and B < 0   
-                    elsif (A_is_positive = '1' and B_is_positive = '0') then     
-                        if (A_is_equal_to_B = '1') then
-                            res_sum <= X"00000000";
-                        elsif (A_is_greater_than_B = '1') then
-                            res_sum <=  ((A - B) AND not X"80000000"); -- effacement du bit de signe
-                        else 
-                            res_sum <=  ((B - A) OR X"80000000"); -- mise à 1 du bit de signe
+                        if (overflow_flag_sup = '1') then
+                            res_sum <= x"7FFFFFFF";
+                        elsif (overflow_flag_inf = '1') then
+                            res_sum <= x"FFFFFFFF";
+                        else
+                            --                                          ON SOMME
+                            --              CASE A > 0 and B > 0
+                            if (A_is_positive = '1' and B_is_positive = '1') then 
+                                res_sum <=  ((A + B) AND not X"80000000"); -- effacement du bit de signe
+                                
+                            --              CASE A < 0 and B < 0 
+                            elsif (A_is_positive = '0' and B_is_positive = '0') then 
+                                res_sum <=  ((A + B) OR X"80000000"); -- mise à 1 du bit de signe
+                                
+                            --              CASE A > 0 and B < 0   
+                            elsif (A_is_positive = '1' and B_is_positive = '0') then     
+                                if (A_is_equal_to_B = '1') then
+                                    res_sum <= X"00000000";
+                                elsif (A_is_greater_than_B = '1') then
+                                    res_sum <=  ((A - B) AND not X"80000000"); -- effacement du bit de signe
+                                else 
+                                    res_sum <=  ((B - A) OR X"80000000"); -- mise à 1 du bit de signe
+                                end if;
+                                
+                            --              CASE A < 0 and B > 0   
+                            elsif (A_is_positive = '0' and B_is_positive = '1') then     
+                                if (A_is_equal_to_B = '1') then
+                                    res_sum <= X"00000000";
+                                elsif (A_is_greater_than_B = '1') then
+                                    res_sum <=  ((A - B) OR X"80000000"); -- mise à 1 du bit de signe
+                                else 
+                                    res_sum <=  ((B - A) AND not X"80000000"); -- effacement du bit de signe
+                                end if;
+                            
+                            else
+                                res_sum <= X"00000000";
+                            end if;
                         end if;
                         
-                    --              CASE A < 0 and B > 0   
-                    elsif (A_is_positive = '0' and B_is_positive = '1') then     
-                        if (A_is_equal_to_B = '1') then
-                            res_sum <= X"00000000";
-                        elsif (A_is_greater_than_B = '1') then
-                            res_sum <=  ((A - B) OR X"80000000"); -- mise à 1 du bit de signe
-                        else 
-                            res_sum <=  ((B - A) AND not X"80000000"); -- effacement du bit de signe
+                        -- UPDATE INDEX
+                        index <= index + 1;
+                        if index >= (weight_array_size-1) then
+                            valid <= '1';
+                            intern_valid <= '1';
+                            index <= "0000000000";
                         end if;
-                    
-                    else
-                        res_sum <= X"00000000";
-                    end if;
-                end if;
-                
-                -- UPDATE INDEX
-                index <= index + 1;
-                if index >= (weight_array_size-1) then
-                    valid <= '1';
-                    intern_valid <= '1';
-                    index <= "0000000000";
-                end if;
-            end if;
-                
+                 end if;
             end if;
             
         end if;
@@ -141,10 +144,10 @@ begin
  
     -- MULTIPLICATEUR
     -- mul_sign représente le ou exclusif entre le bit de signe de la valeur d'entrée et le poid correspondant
-    mul_sign <= (actualWeight(31) XOR Input_Value(31));
+    mul_sign <= (actualWeight(31) XOR Input_Value_minus_2(31));
     -- si mul_sign = 1 alors au moins une valeur est négative sinon, les deux valeurs sont positives ou négative
     mul_mask <= x"0000000000000000" when mul_sign = '0' else x"8000000000000000" ;
-    res_mul <= (((actualWeight) AND not X"80000000") * (Input_Value AND not X"80000000")) or mul_mask when index < weight_array_size;
+    res_mul <= (((actualWeight) AND not X"80000000") * (Input_Value_minus_2 AND not X"80000000")) or mul_mask when index < weight_array_size;
     
     -- FONCTION D'ACTIVATION ReLu
     Output_Value <= x"00000000" when res_sum(31) = '1' else res_sum;

@@ -147,3 +147,54 @@ Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // [Engine Memory]: 1,000 MB (+896858kb) [00:00:22]
 // WARNING: HEventQueue.dispatchEvent() is taking  2075 ms.
 // Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Program/2025.2/Vivado/data/ip'. 
+// Project name: MLP; location: C:/Users/flavi/Desktop/Perceptron_network/MLP; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:14 . Memory (MB): peak = 1668.379 ; gain = 279.805 
+dismissDialog("Open Project"); // bk (Open Project Progress)
+// [Engine Memory]: 1,054 MB (+4765kb) [00:00:27]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,054 MB. GUI used memory: 71 MB. Current time: 1/30/26, 9:42:39 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,054 MB. GUI used memory: 71 MB. Current time: 1/30/26, 9:43:19 AM CET
+// Elapsed time: 62 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Layer.vhd]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Perceptron.vhd]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Perceptron.vhd]", 7, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// [GUI Memory]: 136 MB (+8281kb) [00:01:37]
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Perceptron_BRAM.vhd]", 4, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VHDL, xil_defaultlib, Perceptron_BRAM.vhd]", 4, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,054 MB. GUI used memory: 73 MB. Current time: 1/30/26, 9:43:59 AM CET
+// Elapsed time: 13 seconds
+selectCodeEditor("Perceptron_BRAM.vhd", 69, 336); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 158, 194); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 30, 118); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 6, 121); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 572, 402); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 358, 309); // ae (Perceptron_BRAM.vhd)
+// Elapsed time: 13 seconds
+selectCodeEditor("Perceptron_BRAM.vhd", 174, 302); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 193, 428); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 41, 421); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 17, 346); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 197, 367); // ae (Perceptron_BRAM.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,054 MB. GUI used memory: 74 MB. Current time: 1/30/26, 9:44:39 AM CET
+selectCodeEditor("Perceptron_BRAM.vhd", 0, 362); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 300, 367); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 348, 467); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 486, 396); // ae (Perceptron_BRAM.vhd)
+// Elapsed time: 14 seconds
+selectCodeEditor("Perceptron_BRAM.vhd", 54, 256); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 86, 247); // ae (Perceptron_BRAM.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,054 MB. GUI used memory: 74 MB. Current time: 1/30/26, 9:45:19 AM CET
+// Elapsed time: 22 seconds
+selectCodeEditor("Perceptron_BRAM.vhd", 181, 416); // ae (Perceptron_BRAM.vhd)
+// Elapsed time: 11 seconds
+selectCodeEditor("Perceptron_BRAM.vhd", 457, 304); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 253, 378); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 267, 281); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 239, 278); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 272, 278); // ae (Perceptron_BRAM.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,054 MB. GUI used memory: 74 MB. Current time: 1/30/26, 9:45:59 AM CET
+selectCodeEditor("Perceptron_BRAM.vhd", 226, 413); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 367, 377); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 652, 276); // ae (Perceptron_BRAM.vhd)
+selectCodeEditor("Perceptron_BRAM.vhd", 411, 66); // ae (Perceptron_BRAM.vhd)
+// TclEventType: FILE_SET_CHANGE
