@@ -71,7 +71,6 @@ begin
             Input_Value_minus_2 <= Input_Value_minus_1;
             data_BRAM_arrived <= '1';
                 if data_BRAM_arrived = '1' then
-                
                         if (overflow_flag_sup = '1') then
                             res_sum <= x"7FFFFFFF";
                         elsif (overflow_flag_inf = '1') then
