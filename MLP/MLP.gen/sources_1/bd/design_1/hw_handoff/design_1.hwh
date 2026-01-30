@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan 29 14:30:42 2026" VIVADOVERSION="2025.2">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:basys3:part0:1.2" DEVICE="7a35t" NAME="design_1" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="CLK" SIGIS="undef" SIGNAME="External_Ports_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Perceptron_BRAM_0" PORT="Clock"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Enable" SIGIS="undef" SIGNAME="External_Ports_Enable">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Perceptron_BRAM_0" PORT="Enable"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="Input_Value" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Input_Value">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Perceptron_BRAM_0" PORT="Input_Value"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="Output_Value" RIGHT="0" SIGIS="undef" SIGNAME="Perceptron_BRAM_0_Output_Value">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Perceptron_BRAM_0" PORT="Output_Value"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="RST" SIGIS="undef" SIGNAME="External_Ports_RST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Perceptron_BRAM_0" PORT="Reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Valid" SIGIS="undef" SIGNAME="Perceptron_BRAM_0_Valid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Perceptron_BRAM_0" PORT="Valid"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/Perceptron_BRAM_0" HWVERSION="1.0" INSTANCE="Perceptron_BRAM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Perceptron_BRAM" VLNV="xilinx.com:module_ref:Perceptron_BRAM:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="size_integral_32bit" VALUE="2"/>
+        <PARAMETER NAME="weight_array_size" VALUE="10"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_Perceptron_BRAM_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="Clock" SIGIS="clk" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Enable" SIGIS="undef" SIGNAME="External_Ports_Enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="Input_Value" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Input_Value">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Input_Value"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Output_Value" RIGHT="0" SIGIS="undef" SIGNAME="Perceptron_BRAM_0_Output_Value">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Output_Value"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_RST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Valid" SIGIS="undef" SIGNAME="Perceptron_BRAM_0_Valid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Valid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="addr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="w_in" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
